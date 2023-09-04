@@ -24,13 +24,27 @@ import java.util.*;
 //}
 
 //mul tables of numbers
+//public class loops{
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the n value :");
+//        short n = sc.nextShort();
+//        for(short i=1;i<=10;i++){
+//            System.out.println(n*i);
+//        }
+//    }
+//}
+
+//printing of n even numbers
 public class loops{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the n value :");
+        System.out.println("Enter the value of n :");
         short n = sc.nextShort();
-        for(short i=1;i<=10;i++){
-            System.out.println(n*i);
+        for(short i=2;i<=n;i++){
+            if(i%2 == 0){
+                System.out.println(i);
+            }
         }
     }
 }
