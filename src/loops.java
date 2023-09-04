@@ -8,6 +8,8 @@ import java.util.*;
 //    }
 //}
 
+
+//Sum of n natural numbers
 public class loops{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
