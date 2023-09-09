@@ -60,22 +60,42 @@ import java.util.*;
 //    }
 //}
 
-public class numPattern{
-    public static void main(String[] args){
+//Floyds Triangle
+//public class numPattern{
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the value of n :");
+//        short n = sc.nextShort();
+//        short num = 1;
+//        for(short i=1;i<=n;i++){
+//            for(short j=1;j<=i;j++){
+//                System.out.print(num + " ");
+//                num++;
+//            }
+//            System.out.println();
+//        }
+//    }
+//}
+
+
+//Binary Triangle
+public class numPattern {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the value of n :");
         short n = sc.nextShort();
-        short num = 1;
         for(short i=1;i<=n;i++){
             for(short j=1;j<=i;j++){
-                System.out.print(num + " ");
-                num++;
+                if((i+j)%2 == 0){
+                    System.out.print("1");
+                }else{
+                    System.out.print("0");
+                }
             }
             System.out.println();
         }
     }
 }
-
 
 
 
