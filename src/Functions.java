@@ -27,21 +27,38 @@ import java.util.*;
 //}
 
 //Sum using Function
+//public class Functions {
+//    public static int addTwoNum(int a,int b){
+//        int sum  = a+b;
+//        return sum;
+//    }
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the a value :");
+//        short a = sc.nextShort();
+//        System.out.println("Enter the b value :");
+//        short b = sc.nextShort();
+//
+//        int add = addTwoNum(a,b); // Fun Call
+//        System.out.println("Sum of two numbers is :"+add);
+//
+//    }
+//}
+
 public class Functions {
-    public static int addTwoNum(int a,int b){
-        int sum  = a+b;
-        return sum;
+    public static float mulTwoNum(float a,float b){
+        float mul = a*b;
+        return mul;
     }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the a value :");
-        short a = sc.nextShort();
+        float a = sc.nextFloat();
         System.out.println("Enter the b value :");
-        short b = sc.nextShort();
+        float b = sc.nextFloat();
 
-        int add = addTwoNum(a,b); // Fun Call
-        System.out.println("Sum of two numbers is :"+add);
-
+        float ans = mulTwoNum(a,b);
+        System.out.println("Multiplied ans of numbers :" +ans);
     }
 }
 
