@@ -54,5 +54,52 @@ import java.util.*;
 //}
 
 //linear search
+//public class arrays{
+//    public static void userprint(){
+//
+//    }
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the size :");
+//        int size = sc.nextInt();
+//
+//        //Array declair
+//        int array[] = new int[size];
+//
+//        //Storing values in array
+//        System.out.println("Enter the values :");
+//        for(int i=0;i<size;i++){
+//            array[i] = sc.nextInt();
+//        }
+//        System.out.println("Enter the number :");
+//        int num = sc.nextInt();
+//
+//        for(int i=0;i<array.length;i++){
+//            if(num == array[i]){
+//                System.out.println("Index of the number :" +i);
+//            }
+//        }
+//        userprint();
+//    }
+//}
 
+//Arrays
+public class arrays {
+    public static void stringarr(String[] names){
+        System.out.println("Entered names are :");
+        for(int i=0;i<3;i++){
+            System.out.println(names[i]);
+        }
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String names[] = new String[3];
+
+        System.out.println("Enter the names :");
+        for(int i=0;i<3;i++){
+            names[i] = sc.next();
+        }
+        stringarr(names);
+    }
+}
 
