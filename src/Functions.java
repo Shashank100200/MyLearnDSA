@@ -45,20 +45,43 @@ import java.util.*;
 //    }
 //}
 
+
+//Mul using func
+//public class Functions {
+//    public static float mulTwoNum(float a,float b){
+//        float mul = a*b;
+//        return mul;
+//    }
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the a value :");
+//        float a = sc.nextFloat();
+//        System.out.println("Enter the b value :");
+//        float b = sc.nextFloat();
+//
+//        float ans = mulTwoNum(a,b);
+//        System.out.println("Multiplied ans of numbers :" +ans);
+//    }
+//}
+
+//Factorial using function
 public class Functions {
-    public static float mulTwoNum(float a,float b){
-        float mul = a*b;
-        return mul;
+    public static void factorial(int n){
+        if(n < 0){
+            System.out.println("Invalied Entry");
+            return;
+        }
+        int factorial = 1;
+        for(int i=n;i>=1;i--){
+            factorial = factorial*i;
+        }
+        System.out.println(factorial);
     }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the a value :");
-        float a = sc.nextFloat();
-        System.out.println("Enter the b value :");
-        float b = sc.nextFloat();
+        System.out.println("Enter the value of n :");
+        int fact = sc.nextInt();
 
-        float ans = mulTwoNum(a,b);
-        System.out.println("Multiplied ans of numbers :" +ans);
+        factorial(fact);
     }
 }
-
