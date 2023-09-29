@@ -83,23 +83,80 @@ import java.util.*;
 //    }
 //}
 
-//Arrays
+//Arrays using string
+//public class arrays {
+//    public static void stringarr(String[] names){
+//        System.out.println("Entered names are :");
+//        for(int i=0;i<3;i++){
+//            System.out.println(names[i]);
+//        }
+//    }
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        String names[] = new String[3];
+//
+//        System.out.println("Enter the names :");
+//        for(int i=0;i<3;i++){
+//            names[i] = sc.next();
+//        }
+//        stringarr(names);
+//    }
+//}
+
+//Finding max and min using array
 public class arrays {
-    public static void stringarr(String[] names){
-        System.out.println("Entered names are :");
-        for(int i=0;i<3;i++){
-            System.out.println(names[i]);
-        }
+    public static void minmax(int max,int min){
+        System.out.println("The max number is :"+max);
+        System.out.println("The min number is :"+min);
     }
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String names[] = new String[3];
+     Scanner sc = new Scanner(System.in);
+     //Input size
+     System.out.println("Enter the size :");
+     int size = sc.nextInt();
 
-        System.out.println("Enter the names :");
-        for(int i=0;i<3;i++){
-            names[i] = sc.next();
-        }
-        stringarr(names);
+     int array[] = new int[size];
+
+     //input values
+     System.out.println("Enter the values :");
+     for(int i=0;i<array.length;i++){
+         array[i] = sc.nextInt();
+     }
+        int max = Integer.MIN_VALUE; // for min we used MIN integer value
+        int min = Integer.MAX_VALUE;// here we used MAX integer value
+
+     for(int i=0;i<array.length;i++){
+         if(array[i] > max){
+             max = array[i];
+         }
+         if(array[i] < min){
+             min = array[i];
+         }
+     }
+     minmax(min,max);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
