@@ -27,23 +27,21 @@ import java.util.*;
 //}
 
 //Sum using Function
-//public class Functions {
-//    public static int addTwoNum(int a,int b){
-//        int sum  = a+b;
-//        return sum;
-//    }
-//    public static void main(String[] args){
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Enter the a value :");
-//        short a = sc.nextShort();
-//        System.out.println("Enter the b value :");
-//        short b = sc.nextShort();
-//
-//        int add = addTwoNum(a,b); // Fun Call
-//        System.out.println("Sum of two numbers is :"+add);
-//
-//    }
-//}
+public class Functions {
+    public static int addTwoNum(int a,int b){
+        return a+b;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the a value :");
+        short a = sc.nextShort();
+        System.out.println("Enter the b value :");
+        short b = sc.nextShort();
+
+        int sum = addTwoNum(a,b);
+        System.out.println(sum);
+    }
+}
 
 
 //Mul using func
@@ -65,23 +63,33 @@ import java.util.*;
 //}
 
 //Factorial using function
-public class Functions {
-    public static void factorial(int n){
-        if(n < 0){
-            System.out.println("Invalied Entry");
-            return;
-        }
-        int factorial = 1;
-        for(int i=n;i>=1;i--){
-            factorial = factorial*i;
-        }
-        System.out.println(factorial);
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the value of n :");
-        int fact = sc.nextInt();
+//public class Functions {
+//    public static void factorial(int n){
+//        if(n < 0){
+//            System.out.println("Invalied Entry");
+//            return;
+//        }
+//        int factorial = 1;
+//        for(int i=n;i>=1;i--){
+//            factorial = factorial*i;
+//        }
+//        System.out.println(factorial);
+//    }
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the value of n :");
+//        int fact = sc.nextInt();
+//
+//        factorial(fact);
+//    }
+//}
 
-        factorial(fact);
-    }
-}
+//public class Functions {
+//    public static void myfunc(String fname){ // fname is a parameters
+//        System.out.println(fname + " Das");
+//    }
+//    public static void main(String[] args){
+//        myfunc("Ram"); //arguments
+//        myfunc("Gopi");
+//    }
+//}
