@@ -1,2 +1,115 @@
+import java.util.*;
+//                                                        Strings are immutable --> they cannot modify once they are into memory
+//public class string {
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        String name = "Tony Stark";
+//
+//        for(int i=0;i<name.length();i++){
+//            System.out.println(name.charAt(i));
+//        }
+//    }
+//}
+
+//using compare to function
+//public class string{
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        String name1 = "Tony Stark";
+//        String name2 = "Tony Stark";
+//
+//        //s1 > s2 --> +ve
+//        //s1 == s2 --> 0
+//        //s1 < s2 --> -ve
+//        if(name1.compareTo(name2) == 0){
+//            System.out.println("Strings are equal");
+//        }else{
+//            System.out.println("Strings are not equal");
+//        }
+//
+//        if(new String("Tomy") == new String("Tomy")){
+//            System.out.println("Strings are equal");                // here it shows not equal in java strings are objects many conditions = condition fails
+//        }else{
+//            System.out.println("Strings are not equal");
+//        }
+//    }
+//}
+
+//String indexing
+//public class string {
+//    public static void main(String[] args){
+//        String name = "Pavitra Prabakar";
+//        String n = name.substring(0,name.length());
+//        System.out.println(n);
+//        String l = name.substring(8);
+//        System.out.println(l);  //gives entire index till end without mentioning the ending index
+//        String m = name.substring(2,9);
+//        System.out.println(m);   //prints till 2 to 8
+//    }
+//}
+
+//Take an array of Strings input from the user & find the cumulative (combined) length of all those strings.
+//public class string {
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the size :");
+//        int size = sc.nextInt();
+//
+//        String[] array = new String[size];
+//
+//        int len = 0;
+//        System.out.println("Enter the names :");
+//        for(int i=0;i<size;i++){
+//            array[i] = sc.next();
+//            len += array[i].length();
+//        }
+//        System.out.println(len);
+//    }
+//}
+
+//Input a string from the user. Create a new string called ‘result’ in which you will replace the letter ‘e’ in the original string with letter ‘i’.
+//        Example :
+//        original = “eabcdef’ ; result = “iabcdif”
+//        Original = “xyz” ; result = “xyz”
+
+//public class string {
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the string :");
+//        String name = sc.next();
+//        String result = "";
+//
+//        for(int i=0;i<name.length();i++){
+//            if(name.charAt(i) == 'e'){
+//                result = result + 'i';
+//            }else{
+//                result += name.charAt(i);
+//            }
+//        }
+//        System.out.println(result);
+//    }
+//}
+
+
+//nput an email from the user. You have to create a username from the email by deleting the part that comes after ‘@’. Display that username to the user.
+//        Example :
+//        email = “apnaCollegeJava@gmail.com” ; username = “apnaCollegeJava”
+//        email = “helloWorld123@gmail.com”; username = “helloWorld123”
+
 public class string {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the email :");
+        String mail = sc.next();
+        String result = "";
+
+        for(int i=0;i<mail.length();i++){
+            if(mail.charAt(i) == '@'){
+                break;
+            }else{
+                result += mail.charAt(i);
+            }
+        }
+        System.out.println(result);
+    }
 }
