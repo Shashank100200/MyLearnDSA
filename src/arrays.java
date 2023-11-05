@@ -138,36 +138,74 @@ import java.util.*;
 //}
 
 //Take an array of numbers as input and check if it is an array sorted in ascending order.
-public class arrays {
-    public static void ascending(){
+//public class arrays {
+//    public static void ascending(){
+//
+//    }
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the size :");
+//        short size = sc.nextShort();
+//
+//        //array declairation
+//        int array[] = new int[size];
+//
+//        //input
+//        System.out.println("Enter the values :");
+//        for(int i=0;i<size;i++){
+//            array[i] = sc.nextInt();
+//        }
+//        int sum = 0;
+//        for(int i=0;i<size-1;i++){
+//            if(array[i] < array[i+1]){
+//                sum++;
+//            }
+//        }if(sum == size-1){
+//            System.out.println("sorted");
+//        }else{
+//            System.out.println("NS");
+//        }
+//        ascending();
+//    }
+//}
 
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size :");
-        short size = sc.nextShort();
+//Delition of an element in array
+//import java.util.Scanner;
+//
+//public class arrays {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the size of the array:");
+//        int size = sc.nextInt();
+//        int[] array = new int[size];
+//
+//        System.out.println("Enter the elements of the array:");
+//        for (int i = 0; i < size; i++) {
+//            array[i] = sc.nextInt();
+//        }
+//
+//        System.out.println("Enter the location to delete:");
+//        int loc = sc.nextInt();
+//
+//        // Validate the location
+//        if (loc >= 0 && loc < size) {
+//            // Shift elements to the left to remove the element at the specified location
+//            for (int i = loc; i < size - 1; i++) {
+//                array[i] = array[i - 1];
+//            }
+//            size--; // Decrease the size of the array
+//
+//            // Print the updated array
+//            System.out.println("Array after deletion:");
+//            for (int i = 0; i < size; i++) {
+//                System.out.print(array[i] + " ");
+//            }
+//        } else {
+//            System.out.println("Invalid location. Please enter a valid location within the array size.");
+//        }
+//    }
+//}
 
-        //array declairation
-        int array[] = new int[size];
-
-        //input
-        System.out.println("Enter the values :");
-        for(int i=0;i<size;i++){
-            array[i] = sc.nextInt();
-        }
-        int sum = 0;
-        for(int i=0;i<size-1;i++){
-            if(array[i] < array[i+1]){
-                sum++;
-            }
-        }if(sum == size-1){
-            System.out.println("sorted");
-        }else{
-            System.out.println("NS");
-        }
-        ascending();
-    }
-}
 
 
 
