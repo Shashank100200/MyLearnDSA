@@ -1,58 +1,31 @@
 // convert all the upercase to lower and lower to upper
 import java.io.*;
-//import java.util.*;
-//import java.text.*;
-//import java.math.*;
-//import java.util.regex.*;
-//
-//public class practice {
-//        public static void main(String[] args){
-//                Scanner sc = new Scanner(System.in);
-//                System.out.println("Enter the string :");
-//        }
-//}
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
+public class practice {
+        public static void main(String[] args){
+                Scanner sc = new Scanner(System.in);
 
+                //taking input string
+                System.out.println("Enter the input :");
+                String inp = sc.next();
 
+                char[] array = inp.toCharArray();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//public class stringBuilder{
-//        public static String swapCases(String inputString) {
-//            char[] chars = inputString.toCharArray();
-//
-//            for (int i = 0; i < chars.length; i++) {
-//                char currentChar = chars[i];
-//
-//                if (Character.isUpperCase(currentChar)) {
-//                    chars[i] = Character.toLowerCase(currentChar);
-//                } else if (Character.isLowerCase(currentChar)) {
-//                    chars[i] = Character.toUpperCase(currentChar);
-//                }
-//                // For non-alphabetic characters, keep them unchanged
-//            }
-//
-//            return new String(chars);
-//        }
-//
-//        public static void main(String[] args) {
-//            String inputStr = "Hello World";
-//            String result = swapCases(inputStr);
-//            System.out.println(result);
-//        }
-//}
+                for(int i=0;i<array.length;i++){
+                        char curr = array[i];
+                        if(Character.isUpperCase(curr)){
+                                array[i] = Character.toLowerCase(curr);
+                        }else if(Character.isLowerCase(curr)){
+                                array[i] = Character.toUpperCase(curr);
+                        }
+                }
+                System.out.println(new String(array));
+        }
+}
 
 //public class stringBuilder {
 //    public static void main(String[] args){
