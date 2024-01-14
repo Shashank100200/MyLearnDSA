@@ -194,20 +194,42 @@ import java.util.regex.*;
 
 import java.math.*;
 //7. Create a program to check if a number is a perfect square.
-public class practice{
-    public static boolean perfectSquare(long num){
-        long root = (long)Math.sqrt(num);
-        return root*root == num;
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number :");
-        long num = sc.nextLong();
+//public class practice{
+//    public static boolean perfectSquare(long num){
+//        long root = (long)Math.sqrt(num);
+//        return root*root == num;
+//    }
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter number :");
+//        long num = sc.nextLong();
+//
+//        if(perfectSquare(num)){
+//            System.out.println("Is a Perfect Square");
+//        }else{
+//            System.out.println("Not a perfect square");
+//        }
+//    }
+//}
 
-        if(perfectSquare(num)){
-            System.out.println("Is a Perfect Square");
-        }else{
-            System.out.println("Not a perfect square");
+//8. Implement a function to perform exponentiation without using the ** operator.
+public class practice {
+    public static int exp(int base,int pow){
+        int result=1;
+        for(int i=0;i<pow;i++){
+            result*=base;
         }
+        return result;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter base :");
+        int base = sc.nextInt();
+        System.out.println("Enter exp :");
+        int pow = sc.nextInt();
+
+        System.out.println("The exponent of "+base+" "+"is :"+exp(base,pow));
+
+//        System.out.println("Exponent of number is :"+Math.pow(a,b);
     }
 }
