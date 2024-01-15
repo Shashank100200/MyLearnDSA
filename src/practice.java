@@ -213,23 +213,46 @@ import java.math.*;
 //}
 
 //8. Implement a function to perform exponentiation without using the ** operator.
-public class practice {
-    public static int exp(int base,int pow){
-        int result=1;
-        for(int i=0;i<pow;i++){
-            result*=base;
+//public class practice {
+//    public static int exp(int base,int pow){
+//        int result=1;
+//        for(int i=0;i<pow;i++){
+//            result*=base;
+//        }
+//        return result;
+//    }
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter base :");
+//        int base = sc.nextInt();
+//        System.out.println("Enter exp :");
+//        int pow = sc.nextInt();
+//
+//        System.out.println("The exponent of "+base+" "+"is :"+exp(base,pow));
+//
+////        System.out.println("Exponent of number is :"+Math.pow(a,b);
+//    }
+//}
+
+//9. Write a program to convert a decimal number to binary.
+public class practice{
+    public static void BinaryToDecimal(int n){
+        int[] array = new int[1000];
+        int i=0;
+        while(n>0){
+            array[i]=n%2;
+            n=n/2;
+            i++;
         }
-        return result;
+        for(int j=i-1;j>=0;j--){
+            System.out.print(array[j]+" ");
+        }
     }
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter base :");
-        int base = sc.nextInt();
-        System.out.println("Enter exp :");
-        int pow = sc.nextInt();
+        System.out.println("Enter number :");
+        int num = sc.nextInt();
 
-        System.out.println("The exponent of "+base+" "+"is :"+exp(base,pow));
-
-//        System.out.println("Exponent of number is :"+Math.pow(a,b);
+        BinaryToDecimal(num);
     }
 }
