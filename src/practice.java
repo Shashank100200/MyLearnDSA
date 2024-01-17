@@ -258,27 +258,39 @@ import java.math.*;
 //}
 
 //10. Create a function to convert a binary number to decimal.
-public class practice{
-    public static void BinaryToDecimal(String str){
-        int deci_num = 0;
-        int power = 0;
-        int n = str.length();
-        for(int i=n-1;i>=0;i--) {
-            if (str.charAt(i) == '1') {
-                deci_num += (int) Math.pow(2, power);
-            }
-            power++;
-        }
-        System.out.println(deci_num);
-    }
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter binary number :");
-        String str = sc.next();
+//public class practice{
+//    public static void BinaryToDecimal(String str){
+//        int deci_num = 0;
+//        int power = 0;
+//        int n = str.length();
+//        for(int i=n-1;i>=0;i--) {
+//            if (str.charAt(i) == '1') {
+//                deci_num += (int) Math.pow(2, power);
+//            }
+//            power++;
+//        }
+//        System.out.println(deci_num);
+//    }
+//    public static void main(String[] args){
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("Enter binary number :");
+//        String str = sc.next();
+//
+//        BinaryToDecimal(str);
+//    }
+//}
 
-        BinaryToDecimal(str);
+//11. Implement code to calculate the square root of a number.
+public class practice{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number :");
+        double num = sc.nextDouble();
+
+        System.out.println(Math.sqrt(num));
     }
 }
+
 
 
 
