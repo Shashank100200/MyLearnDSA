@@ -281,13 +281,32 @@ import java.math.*;
 //}
 
 //11. Implement code to calculate the square root of a number.
+//public class practice{
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the number :");
+//        double num = sc.nextDouble();
+//
+//        System.out.println(Math.sqrt(num));
+//    }
+//}
+
+//12. Write a function to generate the nth term of the geometric progression.
+
+//12. Write a function to generate the nth term of the geometric progression.
+//13. Create a program to find the sum of digits of a given number.
 public class practice{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number :");
-        double num = sc.nextDouble();
+        int num = sc.nextInt();
 
-        System.out.println(Math.sqrt(num));
+        int sum=0;
+        while(num!=0){
+            sum+=num%10;
+            num=num/10;
+        }
+        System.out.println(sum);
     }
 }
 
