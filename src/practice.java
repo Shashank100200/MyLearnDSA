@@ -235,24 +235,52 @@ import java.math.*;
 //}
 
 //9. Write a program to convert a decimal number to binary.
+//public class practice{
+//    public static void BinaryToDecimal(int n){
+//        int[] array = new int[1000];
+//        int i=0;
+//        while(n>0){
+//            array[i]=n%2;
+//            n=n/2;
+//            i++;
+//        }
+//        for(int j=i-1;j>=0;j--){
+//            System.out.print(array[j]+" ");
+//        }
+//    }
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter number :");
+//        int num = sc.nextInt();
+//
+//        BinaryToDecimal(num);
+//    }
+//}
+
+//10. Create a function to convert a binary number to decimal.
 public class practice{
-    public static void BinaryToDecimal(int n){
-        int[] array = new int[1000];
-        int i=0;
-        while(n>0){
-            array[i]=n%2;
-            n=n/2;
-            i++;
+    public static void BinaryToDecimal(String str){
+        int deci_num = 0;
+        int power = 0;
+        int n = str.length();
+        for(int i=n-1;i>=0;i--) {
+            if (str.charAt(i) == '1') {
+                deci_num += (int) Math.pow(2, power);
+            }
+            power++;
         }
-        for(int j=i-1;j>=0;j--){
-            System.out.print(array[j]+" ");
-        }
+        System.out.println(deci_num);
     }
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number :");
-        int num = sc.nextInt();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter binary number :");
+        String str = sc.next();
 
-        BinaryToDecimal(num);
+        BinaryToDecimal(str);
     }
 }
+
+
+
+
+
