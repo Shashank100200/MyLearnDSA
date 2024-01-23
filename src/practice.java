@@ -280,6 +280,25 @@ import java.math.*;
 //    }
 //}
 
+//OR
+public class practice{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the binary value :");
+        int num = sc.nextInt();
+
+        int base = 1;
+        int dec_val = 0;
+        while(num>0){
+            int last_num=num%10;
+            num=num/10;
+            dec_val=dec_val+last_num*base;
+            base=base*2;
+        }
+        System.out.print(dec_val);
+    }
+}
+
 //11. Implement code to calculate the square root of a number.
 //public class practice{
 //    public static void main(String[] args){
@@ -292,26 +311,116 @@ import java.math.*;
 //}
 
 //12. Write a function to generate the nth term of the geometric progression.
-
-//12. Write a function to generate the nth term of the geometric progression.
 //13. Create a program to find the sum of digits of a given number.
-public class practice{
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number :");
-        int num = sc.nextInt();
+//public class practice{
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the number :");
+//        int num = sc.nextInt();
+//
+//        int sum=0;
+//        while(num!=0){
+//            sum+=num%10;
+//            num=num/10;
+//        }
+//        System.out.println(sum);
+//    }
+//}
 
-        int sum=0;
-        while(num!=0){
-            sum+=num%10;
-            num=num/10;
-        }
-        System.out.println(sum);
-    }
-}
+//14. Implement code to reverse a number.
+//public class practice{
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter size :");
+//        int size = sc.nextInt();
+//
+//        int[] array=new int[size];
+//        for(int i=0;i<array.length;i++){
+//            array[i] = sc.nextInt();
+//        }
+//        for(int j=array.length-1;j>=0;j--){
+//            System.out.print(array[j]+" ");
+//        }
+//    }
+//}
 
+//OR
+//public class practice{
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the number :");
+//        int num = sc.nextInt();
+//
+//        int rev_num=0;
+//        while(num>0){
+//            rev_num=rev_num*10+num%10;
+//            num=num/10;
+//        }
+//        System.out.println(rev_num);
+//    }
+//}
 
+//15. Write a function to calculate the sum of natural numbers up to a given number
+//public class practice {
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter number :");
+//        int num = sc.nextInt();
+//
+//        int sum=0;
+//        for(int i=1;i<=num;i++){
+//            sum+=i;
+//        }
+//        System.out.print(sum);
+//    }
+//}
 
+//17. Implement code to find the largest and smallest digit in a number.
+//public class practice{
+//    public static void main(String[] args){
+//        int[] array={1,12,32,2,45,8};
+//
+//        int max = Integer.MIN_VALUE;
+//        int min = Integer.MAX_VALUE;
+//
+//        for(int i=0;i<array.length;i++){
+//            if(array[i] > max){
+//                max = array[i];
+//            }
+//            if(array[i] < min){
+//                min = array[i];
+//            }
+//        }
+//        System.out.println("Max is :"+max);
+//        System.out.println("Min is :"+min);
+//    }
+//}
+
+//19. Create a program to find the next prime number after a given number.
+//public class practice{
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the num :");
+//
+//        int num = sc.nextInt();
+//        if(num == 1 || num == 0){
+//            return;
+//        }
+//        boolean prime;
+//        for(int i=2;i<=num;i++){
+//            prime = true;
+//            for(int j=2;j<i;j++){
+//                if(i%j==0){
+//                    prime = false;
+//                    break;
+//                }
+//            }
+//            if(prime){
+//                System.out.print(i+" ");
+//            }
+//        }
+//    }
+//}
 
 
 
