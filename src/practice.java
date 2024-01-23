@@ -281,23 +281,23 @@ import java.math.*;
 //}
 
 //OR
-public class practice{
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the binary value :");
-        int num = sc.nextInt();
-
-        int base = 1;
-        int dec_val = 0;
-        while(num>0){
-            int last_num=num%10;
-            num=num/10;
-            dec_val=dec_val+last_num*base;
-            base=base*2;
-        }
-        System.out.print(dec_val);
-    }
-}
+//public class practice{
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the binary value :");
+//        int num = sc.nextInt();
+//
+//        int base = 1;
+//        int dec_val = 0;
+//        while(num>0){
+//            int last_num=num%10;
+//            num=num/10;
+//            dec_val=dec_val+last_num*base;
+//            base=base*2;
+//        }
+//        System.out.print(dec_val);
+//    }
+//}
 
 //11. Implement code to calculate the square root of a number.
 //public class practice{
@@ -397,30 +397,35 @@ public class practice{
 //}
 
 //19. Create a program to find the next prime number after a given number.
-//public class practice{
-//    public static void main(String[] args){
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Enter the num :");
-//
-//        int num = sc.nextInt();
-//        if(num == 1 || num == 0){
-//            return;
-//        }
-//        boolean prime;
-//        for(int i=2;i<=num;i++){
-//            prime = true;
-//            for(int j=2;j<i;j++){
-//                if(i%j==0){
-//                    prime = false;
-//                    break;
-//                }
-//            }
-//            if(prime){
-//                System.out.print(i+" ");
-//            }
-//        }
-//    }
-//}
+public class practice {
+    public static boolean prime(int num){
+        if(num <=1){
+            return false;
+        }
+        for(int i=2;i*i<=num;i++){
+            if(num%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static int nextPrime(int num){
+        int next = num + 1;
+        while(true){
+            if(prime(next)){
+                return next;
+            }
+            next++;
+        }
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number :");
+        int num = sc.nextInt();
+
+        System.out.println(nextPrime(num));
+    }
+}
 
 
 
