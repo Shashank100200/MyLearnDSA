@@ -25,32 +25,32 @@ import java.util.*;
 //}
 
 //3. Solve the problem of finding the maximum element in an array.
-public class PracticeInArrays {
-    public static void main(String[] args){
-        int[] array={1,5,8,3,2,4};
-
-        int max = array[0];
-        for(int i=0;i< array.length;i++){
-            if(array[i]>max){
-                max = array[i];
-            }
-        }
-        System.out.println("Max value is :"+max);
-    }
-}
-
-//OR
 //public class PracticeInArrays {
 //    public static void main(String[] args){
 //        int[] array={1,5,8,3,2,4};
 //
-//        int max = Integer.MIN_VALUE;
-//
-//        for(int i=0;i<array.length;i++){
-//            if(array[i] > max){
+//        int max = array[0];
+//        for(int i=0;i< array.length;i++){
+//            if(array[i]>max){
 //                max = array[i];
 //            }
 //        }
-//        System.out.println(max);
+//        System.out.println("Max value is :"+max);
 //    }
 //}
+
+//OR
+public class PracticeInArrays {
+    public static void main(String[] args){
+        int[] array={1,5,8,3,2,4};
+
+        int max = Integer.MIN_VALUE;
+
+        for(int i=0;i<array.length;i++){
+            if(array[i] > max){
+                max = array[i];
+            }
+        }
+        System.out.println(max);
+    }
+}
