@@ -56,24 +56,25 @@ import java.util.*;
 //}
 
 //4. Write a program to remove duplicate elements from an array.
-public class PracticeInArrays {
-    public static void main(String[] args){
-        int[] array = {11,22,22,1,3,3,4,11};
+//public class PracticeInArrays {
+//    public static void main(String[] args){
+//        int[] array = {11,22,22,1,3,3,4,11};
+//
+//        for(int i=0;i<array.length;i++){
+//            boolean isDuplicate = false;
+//            for(int j=0;j<i;j++){
+//                if(array[i]==array[j]){
+//                    isDuplicate = true;
+//                    break;
+//                }
+//            }
+//            if(!isDuplicate){
+//                System.out.print(array[i]+" ");
+//            }
+//        }
+//    }
+//}
 
-        for(int i=0;i<array.length;i++){
-            boolean isDuplicate = false;
-            for(int j=0;j<i;j++){
-                if(array[i]==array[j]){
-                    isDuplicate = true;
-                    break;
-                }
-            }
-            if(!isDuplicate){
-                System.out.print(array[i]+" ");
-            }
-        }
-    }
-}
 //Dry Run for above code
 //Certainly! Let's do a step-by-step dry run of the given program:
 //
@@ -142,4 +143,16 @@ public class PracticeInArrays {
 //        ```
 //
 //        The program successfully removes duplicate elements from the array while maintaining the order of the original elements.
+
+//public class PracticeInArrays {
+//    public static void main(String[] args){
+//        boolean isDuplicate = false;
+//
+//        isDuplicate = true;
+//
+//        System.out.print(!isDuplicate);//here its giving false therefore in the above code the isDuplicate value are printing
+//    }
+//}
+
+//5. Implement an algorithm to rotate the elements of an array to the right.
 
