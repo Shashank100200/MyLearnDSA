@@ -14,13 +14,43 @@ import java.util.*;
 
 
 //2. Implement a function to reverse the elements of an array.
+//public class PracticeInArrays {
+//    public static void main(String[] args){
+//        int[] array={1,2,3,4,5};
+//
+//        for(int i= array.length-1;i>=0;i--){
+//            System.out.print(array[i]+" ");
+//        }
+//    }
+//}
+
+//3. Solve the problem of finding the maximum element in an array.
 public class PracticeInArrays {
     public static void main(String[] args){
-        int[] array={1,2,3,4,5};
+        int[] array={1,5,8,3,2,4};
 
-        for(int i= array.length-1;i>=0;i--){
-            System.out.print(array[i]+" ");
+        int max = array[0];
+        for(int i=0;i< array.length;i++){
+            if(array[i]>max){
+                max = array[i];
+            }
         }
+        System.out.println("Max value is :"+max);
     }
 }
 
+//OR
+//public class PracticeInArrays {
+//    public static void main(String[] args){
+//        int[] array={1,5,8,3,2,4};
+//
+//        int max = Integer.MIN_VALUE;
+//
+//        for(int i=0;i<array.length;i++){
+//            if(array[i] > max){
+//                max = array[i];
+//            }
+//        }
+//        System.out.println(max);
+//    }
+//}
