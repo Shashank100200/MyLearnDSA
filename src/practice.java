@@ -427,6 +427,99 @@ import java.math.*;
 //    }
 //}
 
+//1 sum of each digit raised to the power of itself in a given number
+//public class practice {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter a number:");
+//        int num = sc.nextInt();
+//
+//        int originalNum = num;
+//        int sum = 0;
+//
+//        while (num > 0) {
+//            int digit = num % 10;
+//            int power = digit;
+//
+//            if (power > 0) {
+//                sum = sum + (int) Math.pow(digit, power);
+//            }
+//
+//            num /= 10; // Update num by removing the last digit
+//        }
+//        System.out.println("The sum of digits raised to the power of themselves in " + originalNum + " is: " + sum);
+//    }
+//}
+
+//2 check its armstrong
+//public class practice {
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter number :");
+//        int num = sc.nextInt();
+//        int copyNum = num;
+//        int exp = num%10;
+//
+//        int sum=0;
+//        while(copyNum>0){
+//            int digi = copyNum%10;
+//            sum += Math.pow(digi,exp);
+//            copyNum = copyNum/10;
+//        }
+//        if(sum == num){
+//            System.out.println("Is an armstrong number");
+//        }else{
+//            System.out.println("Not an Armstrong number");
+//        }
+//    }
+//}
+
+// public class practice {
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter the number :");
+//         int num = sc.nextInt();
+//
+//         boolean isPrime = true;
+//         for(int i=2;i<num;i++){
+//             if(num%i==0){
+//                 isPrime = false;
+//             }
+//         }
+//         if(isPrime){
+//             System.out.println("is prime");
+//         }else{
+//             System.out.println("not prime");
+//         }
+//     }
+//}
+
+//Write a program to find if a number is a power of 2 or not.
+//Write a program to count the number of 1’s in a binary representation of the number.
+public class practice {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number :");
+        int num = sc.nextInt();
+
+        int count = 0;
+        while(num>0){
+            int rem = num%10;
+            if(rem==1){
+                count++;
+            }
+            num/=10;
+        }
+        System.out.println(count);
+    }
+}
+
+
+
+
+
+
+
 
 
 
