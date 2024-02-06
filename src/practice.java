@@ -514,6 +514,24 @@ import java.math.*;
 //    }
 //}
 
+public class practice {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 4, 6, 3, 7, 8};
+
+        for (int i = 1; i <= array.length + 1; i++) {
+            int j;
+            for (j = 0; j < array.length; j++) {
+                if (i == array[j]) {
+                    break;
+                }
+            }
+            if (j == array.length) {
+                System.out.println(i);
+            }
+        }
+    }
+}
+
 
 
 
