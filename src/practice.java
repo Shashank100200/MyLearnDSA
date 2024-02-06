@@ -496,23 +496,25 @@ import java.math.*;
 
 //Write a program to find if a number is a power of 2 or not.
 //Write a program to count the number of 1’s in a binary representation of the number.
-public class practice {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number :");
-        int num = sc.nextInt();
+//public class practice {
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter number :");
+//        int num = sc.nextInt();
+//
+//        int count = 0;
+//        while(num>0){
+//            int rem = num%10;
+//            if(rem==1){
+//                count++;
+//            }
+//            num/=10;
+//        }
+//        System.out.println(count);
+//    }
+//}
 
-        int count = 0;
-        while(num>0){
-            int rem = num%10;
-            if(rem==1){
-                count++;
-            }
-            num/=10;
-        }
-        System.out.println(count);
-    }
-}
+
 
 
 
