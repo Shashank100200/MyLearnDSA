@@ -109,17 +109,37 @@
 
 
 //program to find sum of n number
+//public class recusrsion {
+//    static int sumOfn(int n){
+//        if(n == 1){
+//            return 1;
+//        }
+//        int sum = sumOfn(n-1);
+//        return n + sum;
+//    }
+//
+//    public static void main(String[] args) {
+//        int ans = sumOfn(5);
+//        System.out.println(ans);
+//    }
+//}
+
+//Fibonacchi of a nth number
 public class recusrsion {
-    static int sumOfn(int n){
+    static int fib(int n){
         if(n == 1){
             return 1;
         }
-        int sum = sumOfn(n-1);
-        return n + sum;
+        if(n == 2){
+            return 1;
+        }
+        int fibans1 = fib(n-1);
+        int fibans2 = fib(n-2);
+        return fibans1 + fibans2;
     }
 
     public static void main(String[] args) {
-        int ans = sumOfn(5);
+        int ans = fib(5);
         System.out.println(ans);
     }
 }
