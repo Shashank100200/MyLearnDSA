@@ -93,17 +93,34 @@
 //}
 
 //1. Write a Java program to calculate the factorial of a number using recursion.
-public class recusrsion{
-    static int fact(int n){
-        if(n ==  0){
+//public class recusrsion{
+//    static int fact(int n){
+//        if(n ==  0){
+//            return 1;
+//        }
+//        int parans = fact(n-1);
+//        return parans * n;
+//    }
+//    public static void main(String[] args){
+//       int ans = fact(5);
+//       System.out.println(ans);
+//    }
+//}
+
+
+//program to find sum of n number
+public class recusrsion {
+    static int sumOfn(int n){
+        if(n == 1){
             return 1;
         }
-        int parans = fact(n-1);
-        return parans * n;
+        int sum = sumOfn(n-1);
+        return n + sum;
     }
-    public static void main(String[] args){
-       int ans = fact(5);
-       System.out.println(ans);
+
+    public static void main(String[] args) {
+        int ans = sumOfn(5);
+        System.out.println(ans);
     }
 }
 
