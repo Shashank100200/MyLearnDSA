@@ -73,22 +73,37 @@
 //    }
 //}
 
-public class recusrsion {
-    public static int calPow(int x,int n){
-        if(n == 0){
+//public class recusrsion {
+//    public static int calPow(int x,int n){
+//        if(n == 0){
+//            return 1;
+//        }
+//        if(x == 0){
+//            return 0;
+//        }
+//       int pownm1 = calPow(x,n-1);
+//       int pown = x * pownm1;
+//       return pown;
+//    }
+//    public static void main(String[] args){
+//        int x = 2,n = 5;
+//        int inp = calPow(x,n);
+//        System.out.println(inp);
+//    }
+//}
+
+//1. Write a Java program to calculate the factorial of a number using recursion.
+public class recusrsion{
+    static int fact(int n){
+        if(n ==  0){
             return 1;
         }
-        if(x == 0){
-            return 0;
-        }
-       int pownm1 = calPow(x,n-1);
-       int pown = x * pownm1;
-       return pown;
+        int parans = fact(n-1);
+        return parans * n;
     }
     public static void main(String[] args){
-        int x = 2,n = 5;
-        int inp = calPow(x,n);
-        System.out.println(inp);
+       int ans = fact(5);
+       System.out.println(ans);
     }
 }
 
