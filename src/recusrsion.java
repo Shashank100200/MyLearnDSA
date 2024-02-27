@@ -199,14 +199,23 @@ class Recursion1 {
 //}
 
 //8. Implement a recursive function to check if a given string is a palindrome.
-//public class recusrsion {
-//    static boolean isPalindrome(int l,int n,String s){
-//        if(l >= n){
-//            return true;
-//        }
-//        return isPalindrome(l+1,n-1,s);
-//    }
-//}
+public class recusrsion {
+    static boolean isPalindrome(String str){
+        if(str.length() == 0 || str.length() == 1){
+            return true;
+        }
+        if(str.charAt(0) == str.charAt(str.length()-1)){
+            return isPalindrome(str.substring(1,str.length()-1));
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        String str1 = "radar";
+        System.out.println(isPalindrome(str1));
+    }
+}
+
 
 
 
