@@ -107,6 +107,19 @@
 //    }
 //}
 
+class Recursion1 {
+    public static void printFactorial(int a, int b, int n) {
+        if(n == 0) {
+            return;
+        }
+        System.out.println(a);
+        printFactorial(b, a+b, n-1);
+    }
+    public static void main(String args[]) {
+        printFactorial(0, 1, 5);
+    }
+}
+
 
 //program to find sum of n number
 //public class recusrsion {
@@ -164,26 +177,37 @@
 //}
 
 
-public class recusrsion {
-    static int power(int x,int n){
-        if(x == 0){
-            return 0;
-        }
-        if(n == 0){
-            return 1;
-        }
-        int temp = power(x,n/2);
-        if(n%2 == 1){
-            return temp*temp*x;
-        }
-        return temp*temp;
-    }
+//public class recusrsion {
+//    static int power(int x,int n){
+//        if(x == 0){
+//            return 0;
+//        }
+//        if(n == 0){
+//            return 1;
+//        }
+//        int temp = power(x,n/2);
+//        if(n%2 == 1){
+//            return temp*temp*x;
+//        }
+//        return temp*temp;
+//    }
+//
+//    public static void main(String[] args) {
+//        int ans = power(2,5);
+//        System.out.println(ans);
+//    }
+//}
 
-    public static void main(String[] args) {
-        int ans = power(2,5);
-        System.out.println(ans);
-    }
-}
+//8. Implement a recursive function to check if a given string is a palindrome.
+//public class recusrsion {
+//    static boolean isPalindrome(int l,int n,String s){
+//        if(l >= n){
+//            return true;
+//        }
+//        return isPalindrome(l+1,n-1,s);
+//    }
+//}
+
 
 
 
