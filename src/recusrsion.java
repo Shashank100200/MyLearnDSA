@@ -107,6 +107,8 @@
 //    }
 //}
 
+import java.util.Arrays;
+
 class Recursion1 {
     public static void printFactorial(int a, int b, int n) {
         if(n == 0) {
@@ -199,23 +201,44 @@ class Recursion1 {
 //}
 
 //8. Implement a recursive function to check if a given string is a palindrome.
+//public class recusrsion {
+//    static boolean isPalindrome(String str){
+//        if(str.length() == 0 || str.length() == 1){
+//            return true;
+//        }
+//        if(str.charAt(0) == str.charAt(str.length()-1)){
+//            return isPalindrome(str.substring(1,str.length()-1));
+//        }
+//        return false;
+//    }
+//
+//    public static void main(String[] args) {
+//        String str1 = "radar";
+//        System.out.println(isPalindrome(str1));
+//    }
+//}
+
+//Recursion function to reverse an array
 public class recusrsion {
-    static boolean isPalindrome(String str){
-        if(str.length() == 0 || str.length() == 1){
-            return true;
+    public static void arrayHelper(int[] arr){
+        reverseArray(arr,0,arr.length-1);
+    }
+    public static void reverseArray(int[] arr,int start,int end){
+        if (start >= end) {
+            return;
         }
-        if(str.charAt(0) == str.charAt(str.length()-1)){
-            return isPalindrome(str.substring(1,str.length()-1));
-        }
-        return false;
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        reverseArray(arr,start+1,end-1);
     }
 
     public static void main(String[] args) {
-        String str1 = "radar";
-        System.out.println(isPalindrome(str1));
+        int[] array={1,2,3,4,5};
+        arrayHelper(array);
+        System.out.println(java.util.Arrays.toString(array));
     }
 }
-
 
 
 
