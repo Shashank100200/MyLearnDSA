@@ -109,18 +109,18 @@
 
 import java.util.Arrays;
 
-class Recursion1 {
-    public static void printFactorial(int a, int b, int n) {
-        if(n == 0) {
-            return;
-        }
-        System.out.println(a);
-        printFactorial(b, a+b, n-1);
-    }
-    public static void main(String args[]) {
-        printFactorial(0, 1, 5);
-    }
-}
+//class Recursion1 {
+//    public static void printFactorial(int a, int b, int n) {
+//        if(n == 0) {
+//            return;
+//        }
+//        System.out.println(a);
+//        printFactorial(b, a+b, n-1);
+//    }
+//    public static void main(String args[]) {
+//        printFactorial(0, 1, 5);
+//    }
+//}
 
 
 //program to find sum of n number
@@ -240,6 +240,7 @@ class Recursion1 {
 //    }
 //}
 
+//7. Write a program to reverse a number using recursion.
 //public class recusrsion {
 //    static int revNum(int num,int reversed){
 //        if(num == 0){
@@ -258,23 +259,42 @@ class Recursion1 {
 //    }
 //}
 
-//Tower of Hanoi
+//7. Write a program to reverse a string using recursion.
 public class recusrsion {
-    static void TowerOfHanoi(int n,String src,String helper,String dest){
-        if(n == 1){
-            System.out.println("Disk "+ n + " transferd from "+src+" to "+dest);
+    static void rev(String str,int idx){
+        if(idx == 0){
+            System.out.println(str.charAt(idx));
             return;
         }
-        TowerOfHanoi(n-1,src,dest,helper);
-        System.out.println("Disk "+ n + " transferd from "+src+" to "+dest);
-        TowerOfHanoi(n-1,helper,src,dest);
+        System.out.print(str.charAt(idx));
+        rev(str,idx-1);
     }
 
     public static void main(String[] args) {
-        int n = 2;
-        TowerOfHanoi(n,"A","B","C");
+        String str = "reva";
+        rev(str,str.length()-1);
     }
 }
+
+//Tower of Hanoi
+//public class recusrsion {
+//    static void TowerOfHanoi(int n,String src,String helper,String dest){
+//        if(n == 1){
+//            System.out.println("Disk "+ n + " transferd from "+src+" to "+dest);
+//            return;
+//        }
+//        TowerOfHanoi(n-1,src,dest,helper);
+//        System.out.println("Disk "+ n + " transferd from "+src+" to "+dest);
+//        TowerOfHanoi(n-1,helper,src,dest);
+//    }
+//
+//    public static void main(String[] args) {
+//        int n = 3;
+//        TowerOfHanoi(n,"A","B","C");
+//    }
+//}
+
+
 
 
 
