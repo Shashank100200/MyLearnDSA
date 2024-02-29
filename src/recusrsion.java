@@ -213,32 +213,55 @@ class Recursion1 {
 //    }
 //
 //    public static void main(String[] args) {
-//        String str1 = "radar";
+//        String str1 = "malayalam";
 //        System.out.println(isPalindrome(str1));
 //    }
 //}
 
 //Recursion function to reverse an array
+//public class recusrsion {
+//    public static void arrayHelper(int[] arr){
+//        reverseArray(arr,0,arr.length-1);
+//    }
+//    public static void reverseArray(int[] arr,int start,int end){
+//        if (start >= end) {
+//            return;
+//        }
+//        int temp = arr[start];
+//        arr[start] = arr[end];
+//        arr[end] = temp;
+//        reverseArray(arr,start+1,end-1);
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] array={1,2,3,4,5};
+//        arrayHelper(array);
+//        System.out.println(java.util.Arrays.toString(array));
+//    }
+//}
+
 public class recusrsion {
-    public static void arrayHelper(int[] arr){
-        reverseArray(arr,0,arr.length-1);
-    }
-    public static void reverseArray(int[] arr,int start,int end){
-        if (start >= end) {
-            return;
+    static int revNum(int num,int reversed){
+        if(num == 0){
+            return reversed;
         }
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-        reverseArray(arr,start+1,end-1);
+        int digi = num%10;
+        num /=10;
+        reversed=reversed*10+digi;
+        return revNum(num,reversed);
     }
 
-    public static void main(String[] args) {
-        int[] array={1,2,3,4,5};
-        arrayHelper(array);
-        System.out.println(java.util.Arrays.toString(array));
+    public static void main(String[] args){
+        int num = 1234;
+        int reversed = 0;
+        System.out.println(revNum(num,reversed));
     }
 }
+
+
+
+
+
 
 
 
