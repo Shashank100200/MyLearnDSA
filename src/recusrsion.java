@@ -240,21 +240,39 @@ class Recursion1 {
 //    }
 //}
 
+//public class recusrsion {
+//    static int revNum(int num,int reversed){
+//        if(num == 0){
+//            return reversed;
+//        }
+//        int digi = num%10;
+//        num /=10;
+//        reversed=reversed*10+digi;
+//        return revNum(num,reversed);
+//    }
+//
+//    public static void main(String[] args){
+//        int num = 1234;
+//        int reversed = 0;
+//        System.out.println(revNum(num,reversed));
+//    }
+//}
+
+//Tower of Hanoi
 public class recusrsion {
-    static int revNum(int num,int reversed){
-        if(num == 0){
-            return reversed;
+    static void TowerOfHanoi(int n,String src,String helper,String dest){
+        if(n == 1){
+            System.out.println("Disk "+ n + " transferd from "+src+" to "+dest);
+            return;
         }
-        int digi = num%10;
-        num /=10;
-        reversed=reversed*10+digi;
-        return revNum(num,reversed);
+        TowerOfHanoi(n-1,src,dest,helper);
+        System.out.println("Disk "+ n + " transferd from "+src+" to "+dest);
+        TowerOfHanoi(n-1,helper,src,dest);
     }
 
-    public static void main(String[] args){
-        int num = 1234;
-        int reversed = 0;
-        System.out.println(revNum(num,reversed));
+    public static void main(String[] args) {
+        int n = 2;
+        TowerOfHanoi(n,"A","B","C");
     }
 }
 
