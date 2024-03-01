@@ -260,21 +260,21 @@ import java.util.Arrays;
 //}
 
 //7. Write a program to reverse a string using recursion.
-public class recusrsion {
-    static void rev(String str,int idx){
-        if(idx == 0){
-            System.out.println(str.charAt(idx));
-            return;
-        }
-        System.out.print(str.charAt(idx));
-        rev(str,idx-1);
-    }
-
-    public static void main(String[] args) {
-        String str = "reva";
-        rev(str,str.length()-1);
-    }
-}
+//public class recusrsion {
+//    static void rev(String str,int idx){
+//        if(idx == 0){
+//            System.out.println(str.charAt(idx));
+//            return;
+//        }
+//        System.out.print(str.charAt(idx));
+//        rev(str,idx-1);
+//    }
+//
+//    public static void main(String[] args) {
+//        String str = "reva";
+//        rev(str,str.length()-1);
+//    }
+//}
 
 //Tower of Hanoi
 //public class recusrsion {
@@ -293,6 +293,25 @@ public class recusrsion {
 //        TowerOfHanoi(n,"A","B","C");
 //    }
 //}
+
+//3. Write a recursive method to calculate the sum of digits of a given number.
+public class recusrsion {
+    static int sumOfDig(int n,int sum){
+        if(n == 0){
+            return sum;
+        }
+        int digi = n%10;
+        n = n/10;
+        sum = sum + digi;
+        return sumOfDig(n,sum);
+    }
+
+    public static void main(String[] args) {
+        int num = 1234;
+        System.out.println(sumOfDig(num,0));
+    }
+}
+
 
 
 
