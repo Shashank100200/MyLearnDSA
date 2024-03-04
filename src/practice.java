@@ -557,34 +557,55 @@ import java.util.regex.*;
 
     //write a program using constructor method for printing name,age,id,address,cllg,name,skills for initialising different objects for each
 
-    class Student4{
-        String name;
-        int age;
-        int id;
-        String address;
-        String cllg_name;
-        String skills;
+//    class Student4{
+//        String name;
+//        int age;
+//        int id;
+//        String address;
+//        String cllg_name;
+//        String skills;
+//
+//        Student4(String n,int a,int i,String add,String cn,String sk){
+//            name = n;
+//            id = i;
+//            age = a;
+//            address = add;
+//            cllg_name=cn;
+//            skills = sk;
+//        }
+//        void display(){
+//            System.out.println(name+" "+age+" "+id+" "+address+" "+cllg_name+" "+skills);
+//        }
+//
+//        public static void main(String[] args) {
+//            Student4 s1 = new Student4("SingKing",24,11,"Yelahanka","Reva","Java");
+//            Student4 s2 = new Student4("Suhas",25,22,"Bell Road","MS Ramaiha","Cpp");
+//
+//            s1.display();
+//            s2.display();
+//        }
+//    }
 
-        Student4(String n,int a,int i,String add,String cn,String sk){
-            name = n;
-            id = i;
-            age = a;
-            address = add;
-            cllg_name=cn;
-            skills = sk;
+public class practice {
+    public static void main(String[] args) {
+        int[] array = {1,2,3,4,5,5,5,6};
+
+        boolean isArranged = true;
+        for(int i=0;i<array.length-1;i++){
+            int currEle = array[i];
+            int currNext = array[i+1];
+
+            if(currEle > currNext){
+                isArranged = false;
+            }
         }
-        void display(){
-            System.out.println(name+" "+age+" "+id+" "+address+" "+cllg_name+" "+skills);
-        }
-
-        public static void main(String[] args) {
-            Student4 s1 = new Student4("SingKing",24,11,"Yelahanka","Reva","Java");
-            Student4 s2 = new Student4("Suhas",25,22,"Bell Road","MS Ramaiha","Cpp");
-
-            s1.display();
-            s2.display();
+        if(isArranged){
+            System.out.println("Arranged");
+        }else{
+            System.out.println("NA");
         }
     }
+}
 
 
 
