@@ -533,6 +533,60 @@ import java.util.regex.*;
 //}
 
 
+//    class Studdent3{
+//        int id;
+//        String name;
+//
+//        //Creating Parameterized constructor
+//        Studdent3(int i,String n){
+//            id = i;
+//            name = n;
+//        }
+//        //method to display values
+//        void display(){
+//            System.out.println(id+" "+name);
+//        }
+//
+//        public static void main(String[] args) {
+//            Studdent3 s1= new Studdent3(111,"Satish");
+//            Studdent3 s2 = new Studdent3(222,"Devid");
+//            s1.display();
+//            s2.display();
+//        }
+//    }
+
+    //write a program using constructor method for printing name,age,id,address,cllg,name,skills for initialising different objects for each
+
+    class Student4{
+        String name;
+        int age;
+        int id;
+        String address;
+        String cllg_name;
+        String skills;
+
+        Student4(String n,int a,int i,String add,String cn,String sk){
+            name = n;
+            id = i;
+            age = a;
+            address = add;
+            cllg_name=cn;
+            skills = sk;
+        }
+        void display(){
+            System.out.println(name+" "+age+" "+id+" "+address+" "+cllg_name+" "+skills);
+        }
+
+        public static void main(String[] args) {
+            Student4 s1 = new Student4("SingKing",24,11,"Yelahanka","Reva","Java");
+            Student4 s2 = new Student4("Suhas",25,22,"Bell Road","MS Ramaiha","Cpp");
+
+            s1.display();
+            s2.display();
+        }
+    }
+
+
 
 
 

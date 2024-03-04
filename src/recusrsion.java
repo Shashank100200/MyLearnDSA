@@ -295,22 +295,52 @@ import java.util.Arrays;
 //}
 
 //3. Write a recursive method to calculate the sum of digits of a given number.
+//public class recusrsion {
+//    static int sumOfDig(int n,int sum){
+//        if(n == 0){
+//            return sum;
+//        }
+//        int digi = n%10;
+//        n = n/10;
+//        sum = sum + digi;
+//        return sumOfDig(n,sum);
+//    }
+//
+//    public static void main(String[] args) {
+//        int num = 1234;
+//        System.out.println(sumOfDig(num,0));
+//    }
+//}
+
+//write a program to find first and last position of the element
 public class recusrsion {
-    static int sumOfDig(int n,int sum){
-        if(n == 0){
-            return sum;
+    public static int first = -1;
+    public static int last = -1;
+
+    public static void findPos(String str,int idx,char ele){
+        if(idx == str.length()){
+            System.out.println(first);
+            System.out.println(last);
+            return;
         }
-        int digi = n%10;
-        n = n/10;
-        sum = sum + digi;
-        return sumOfDig(n,sum);
+        char currChar = str.charAt(idx);
+        if(currChar == ele){
+            if(first == -1){
+                first = idx;
+            }
+            else{
+                last = idx;
+            }
+        }
+        findPos(str,idx + 1,ele);
     }
 
     public static void main(String[] args) {
-        int num = 1234;
-        System.out.println(sumOfDig(num,0));
+        String str = "abbaskjnaksjaskadf";
+        findPos(str,0,'a');
     }
 }
+
 
 
 
