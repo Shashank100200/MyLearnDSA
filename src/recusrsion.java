@@ -342,26 +342,77 @@ import java.util.Arrays;
 //}
 
 //check array is arranged or not
-public class recusrsion {
-    public static void arrayhelper(int[] arr,int idx){
-        boolean ans = isArranged(arr,0);
-        System.out.println("isArranged :"+ans);
-    }
-    public static boolean isArranged(int[] arr,int idx){
-        if(idx > arr.length-1){
-            return true;
-        }
-        if(arr[idx] > arr[idx+1]){
-            return false;
-        }
-        return isArranged(arr,idx+1);
-    }
+//public class recusrsion {
+//    public static void arrayhelper(int[] arr,int idx){
+//        boolean ans = isArranged(arr,0);
+//        System.out.println("isArranged :"+ans);
+//    }
+//    public static boolean isArranged(int[] arr,int idx){
+//        if(idx > arr.length-1){
+//            return true;
+//        }
+//        if(arr[idx] > arr[idx+1]){
+//            return false;
+//        }
+//        return isArranged(arr,idx+1);
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] array = {1,2,3,2,5};
+//        arrayhelper(array,0);
+//    }
+//}
 
-    public static void main(String[] args) {
-        int[] array = {1,2,3,2,5};
-        arrayhelper(array,0);
-    }
-}
+//public class recusrsion {
+//    public static boolean isArranged(int[] arr,int idx){
+//        if(idx > arr.length-1){
+//            return false;
+//        }
+//        if(arr[idx] < arr[idx+1]){
+//            return true;
+//        }
+//        return isArranged(arr,idx+1);
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] array = {1,2,3,4,5};
+//        isArranged(array,0);
+//    }
+//}
+
+//public class recusrsion {
+//    public static int[] kthOccurrence(int X, int[] arr, int[] query_values) {
+//        int[] result = new int[query_values.length];
+//        Arrays.fill(result, -1);
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] == X) {
+//                for (int j = 0; j < query_values.length; j++) {
+//                    if (query_values[j] > 0) {
+//                        query_values[j]--;
+//                        if (query_values[j] == 0) {
+//                            result[j] = i + 1; // 1-based index
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        return result;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr = {1, 2, 20, 8, 8, 1, 2, 5, 8, 0};
+//        int X = 8;
+//        int[] query_values = {100, 4, 2};
+//        int[] result = kthOccurrence(X, arr, query_values);
+//        for (int i : result) {
+//            System.out.print(i + " ");
+//        }
+//        // Output: -1 -1 5
+//    }
+//}
+
+
 
 
 
