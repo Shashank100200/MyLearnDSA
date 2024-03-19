@@ -629,53 +629,55 @@ import java.util.regex.*;
 //    }
 //}
 
-//public class practice {
-//    public static void main(String[] args) {
-//        String word = "We are reva students";
-//
-//        char[] arr = word.toCharArray();
-//        int f = 0;
-//
-//        for(int i=0;i< arr.length;i++){
-//            if(i==0 && arr[i] != ' ' || arr[i] != ' ' && arr[i - 1] == ' '){
-//                System.out.print(arr[i]);
-//            }
-//            if(i == arr.length-1 && arr[i] != ' ' || arr[i]!= ' ' && arr[i+1] == ' '){
-//                System.out.print(arr[i]);
-//                char temp = arr[i];
-//                arr[i] = arr[f];
-//                arr[f] = temp;
-//            }
-//        }
-//        System.out.print(word);
-//        System.out.print(arr);
-//    }
-//}
+public class practice {
+    public static void main(String[] args) {
+        String word = "We are reva students";
+
+        char[] arr = word.toCharArray();
+        int f = 0;
+
+        for(int i=0;i< arr.length;i++){
+            if(i==0 && arr[i] != ' ' || arr[i] != ' ' && arr[i - 1] == ' '){
+                System.out.print(arr[i]);
+            }
+            if(i == arr.length-1 && arr[i] != ' ' || arr[i]!= ' ' && arr[i+1] == ' '){
+                System.out.print(arr[i]);
+                char temp = arr[i];
+                arr[i] = arr[f];
+                arr[f] = temp;
+            }
+        }
+        System.out.print(word);
+        System.out.print(arr);
+    }
+}
 
 //to print the repeating element in the array
 
-public class practice {
-    public static void main(String[] args) {
-        String word = "Student of reva university";
+//public class practice {
+//    public static void main(String[] args) {
+//        String word = "Student of reva university";
+//
+//        char[] array = word.toCharArray();
+//        boolean[] tem = new boolean[array.length];
+//
+//        for(int i=0;i< array.length;i++){
+//            for(int j=0;j< array.length;j++){
+//                if(i != j && array[i] == array[j]){
+//                    tem[i] = true;
+//                }
+//            }
+//        }
+//        for(int i=0;i<array.length;i++){
+//            if(tem[i] == true){
+//                array[i] = '$';
+//            }
+//        }
+//        System.out.println(array);
+//    }
+//}
 
-        char[] array = word.toCharArray();
-        boolean[] tem = new boolean[array.length];
 
-        for(int i=0;i< array.length;i++){
-            for(int j=0;j< array.length;j++){
-                if(i != j && array[i] == array[j]){
-                    tem[i] = true;
-                }
-            }
-        }
-        for(int i=0;i<array.length;i++){
-            if(tem[i] == true){
-                array[i] = '$';
-            }
-        }
-        System.out.println(array);
-    }
-}
 
 
 
