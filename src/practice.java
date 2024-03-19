@@ -608,49 +608,49 @@ import java.util.regex.*;
 //}
 
 //form 2 numbers from the digits minimize the sum of those two num in given array
-//public class practice {
-//    public static void main(String[] args) {
-//        int[] array = {6,8,4,5,2,3};
-//
-//        Arrays.sort(array);
-//        int num1 = 0;
-//        int num2 = 0;
-//        System.out.println(array);
-//
-//        for(int i =0;i< array.length;i++){
-//            if(i%2 == 0){
-//                num1 = num1*10+array[i];
-//            }else{
-//                num2 = num2*10 + array[i];
-//            }
-//        }
-//        int sum = num1+num2;
-//        System.out.println("Minimize sum is :"+ sum);
-//    }
-//}
-
 public class practice {
     public static void main(String[] args) {
-        String word = "We are reva students";
+        int[] array = {6,8,4,5,2,3};
 
-        char[] arr = word.toCharArray();
-        int f = 0;
+        Arrays.sort(array);
+        int num1 = 0;
+        int num2 = 0;
+        System.out.println(array);
 
-        for(int i=0;i< arr.length;i++){
-            if(i==0 && arr[i] != ' ' || arr[i] != ' ' && arr[i - 1] == ' '){
-                System.out.print(arr[i]);
-            }
-            if(i == arr.length-1 && arr[i] != ' ' || arr[i]!= ' ' && arr[i+1] == ' '){
-                System.out.print(arr[i]);
-                char temp = arr[i];
-                arr[i] = arr[f];
-                arr[f] = temp;
+        for(int i =0;i< array.length;i++){
+            if(i%2 == 0){
+                num1 = num1*10+array[i];
+            }else{
+                num2 = num2*10 + array[i];
             }
         }
-        System.out.print(word);
-        System.out.print(arr);
+        int sum = num1+num2;
+        System.out.println("Minimize sum is :"+ sum);
     }
 }
+
+//public class practice {
+//    public static void main(String[] args) {
+//        String word = "We are reva students";
+//
+//        char[] arr = word.toCharArray();
+//        int f = 0;
+//
+//        for(int i=0;i< arr.length;i++){
+//            if(i==0 && arr[i] != ' ' || arr[i] != ' ' && arr[i - 1] == ' '){
+//                System.out.print(arr[i]);
+//            }
+//            if(i == arr.length-1 && arr[i] != ' ' || arr[i]!= ' ' && arr[i+1] == ' '){
+//                System.out.print(arr[i]);
+//                char temp = arr[i];
+//                arr[i] = arr[f];
+//                arr[f] = temp;
+//            }
+//        }
+//        System.out.print(word);
+//        System.out.print(arr);
+//    }
+//}
 
 //to print the repeating element in the array
 
