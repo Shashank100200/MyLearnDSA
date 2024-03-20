@@ -412,24 +412,26 @@ import java.util.Arrays;
 //    }
 //}
 
-//check weathe the given array is strictly sorted
-public class recusrsion {
-    public static boolean isSorted(int array[],int idx){
-        if(idx == array.length-1){
-            return true;
-        }
-        if(array[idx] <= array[idx+1]){
-            return isSorted(array,idx+1);
-        }else{
-            return false;
-        }
-    }
+//check weather the given array is strictly sorted
+//public class recusrsion {
+//    public static boolean isSorted(int array[],int idx){
+//        if(idx == array.length-1){
+//            return true;
+//        }
+//        if(array[idx] <= array[idx+1]){
+//            return isSorted(array,idx+1);
+//        }else{
+//            return false;
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        int array[] = {1,2,3,4};
+//        System.out.println(isSorted(array,0));
+//    }
+//}
 
-    public static void main(String[] args) {
-        int array[] = {1,2,3,4};
-        System.out.println(isSorted(array,0));
-    }
-}
+
 
 
 

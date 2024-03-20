@@ -791,7 +791,23 @@ import java.util.regex.*;
 //    }
 //}
 
-
+public class practice {
+    public static void main(String[] args) {
+        int rev = 0;
+        int num = 123;
+        while(num > 0){
+            int n = num%10;
+            rev = rev*10 + n;
+            num /= 10;
+        }
+        int digi = rev%10;
+        if(digi % 2 == 0){
+            System.out.println("Even");
+        }else{
+            System.out.println("Odd");
+        }
+    }
+}
 
 
 
