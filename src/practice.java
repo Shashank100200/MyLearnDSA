@@ -762,34 +762,35 @@ import java.util.regex.*;
 //    }
 //}
 
-public class practice {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String word = sc.nextLine();
+//public class practice {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        String word = sc.nextLine();
+//
+//        char[] array = word.toCharArray();
+//
+//        int count1 = 0;
+//        int count2 = 0;
+//
+//        for(int i=0;i< array.length;i++){
+//            char curr = array[i];
+//            if(curr == '#'){
+//                count1++;
+//            } else if (curr == '*') {
+//                count2++;
+//            }
+//        }
+//        int mat = count1 - count2;
+//        if(mat > 1){
+//            System.out.println("Positive");
+//        } else if (mat < 0) {
+//            System.out.println("Negative");
+//        }else{
+//            System.out.println("Zero");
+//        }
+//    }
+//}
 
-        char[] array = word.toCharArray();
-
-        int count1 = 0;
-        int count2 = 0;
-
-        for(int i=0;i< array.length;i++){
-            char curr = array[i];
-            if(curr == '#'){
-                count1++;
-            } else if (curr == '*') {
-                count2++;
-            }
-        }
-        int mat = count1 - count2;
-        if(mat > 1){
-            System.out.println("Positive");
-        } else if (mat < 0) {
-            System.out.println("Negative");
-        }else{
-            System.out.println("Zero");
-        }
-    }
-}
 
 
 

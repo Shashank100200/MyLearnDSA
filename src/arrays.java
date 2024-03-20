@@ -206,6 +206,43 @@ import java.util.*;
 //    }
 //}
 
+//        Stephan, a vampire, wants to maximize his power before battling his brother Damon. Vampires gain power from human blood,
+//        but Stephan wants to minimize the loss of human life while still being more powerful than Damon.
+//        Given the power levels of human blood in a town,
+//        determine the total max. power Stephan can gather before the battle
+//
+//        Input Format:
+//        The second line contains a Integer Array with n elements, denoting the one-digit power in every blood.
+//        Ex
+//        :- { 0, 9, 3, 5, 1, 2)
+//        Output Format:
+//        Output a single integer representing the total miximum power Stephan will gather before the battle
+
+public class arrays {
+    public static void main(String[] args) {
+        int[] array = {0,9,3,5,1,2};
+        Arrays.sort(array);
+
+        int stephanPow = 0;
+        int demonPow = 0;
+        int i = array.length-1;
+        for(int a:array){
+            demonPow += a;
+        }
+        while(stephanPow < demonPow){
+            demonPow -= array[i];
+            stephanPow += array[i];
+            i--;
+        }
+        System.out.println("Stephan Power :"+stephanPow);
+        System.out.println("Demon Power :"+demonPow);
+    }
+}
+
+
+
+
+
 
 
 
