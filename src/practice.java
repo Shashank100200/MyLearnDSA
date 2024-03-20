@@ -726,23 +726,23 @@ import java.util.regex.*;
 //    }
 //}
 
-public class practice {
-    public static void main(String[] args) {
-        int n = 20;
-
-        int num = 0;
-        int num2 = 0;
-        for(int i=1;i<=n;i++){
-            if(i%4 == 0){
-                num = num+i;
-            }else{
-                num2 = num2 + i;
-            }
-        }
-        int sum = num2-num;
-        System.out.println(sum);
-    }
-}
+//public class practice {
+//    public static void main(String[] args) {
+//        int n = 20;
+//
+//        int num = 0;
+//        int num2 = 0;
+//        for(int i=1;i<=n;i++){
+//            if(i%4 == 0){
+//                num = num+i;
+//            }else{
+//                num2 = num2 + i;
+//            }
+//        }
+//        int sum = num2-num;
+//        System.out.println(sum);
+//    }
+//}
 
 //public class practice {
 //    public static void main(String[] args) {
@@ -762,34 +762,34 @@ public class practice {
 //    }
 //}
 
-//public class practice {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        String word = sc.nextLine();
-//
-//        char[] array = word.toCharArray();
-//
-//        int count1 = 0;
-//        int count2 = 0;
-//
-//        for(int i=0;i< array.length;i++){
-//            char curr = array[i];
-//            if(curr == '#'){
-//                count1++;
-//            } else if (curr == '*') {
-//                count2++;
-//            }
-//        }
-//        int mat = count1 - count2;
-//        if(mat > 1){
-//            System.out.println("Positive");
-//        } else if (mat < 0) {
-//            System.out.println("Negative");
-//        }else{
-//            System.out.println("Zero");
-//        }
-//    }
-//}
+public class practice {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String word = sc.nextLine();
+
+        char[] array = word.toCharArray();
+
+        int count1 = 0;
+        int count2 = 0;
+
+        for(int i=0;i< array.length;i++){
+            char curr = array[i];
+            if(curr == '#'){
+                count1++;
+            } else if (curr == '*') {
+                count2++;
+            }
+        }
+        int mat = count1 - count2;
+        if(mat > 1){
+            System.out.println("Positive");
+        } else if (mat < 0) {
+            System.out.println("Negative");
+        }else{
+            System.out.println("Zero");
+        }
+    }
+}
 
 
 
