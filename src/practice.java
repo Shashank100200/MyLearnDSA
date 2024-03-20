@@ -608,62 +608,62 @@ import java.util.regex.*;
 //}
 
 //form 2 numbers from the digits minimize the sum of those two num in given array
-public class practice {
-    public static void main(String[] args) {
-        int[] array = {6,8,4,5,2,3};
-
-        Arrays.sort(array);
-        int num1 = 0;
-        int num2 = 0;
-        System.out.println(array);
-
-        for(int i =0;i< array.length;i++){
-            if(i%2 == 0){
-                num1 = num1*10+array[i];
-            }else{
-                num2 = num2*10 + array[i];
-            }
-        }
-        int sum = num1+num2;
-        System.out.println("Minimize sum is :"+ sum);
-    }
-}
+//public class practice {
+//    public static void main(String[] args) {
+//        int[] array = {6,8,4,5,2,3};
+//
+//        Arrays.sort(array);
+//        int num1 = 0;
+//        int num2 = 0;
+//        System.out.println(array);
+//
+//        for(int i =0;i< array.length;i++){
+//            if(i%2 == 0){
+//                num1 = num1*10+array[i];
+//            }else{
+//                num2 = num2*10 + array[i];
+//            }
+//        }
+//        int sum = num1+num2;
+//        System.out.println("Minimize sum is :"+ sum);
+//    }
+//}
 
 //public class practice {
 //    public static void main(String[] args) {
-//        String word = "We are reva students";
+//        String word = "we are reva students";  // eW  era aevr students
 //
 //        char[] arr = word.toCharArray();
 //        int f = 0;
 //
-//        for(int i=0;i< arr.length;i++){
+//        for(int i=0;i < arr.length;i++){
+//            //for finding first letter
 //            if(i==0 && arr[i] != ' ' || arr[i] != ' ' && arr[i - 1] == ' '){
 //                System.out.print(arr[i]);
 //            }
+//            //for finding last letter
 //            if(i == arr.length-1 && arr[i] != ' ' || arr[i]!= ' ' && arr[i+1] == ' '){
 //                System.out.print(arr[i]);
-//                char temp = arr[i];
-//                arr[i] = arr[f];
-//                arr[f] = temp;
 //            }
+//            char temp = arr[i];
+//            arr[i] = arr[f];
+//            arr[f] = temp;
 //        }
 //        System.out.print(word);
-//        System.out.print(arr);
 //    }
 //}
 
-//to print the repeating element in the array
-
+//to replace the repeating element in the array with $
 //public class practice {
 //    public static void main(String[] args) {
-//        String word = "Student of reva university";
+//        String word = "student of reva university";
 //
 //        char[] array = word.toCharArray();
 //        boolean[] tem = new boolean[array.length];
 //
 //        for(int i=0;i< array.length;i++){
 //            for(int j=0;j< array.length;j++){
-//                if(i != j && array[i] == array[j]){
+//                if(i != j && array[i] == array[j] && array[i] != ' '){
 //                    tem[i] = true;
 //                }
 //            }
@@ -676,6 +676,59 @@ public class practice {
 //        System.out.println(array);
 //    }
 //}
+
+//public class practice {
+//    public static void main(String[] args) {
+//        String word = "we are reva students";  // eW  era aevr students
+//
+//        char[] arr = word.toCharArray();
+//        int start = 0;
+//
+//        for(int i = 0; i < arr.length; i++) {
+//            // If current character is not a space and the previous character was a space (or it's the first character)
+//            if ((i == 0 && arr[i] != ' ') || (arr[i] != ' ' && arr[i - 1] == ' ')) {
+//                start = i; // Start of a word
+//            }
+//            // If current character is not a space and the next character is a space (or it's the last character)
+//            if ((i == arr.length - 1 && arr[i] != ' ') || (arr[i] != ' ' && arr[i + 1] == ' ')) {
+//                reverseWord(arr, start, i); // Reverse the word
+//            }
+//        }
+//        System.out.print(new String(arr));
+//    }
+//
+//    // Function to reverse a word within the character array
+//    private static void reverseWord(char[] arr, int start, int end) {
+//        while (start < end) {
+//            char temp = arr[start];
+//            arr[start] = arr[end];
+//            arr[end] = temp;
+//            start++;
+//            end--;
+//        }
+//    }
+//}
+
+public class practice {
+    public static void main(String[] args) {
+        int[] array = {12,3,14,56,77,13};
+        int num =13;
+        int diff = 2;
+
+        int count = 0;
+        for(int i=0;i< array.length;i++){
+            int n = array[i];
+            if(Math.abs(n - num) <= diff){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+
+
+
+
 
 
 
