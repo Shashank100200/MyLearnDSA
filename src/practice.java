@@ -709,22 +709,95 @@ import java.util.regex.*;
 //    }
 //}
 
+//public class practice {
+//    public static void main(String[] args) {
+//        int[] array = {12,3,14,56,77,13};
+//        int num =13;
+//        int diff = 2;
+//
+//        int count = 0;
+//        for(int i=0;i< array.length;i++){
+//            int n = array[i];
+//            if(Math.abs(n - num) <= diff){
+//                count++;
+//            }
+//        }
+//        System.out.println(count);
+//    }
+//}
+
 public class practice {
     public static void main(String[] args) {
-        int[] array = {12,3,14,56,77,13};
-        int num =13;
-        int diff = 2;
+        int n = 20;
 
-        int count = 0;
-        for(int i=0;i< array.length;i++){
-            int n = array[i];
-            if(Math.abs(n - num) <= diff){
-                count++;
+        int num = 0;
+        int num2 = 0;
+        for(int i=1;i<=n;i++){
+            if(i%4 == 0){
+                num = num+i;
+            }else{
+                num2 = num2 + i;
             }
         }
-        System.out.println(count);
+        int sum = num2-num;
+        System.out.println(sum);
     }
 }
+
+//public class practice {
+//    public static void main(String[] args) {
+//        int[] array = {1,12,23,45,17,2}; // 45,23,17,12,2,1
+//        Arrays.sort(array);
+//
+//        int even = 0;
+//        int odd = 0;
+//        for(int i=0;i<array.length;i++){
+//            if(i%2 == 0){
+//                even = even*10 + array[i];
+//            }else{
+//                odd = array[i];
+//            }
+//        }
+//        System.out.println(even);
+//    }
+//}
+
+//public class practice {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        String word = sc.nextLine();
+//
+//        char[] array = word.toCharArray();
+//
+//        int count1 = 0;
+//        int count2 = 0;
+//
+//        for(int i=0;i< array.length;i++){
+//            char curr = array[i];
+//            if(curr == '#'){
+//                count1++;
+//            } else if (curr == '*') {
+//                count2++;
+//            }
+//        }
+//        int mat = count1 - count2;
+//        if(mat > 1){
+//            System.out.println("Positive");
+//        } else if (mat < 0) {
+//            System.out.println("Negative");
+//        }else{
+//            System.out.println("Zero");
+//        }
+//    }
+//}
+
+
+
+
+
+
+
+
 
 
 
