@@ -1,4 +1,5 @@
 import java.io.*;
+import java.sql.SQLOutput;
 import java.util.*;
 import java.text.*;
 import java.math.*;
@@ -791,23 +792,56 @@ import java.util.regex.*;
 //    }
 //}
 
+//public class practice {
+//    public static void main(String[] args) {
+//        int rev = 0;
+//        int num = 123;
+//        while(num > 0){
+//            int n = num%10;
+//            rev = rev*10 + n;
+//            num /= 10;
+//        }
+//        int digi = rev%10;
+//        if(digi % 2 == 0){
+//            System.out.println("Even");
+//        }else{
+//            System.out.println("Odd");
+//        }
+//    }
+//}
+
+//Given an integer array Arr of size N the task is to find the count of elements whose value is greater than all of its prior elements.
+//        Note : 1st element of the array should be considered in the count of the result.
+//        For example,
+//        Arr[]={7,4,8,2,9}
+//        As 7 is the first element, it will consider in the result.
+//        8 and 9 are also the elements that are greater than all of its previous elements.
+//        Since total of  3 elements is present in the array that meets the condition.
+//        Hence the output = 3.
+
 public class practice {
     public static void main(String[] args) {
-        int rev = 0;
-        int num = 123;
-        while(num > 0){
-            int n = num%10;
-            rev = rev*10 + n;
-            num /= 10;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the n value :");
+        short n = sc.nextShort();
+        int[] array = new int[n];
+
+        int max = 0;
+        int count = 0;
+        for(int i=0;i<n;i++){
+            array[i] = sc.nextInt();
+            if(i == 0){
+                max = array[i];
+                count = 1;
+            }else if(array[i] > max){
+                count++;
+                max = array[i];
+            }
         }
-        int digi = rev%10;
-        if(digi % 2 == 0){
-            System.out.println("Even");
-        }else{
-            System.out.println("Odd");
-        }
+        System.out.println(count);
     }
 }
+
 
 
 
