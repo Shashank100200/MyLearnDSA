@@ -218,28 +218,41 @@ import java.util.*;
 //        Output Format:
 //        Output a single integer representing the total miximum power Stephan will gather before the battle
 
+//public class arrays {
+//    public static void main(String[] args) {
+//        int[] array = {0,9,3,5,1,2};
+//        Arrays.sort(array);
+//
+//        int stephanPow = 0;
+//        int demonPow = 0;
+//        int i = array.length-1;
+//        for(int a:array){
+//            demonPow += a;
+//        }
+//        while(stephanPow < demonPow){
+//            demonPow -= array[i];
+//            stephanPow += array[i];
+//            i--;
+//        }
+//        System.out.println("Stephan Power :"+stephanPow);
+//        System.out.println("Demon Power :"+demonPow);
+//    }
+//}
+
+//Solve the problem of finding the maximum element in an array.
 public class arrays {
     public static void main(String[] args) {
-        int[] array = {0,9,3,5,1,2};
-        Arrays.sort(array);
-
-        int stephanPow = 0;
-        int demonPow = 0;
-        int i = array.length-1;
-        for(int a:array){
-            demonPow += a;
+        int[] array = {1,2,4,85,3};
+        int max = 0;
+        for(int i=0;i< array.length;i++){
+            int curr = array[i];
+            if(curr > max){
+                max = array[i];
+            }
         }
-        while(stephanPow < demonPow){
-            demonPow -= array[i];
-            stephanPow += array[i];
-            i--;
-        }
-        System.out.println("Stephan Power :"+stephanPow);
-        System.out.println("Demon Power :"+demonPow);
+        System.out.println(max);
     }
 }
-
-
 
 
 

@@ -819,28 +819,30 @@ import java.util.regex.*;
 //        Since total of  3 elements is present in the array that meets the condition.
 //        Hence the output = 3.
 
-public class practice {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the n value :");
-        short n = sc.nextShort();
-        int[] array = new int[n];
+//public class practice {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the n value :");
+//        short n = sc.nextShort();
+//        int[] array = new int[n];
+//
+//        int max = 0;
+//        int count = 0;
+//        for(int i=0;i<n;i++){
+//            array[i] = sc.nextInt();
+//            if(i == 0){
+//                max = array[i];
+//                count = 1;
+//            }else if(array[i] > max){
+//                count++;
+//                max = array[i];
+//            }
+//        }
+//        System.out.println(count);
+//    }
+//}
 
-        int max = 0;
-        int count = 0;
-        for(int i=0;i<n;i++){
-            array[i] = sc.nextInt();
-            if(i == 0){
-                max = array[i];
-                count = 1;
-            }else if(array[i] > max){
-                count++;
-                max = array[i];
-            }
-        }
-        System.out.println(count);
-    }
-}
+
 
 
 
