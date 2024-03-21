@@ -240,19 +240,38 @@ import java.util.*;
 //}
 
 //Solve the problem of finding the maximum element in an array.
-public class arrays {
-    public static void main(String[] args) {
-        int[] array = {1,2,4,85,3};
-        int max = 0;
-        for(int i=0;i< array.length;i++){
-            int curr = array[i];
-            if(curr > max){
-                max = array[i];
-            }
-        }
-        System.out.println(max);
-    }
-}
+//public class arrays {
+//    public static void main(String[] args) {
+//        int[] array = {1,2,4,85,3};
+//        int max = 0;
+//        for(int i=0;i< array.length;i++){
+//            int curr = array[i];
+//            if(curr > max){
+//                max = array[i];
+//            }
+//        }
+//        System.out.println(max);
+//    }
+//}
+
+//Write a program to remove duplicate elements from an array.
+//public class arrays {
+//    public static void main(String[] args) {
+//        int[] array = {1,2,2,3,4,3,5,1};
+//
+//        int count = 0;
+//        for(int i=0;i< array.length;i++){
+//            for(int j=0;j<array.length;j++){
+//                if(i != j && array[i] == array[j]){
+//                    count++;
+//                }
+//            }
+//        }
+//        System.out.println(count);
+//    }
+//}
+
+
 
 
 
