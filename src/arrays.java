@@ -255,21 +255,28 @@ import java.util.*;
 //}
 
 //Write a program to remove duplicate elements from an array.
-//public class arrays {
-//    public static void main(String[] args) {
-//        int[] array = {1,2,2,3,4,3,5,1};
-//
-//        int count = 0;
-//        for(int i=0;i< array.length;i++){
-//            for(int j=0;j<array.length;j++){
-//                if(i != j && array[i] == array[j]){
-//                    count++;
-//                }
-//            }
-//        }
-//        System.out.println(count);
-//    }
-//}
+public class arrays {
+    public static void main(String[] args) {
+        int[] array = {1,2,2,3,4,3,5,1};
+
+        for(int i=0;i< array.length;i++){
+            for(int j=0;j<array.length;j++){
+                if(i != j && array[i] == array[j]){
+                    array[j] = Integer.MAX_VALUE;
+                }
+            }
+        }
+        for (int i=0;i<array.length;i++)
+        {
+            if(array[i] != Integer.MAX_VALUE)
+            {
+                System.out.println(array[i]);
+            }
+        }
+    }
+}
+
+
 
 
 

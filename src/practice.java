@@ -864,29 +864,31 @@ import java.util.regex.*;
 //    }
 //}
 
-public class practice{
-    public static void main(String[] args) {
-        int[] array = {1,2,3,4,5,6,7};
+//public class practice{
+//    public static void main(String[] args) {
+//        int[] array = {1,2,3,4,5,6,7};
+//
+//        int maxEven = 0;   //1 3 5 7
+//        int maxOdd = 0;  // 2 4 6
+//        for(int i=0;i<= array.length-1;i++){
+//            if(i%2 == 0){
+//                int evenEle = array[i];
+//                if(evenEle > maxEven){
+//                    maxEven = array[i];
+//                }
+//            }else if(i%2 != 2){
+//                int oddEle = array[i];
+//                if(oddEle > maxOdd){
+//                    maxOdd = array[i];
+//                }
+//            }
+//        }
+//        System.out.println(maxEven);
+//        System.out.println(maxOdd);
+//    }
+//}
 
-        int maxEven = 0;   //1 3 5 7
-        int maxOdd = 0;  // 2 4 6
-        for(int i=0;i<= array.length-1;i++){
-            if(i%2 == 0){
-                int evenEle = array[i];
-                if(evenEle > maxEven){
-                    maxEven = array[i];
-                }
-            }else if(i%2 != 2){
-                int oddEle = array[i];
-                if(oddEle > maxOdd){
-                    maxOdd = array[i];
-                }
-            }
-        }
-        System.out.println(maxEven);
-        System.out.println(maxOdd);
-    }
-}
+
 
 
 
