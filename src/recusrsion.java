@@ -108,6 +108,7 @@
 //}
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 //class Recursion1 {
 //    public static void printFactorial(int a, int b, int n) {
@@ -483,23 +484,48 @@ import java.util.Arrays;
 
 
 //to print subsequence of a string     its like number of possibilities of a given string
-public class recusrsion {
-    public static void subsequence(String str,int idx,String newStr){
-        if(idx == str.length()){
-            System.out.println(newStr);
-            return;
-        }
-        //the number which likes to print as a subsequence
-        char currChar = str.charAt(idx);
-        subsequence(str,idx+1,newStr+currChar);   // to revice this watch 18th lecture at 1:15:00
+//public class recusrsion {
+//    public static void subsequence(String str,int idx,String newStr){
+//        if(idx == str.length()){
+//            System.out.println(newStr);
+//            return;
+//        }
+//        //the number which likes to print as a subsequence
+//        char currChar = str.charAt(idx);
+//        subsequence(str,idx+1,newStr+currChar);   // to revice this watch 18th lecture at 1:15:00
+//
+//        //the number which not likes to print as a subsquence
+//        subsequence(str,idx+1,newStr);
+//    }
+//
+//    public static void main(String[] args) {
+//        String str = "abc";
+//        subsequence(str,0,"");                 //TC = O(2^n)
+//    }
+//}
 
-        //the number which not likes to print as a subsquence
-        subsequence(str,idx+1,newStr);
+//to print unique subsequence of a string
+public class recusrsion {
+    public static void uniSubSeque(String str, int idx, String newStr, HashSet<String> set){
+        if(idx == str.length()){
+            if(set.contains(newStr)){
+                return;
+            }else{
+                System.out.println(newStr);
+                set.add(newStr);
+                return;
+            }
+        }
+        char currChar = str.charAt(idx);
+        uniSubSeque(str,idx+1,newStr+currChar,set);
+
+        uniSubSeque(str,idx+1,newStr,set);
     }
 
     public static void main(String[] args) {
-        String str = "abc";
-        subsequence(str,0,"");
+        String str = "aaa";
+        HashSet<String> set = new HashSet<>();  //HashSet is like collections of unique elements and duplicate elements will not be there
+        uniSubSeque(str,0,"",set);
     }
 }
 
