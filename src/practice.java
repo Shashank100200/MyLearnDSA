@@ -889,6 +889,27 @@ import java.util.regex.*;
 //}
 
 
+//To print duplicate charecters in agive string
+public class practice {
+    public static void main(String[] args) {
+        String str = "abbccda";
+
+        String newStr = "";
+        for(int i=0;i<str.length();i++){
+            for(int j=0;j<str.length();j++){
+                char curChar = str.charAt(i);
+                char curNext = str.charAt(j);
+
+                if(i != j && curChar == curNext){
+                    newStr += curChar;
+                }
+            }
+        }
+        System.out.println(newStr);
+    }
+}
+
+
 
 
 
