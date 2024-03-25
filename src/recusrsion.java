@@ -456,7 +456,30 @@ import java.util.Arrays;
 //    }
 //}
 
+//to remove duplicates in a String
+public class recusrsion {
+    public static boolean[] map = new boolean[26];
 
+    public static void moveDup(String str,int idx,String newStr){
+        if(idx == str.length()){
+            System.out.println(newStr);
+            return;
+        }
+        char currChar = str.charAt(idx);
+        if(map[currChar - 'a']){
+            moveDup(str,idx+1,newStr);
+        }else{
+            newStr += currChar;
+            map[currChar - 'a'] = true;
+            moveDup(str,idx+1,newStr);
+        }
+    }
+
+    public static void main(String[] args) {
+        String str = "aabccda";
+        moveDup(str,0,"");
+    }
+}
 
 
 
