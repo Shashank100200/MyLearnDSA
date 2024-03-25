@@ -457,27 +457,49 @@ import java.util.Arrays;
 //}
 
 //to remove duplicates in a String
-public class recusrsion {
-    public static boolean[] map = new boolean[26];
+//public class recusrsion {
+//    public static boolean[] map = new boolean[26];
+//
+//    public static void moveDup(String str,int idx,String newStr){
+//        if(idx == str.length()){
+//            System.out.println(newStr);
+//            return;
+//        }
+//        char currChar = str.charAt(idx);
+//        if(map[currChar - 'a']){
+//            moveDup(str,idx+1,newStr);
+//        }else{
+//            newStr += currChar;
+//            map[currChar - 'a'] = true;
+//            moveDup(str,idx+1,newStr);                        //O(n)
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        String str = "aabccda";
+//        moveDup(str,0,"");
+//    }
+//}
 
-    public static void moveDup(String str,int idx,String newStr){
+
+//to print subsequence of a string     its like number of possibilities of a given string
+public class recusrsion {
+    public static void subsequence(String str,int idx,String newStr){
         if(idx == str.length()){
             System.out.println(newStr);
             return;
         }
+        //the number which likes to print as a subsequence
         char currChar = str.charAt(idx);
-        if(map[currChar - 'a']){
-            moveDup(str,idx+1,newStr);
-        }else{
-            newStr += currChar;
-            map[currChar - 'a'] = true;
-            moveDup(str,idx+1,newStr);
-        }
+        subsequence(str,idx+1,newStr+currChar);   // to revice this watch 18th lecture at 1:15:00
+
+        //the number which not likes to print as a subsquence
+        subsequence(str,idx+1,newStr);
     }
 
     public static void main(String[] args) {
-        String str = "aabccda";
-        moveDup(str,0,"");
+        String str = "abc";
+        subsequence(str,0,"");
     }
 }
 
