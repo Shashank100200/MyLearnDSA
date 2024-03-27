@@ -505,29 +505,54 @@ import java.util.HashSet;
 //}
 
 //to print unique subsequence of a string
+//public class recusrsion {
+//    public static void uniSubSeque(String str, int idx, String newStr, HashSet<String> set){
+//        if(idx == str.length()){
+//            if(set.contains(newStr)){
+//                return;
+//            }else{
+//                System.out.println(newStr);
+//                set.add(newStr);
+//                return;
+//            }
+//        }
+//        char currChar = str.charAt(idx);
+//        uniSubSeque(str,idx+1,newStr+currChar,set);
+//
+//        uniSubSeque(str,idx+1,newStr,set);
+//    }
+//
+//    public static void main(String[] args) {
+//        String str = "aaa";
+//        HashSet<String> set = new HashSet<>();  //HashSet is like collections of unique elements and duplicate elements will not be there
+//        uniSubSeque(str,0,"",set);
+//    }
+//}
+
+//to print possible combination of keypad numbers
 public class recusrsion {
-    public static void uniSubSeque(String str, int idx, String newStr, HashSet<String> set){
+    public static String[] keypad = {".","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz"};
+
+    public static void printCombi(String str,int idx,String combination){
         if(idx == str.length()){
-            if(set.contains(newStr)){
-                return;
-            }else{
-                System.out.println(newStr);
-                set.add(newStr);
-                return;
-            }
+            System.out.println(combination);
+            return;
         }
         char currChar = str.charAt(idx);
-        uniSubSeque(str,idx+1,newStr+currChar,set);
+        String mapping = keypad[currChar - '0'];
 
-        uniSubSeque(str,idx+1,newStr,set);
+        for(int i=0;i<mapping.length();i++){
+            printCombi(str,idx+1,combination+mapping.charAt(i));
+        }
     }
 
     public static void main(String[] args) {
-        String str = "aaa";
-        HashSet<String> set = new HashSet<>();  //HashSet is like collections of unique elements and duplicate elements will not be there
-        uniSubSeque(str,0,"",set);
+        String str = "23";
+        printCombi(str,0,"");                 //O(3^n)
     }
 }
+
+
 
 
 
