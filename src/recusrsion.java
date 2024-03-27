@@ -554,22 +554,46 @@ import java.util.HashSet;
 //}
 
 //to find permutation of a given string
+//public class recusrsion {
+//    public static void permu(String str,String permutation){
+//        if(str.length() == 0){
+//            System.out.println(permutation);
+//            return;
+//        }
+//        for(int i=0;i<str.length();i++){
+//            char currChar = str.charAt(i);
+//            String newStr = str.substring(0,i) + str.substring(i+1);
+//            permu(newStr,permutation+currChar);
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        String str = "abc";
+//        permu(str,"");
+//    }
+//}
+
+//Counting of paths in given matrix
 public class recusrsion {
-    public static void permu(String str,String permutation){
-        if(str.length() == 0){
-            System.out.println(permutation);
-            return;
+    public static int calPath(int i,int j,int m,int n){
+        if(i == m || j == n){
+            return 0;
         }
-        for(int i=0;i<str.length();i++){
-            char currChar = str.charAt(i);
-            String newStr = str.substring(0,i) + str.substring(i+1);
-            permu(newStr,permutation+currChar);
+        if(i == m-1 && j == n-1){
+            return 1;
         }
+        int downPath = calPath(i+1,j,m,n);
+
+        int rightPath = calPath(i,j+1,m,n);
+
+        return downPath+rightPath;
     }
 
     public static void main(String[] args) {
-        String str = "abc";
-        permu(str,"");
+        int m = 3;
+        int n = 3;
+        int ans = calPath(0,0,m,n);
+        System.out.println(ans);
     }
 }
 
