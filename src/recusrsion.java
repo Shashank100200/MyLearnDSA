@@ -1,3 +1,6 @@
+import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
 //public class recusrsion {
 //    public static void printNum(int n){
 //        if(n == 0){
@@ -107,8 +110,6 @@
 //    }
 //}
 
-import java.util.Arrays;
-import java.util.HashSet;
 
 //class Recursion1 {
 //    public static void printFactorial(int a, int b, int n) {
@@ -530,27 +531,50 @@ import java.util.HashSet;
 //}
 
 //to print possible combination of keypad numbers
-public class recusrsion {
-    public static String[] keypad = {".","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz"};
+//public class recusrsion {
+//    public static String[] keypad = {".","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz"};
+//
+//    public static void printCombi(String str,int idx,String combination){
+//        if(idx == str.length()){
+//            System.out.println(combination);
+//            return;
+//        }
+//        char currChar = str.charAt(idx);
+//        String mapping = keypad[currChar - '0'];
+//
+//        for(int i=0;i<mapping.length();i++){
+//            printCombi(str,idx+1,combination+mapping.charAt(i));
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        String str = "23";
+//        printCombi(str,0,"");                 //O(3^n)
+//    }
+//}
 
-    public static void printCombi(String str,int idx,String combination){
-        if(idx == str.length()){
-            System.out.println(combination);
+//to find permutation of a given string
+public class recusrsion {
+    public static void permu(String str,String permutation){
+        if(str.length() == 0){
+            System.out.println(permutation);
             return;
         }
-        char currChar = str.charAt(idx);
-        String mapping = keypad[currChar - '0'];
-
-        for(int i=0;i<mapping.length();i++){
-            printCombi(str,idx+1,combination+mapping.charAt(i));
+        for(int i=0;i<str.length();i++){
+            char currChar = str.charAt(i);
+            String newStr = str.substring(0,i) + str.substring(i+1);
+            permu(newStr,permutation+currChar);
         }
     }
 
     public static void main(String[] args) {
-        String str = "23";
-        printCombi(str,0,"");                 //O(3^n)
+        String str = "abc";
+        permu(str,"");
     }
 }
+
+
+
 
 
 
