@@ -574,28 +574,50 @@ import java.util.HashSet;
 //}
 
 //Counting of paths in given matrix
+//public class recusrsion {
+//    public static int calPath(int i,int j,int m,int n){
+//        if(i == m || j == n){
+//            return 0;
+//        }
+//        if(i == m-1 && j == n-1){
+//            return 1;
+//        }
+//        int downPath = calPath(i+1,j,m,n);
+//
+//        int rightPath = calPath(i,j+1,m,n);
+//
+//        return downPath+rightPath;
+//    }
+//
+//    public static void main(String[] args) {
+//        int m = 3;
+//        int n = 3;
+//        int ans = calPath(0,0,m,n);
+//        System.out.println(ans);
+//    }
+//}
+
+//permutation of given string
 public class recusrsion {
-    public static int calPath(int i,int j,int m,int n){
-        if(i == m || j == n){
-            return 0;
+    public static void printPermu(String str,String permu,int idx){
+        if(str.length() == 0){
+            System.out.println(permu);
+            return;
         }
-        if(i == m-1 && j == n-1){
-            return 1;
+
+        for(int i=0;i<str.length();i++){
+            char currChar = str.charAt(i);
+            String newStr = str.substring(0,i) + str.substring(i+1);
+            printPermu(newStr,permu+currChar,idx+1);
         }
-        int downPath = calPath(i+1,j,m,n);
-
-        int rightPath = calPath(i,j+1,m,n);
-
-        return downPath+rightPath;
     }
 
     public static void main(String[] args) {
-        int m = 3;
-        int n = 3;
-        int ans = calPath(0,0,m,n);
-        System.out.println(ans);
+        String str = "ABC";
+        printPermu(str,"",0);
     }
 }
+
 
 
 
