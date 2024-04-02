@@ -909,31 +909,8 @@ import java.util.regex.*;
 //    }
 //}
 
-import java.util.*;
-class Solution {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String inp = sc.next();
+//Write a Java program to find the GCD (Greatest Common Divisor) of two numbers using recursion.
 
-        char[] array = inp.toCharArray();
-        boolean isPalindrome = true;
-
-        for(int i=0;i<array.length/2;i++){
-            char curr = array[i];
-            char curr2 = array[array.length - i - 1];
-
-            if(curr != curr2){
-                isPalindrome = false;
-                break;
-            }
-        }
-        if(isPalindrome){
-            System.out.println(true);
-        }else{
-            System.out.println(false);
-        }
-    }
-}
 
 
 

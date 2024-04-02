@@ -618,19 +618,20 @@ import java.util.HashSet;
 //    }
 //}
 
-public class recusrsion {
-    public static int calSum(int n){
-        if(n  == 0){
-            return 0;
-        }
-        return (n % 10 + calSum(n/10));
-    }
-
-    public static void main(String[] args) {
-        int ans = calSum(123456);
-        System.out.println(ans);
-    }
-}
+//Write a recursive method to calculate the sum of digits of a given number.
+//public class recusrsion {
+//    public static int calSum(int n){
+//        if(n  == 0){
+//            return 0;
+//        }
+//        return (n % 10 + calSum(n/10));
+//    }
+//
+//    public static void main(String[] args) {
+//        int ans = calSum(123456);
+//        System.out.println(ans);
+//    }
+//}
 
 
 
