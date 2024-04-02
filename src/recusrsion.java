@@ -619,22 +619,20 @@ import java.util.HashSet;
 //}
 
 public class recusrsion {
-    public static int calFibo(int n){
-        if(n == 0){
+    public static int calSum(int n){
+        if(n  == 0){
             return 0;
         }
-        if(n == 1){
-            return 1;
-        }
-        int fib = calFibo(n-1) + calFibo(n-2);
-        return fib;
+        return (n % 10 + calSum(n/10));
     }
 
     public static void main(String[] args) {
-        int ans = calFibo(6);
+        int ans = calSum(123456);
         System.out.println(ans);
     }
 }
+
+
 
 
 
