@@ -598,27 +598,43 @@ import java.util.HashSet;
 //}
 
 //permutation of given string
-public class recusrsion {
-    public static void printPermu(String str,String permu,int idx){
-        if(str.length() == 0){
-            System.out.println(permu);
-            return;
-        }
+//public class recusrsion {
+//    public static void printPermu(String str,String permu,int idx){
+//        if(str.length() == 0){
+//            System.out.println(permu);
+//            return;
+//        }
+//
+//        for(int i=0;i<str.length();i++){
+//            char currChar = str.charAt(i);
+//            String newStr = str.substring(0,i) + str.substring(i+1);  //not to repeate current charecter we used this
+//            printPermu(newStr,permu+currChar,idx+1);
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        String str = "ABC";
+//        printPermu(str,"",0);              //O(n*n!)
+//    }
+//}
 
-        for(int i=0;i<str.length();i++){
-            char currChar = str.charAt(i);
-            String newStr = str.substring(0,i) + str.substring(i+1);
-            printPermu(newStr,permu+currChar,idx+1);
+public class recusrsion {
+    public static int calFibo(int n){
+        if(n == 0){
+            return 0;
         }
+        if(n == 1){
+            return 1;
+        }
+        int fib = calFibo(n-1) + calFibo(n-2);
+        return fib;
     }
 
     public static void main(String[] args) {
-        String str = "ABC";
-        printPermu(str,"",0);
+        int ans = calFibo(6);
+        System.out.println(ans);
     }
 }
-
-
 
 
 
