@@ -669,7 +669,21 @@ import java.util.HashSet;
 //}
 
 //Write a program to reverse a string using recursion
+public class recusrsion {
+    public static String StrRev(String wrd,int idx){
+        if(idx >= wrd.length()){
+            return "";
+        }
+        char ch = wrd.charAt(idx);
+        String newStr = StrRev(wrd,idx+1);
+        return newStr+ch;
+    }
 
+    public static void main(String[] args) {
+        String ans = StrRev("reva",0);
+        System.out.println(ans);
+    }
+}
 
 
 
