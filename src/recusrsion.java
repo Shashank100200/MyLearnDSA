@@ -633,6 +633,27 @@ import java.util.HashSet;
 //    }
 //}
 
+//Write a Java program to find the GCD (Greatest Common Divisor) of two numbers using recursion.
+public class recusrsion {
+    public static int gcd(int a,int b){
+        if(a%b == 0){
+            return b;
+        }else{
+            return gcd(b,a%b);
+        }
+    }
+
+    public static void main(String[] args) {
+        int a = 12;
+        int b = 28;
+        int ans = gcd(a,b);
+        System.out.println(ans);
+    }
+}
+
+
+
+
 
 
 
