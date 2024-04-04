@@ -634,23 +634,39 @@ import java.util.HashSet;
 //}
 
 //Write a Java program to find the GCD (Greatest Common Divisor) of two numbers using recursion.
+//public class recusrsion {
+//    public static int gcd(int a,int b){
+//        if(a%b == 0){
+//            return b;
+//        }else{
+//            return gcd(b,a%b);
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        int a = 12;
+//        int b = 28;
+//        int ans = gcd(a,b);
+//        System.out.println(ans);
+//    }
+//}
+
+//Implement a recursive function to calculate the power of a number
 public class recusrsion {
-    public static int gcd(int a,int b){
-        if(a%b == 0){
-            return b;
-        }else{
-            return gcd(b,a%b);
+    public static int exp(int base,int pow){
+        if(pow == 0){
+            return 1;
         }
+        int result = 1;
+        result = base * exp(base,pow-1);
+        return result;
     }
 
     public static void main(String[] args) {
-        int a = 12;
-        int b = 28;
-        int ans = gcd(a,b);
+        int ans = exp(3,3);
         System.out.println(ans);
     }
 }
-
 
 
 
