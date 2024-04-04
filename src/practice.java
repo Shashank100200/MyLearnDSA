@@ -930,32 +930,44 @@ import java.util.regex.*;
 
 
 //find the smallest non-negative integer missing from the given array.
+//public class practice {
+//    public static void main(String[] args) {
+//        int size = 600;
+//        boolean array[] = new boolean[size];
+//
+//        int[] arr = {0,-9,1,3,-4,5};
+//
+//        for(int i=0;i<size;i++){
+//            array[i] = false;
+//            }
+//        for(int i=0;i<arr.length;i++){
+//            if(arr[i] >= 0){
+//                array[arr[i]] = true;
+//            }
+//        }
+//        int ans = -1;
+//        for(int i=0;i<size;i++){
+//            if(array[i] == false){
+//                ans = i;
+//                break;
+//            }
+//        }
+//        System.out.println(ans);
+//    }
+//}
+
 public class practice {
     public static void main(String[] args) {
-        int size = 600;
-        boolean array[] = new boolean[size];
+        String wrd = "Reva";
+        String newstr = "";
 
-        int[] arr = {0,-9,1,3,-4,5};
-
-        for(int i=0;i<size;i++){
-            array[i] = false;
-            }
-        for(int i=0;i<arr.length;i++){
-            if(arr[i] >= 0){
-                array[arr[i]] = true;
-            }
+        for(int i=0;i<wrd.length();i++){
+            char ch = wrd.charAt(i);
+            newstr = ch + newstr;
         }
-        int ans = -1;
-        for(int i=0;i<size;i++){
-            if(array[i] == false){
-                ans = i;
-                break;
-            }
-        }
-        System.out.println(ans);
+        System.out.println(newstr);
     }
 }
-
 
 
 
