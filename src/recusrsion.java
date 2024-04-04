@@ -652,21 +652,23 @@ import java.util.HashSet;
 //}
 
 //Implement a recursive function to calculate the power of a number
-public class recusrsion {
-    public static int exp(int base,int pow){
-        if(pow == 0){
-            return 1;
-        }
-        int result = 1;
-        result = base * exp(base,pow-1);
-        return result;
-    }
+//public class recusrsion {
+//    public static int exp(int base,int pow){
+//        if(pow == 0){
+//            return 1;
+//        }
+//        int result = 1;
+//        result = base * exp(base,pow-1);
+//        return result;
+//    }
+//
+//    public static void main(String[] args) {
+//        int ans = exp(3,3);
+//        System.out.println(ans);
+//    }
+//}
 
-    public static void main(String[] args) {
-        int ans = exp(3,3);
-        System.out.println(ans);
-    }
-}
+//Write a program to reverse a string using recursion
 
 
 

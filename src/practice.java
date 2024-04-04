@@ -911,8 +911,50 @@ import java.util.regex.*;
 
 //Write a Java program to find the GCD (Greatest Common Divisor) of two numbers using recursion.
 
+//public class practice {
+//    public static void main(String[] args) {
+//        int[] array = {12,3,14,56,77,13};
+//        int num =13;
+//        int diff = 2;
+//
+//        int count = 0;
+//        for(int i=0;i< array.length;i++){
+//            int n = array[i];
+//            if(Math.abs(n - num) <= diff){
+//                count++;
+//            }
+//        }
+//        System.out.println(count);
+//    }
+//}
 
 
+//find the smallest non-negative integer missing from the given array.
+public class practice {
+    public static void main(String[] args) {
+        int size = 600;
+        boolean array[] = new boolean[size];
+
+        int[] arr = {0,-9,1,3,-4,5};
+
+        for(int i=0;i<size;i++){
+            array[i] = false;
+            }
+        for(int i=0;i<arr.length;i++){
+            if(arr[i] >= 0){
+                array[arr[i]] = true;
+            }
+        }
+        int ans = -1;
+        for(int i=0;i<size;i++){
+            if(array[i] == false){
+                ans = i;
+                break;
+            }
+        }
+        System.out.println(ans);
+    }
+}
 
 
 
