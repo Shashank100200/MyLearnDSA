@@ -688,28 +688,45 @@ import java.util.HashSet;
 //}
 
 //Implement a recursive function to check if a given string is a palindrome
+//public class recusrsion {
+//    public static String StrRev(String wrd,int idx){
+//        if(idx >= wrd.length()){
+//            return "";
+//        }
+//        char ch = wrd.charAt(idx);
+//        String newStr = StrRev(wrd,idx+1);
+//        return newStr+ch;
+//    }
+//
+//    public static void main(String[] args) {
+//        String wrd = "reva";
+//        String ans = StrRev(wrd,0);
+////        System.out.println(ans);
+//        if(ans.equals(wrd)){
+//            System.out.println("Palindrome");
+//        }else{
+//            System.out.println("Not a palindrome");
+//        }
+//    }
+//}
+
+//Write a recursive function to find the sum of elements in an array.
 public class recusrsion {
-    public static String StrRev(String wrd,int idx){
-        if(idx >= wrd.length()){
-            return "";
+    public static int ArrSum(int[] arr,int idx){
+        if(arr.length == idx){
+            return 0;
         }
-        char ch = wrd.charAt(idx);
-        String newStr = StrRev(wrd,idx+1);
-        return newStr+ch;
+        int curr = arr[idx];
+        int sum = ArrSum(arr,idx+1);
+        return curr+sum;
     }
 
     public static void main(String[] args) {
-        String wrd = "reva";
-        String ans = StrRev(wrd,0);
-//        System.out.println(ans);
-        if(ans.equals(wrd)){
-            System.out.println("Palindrome");
-        }else{
-            System.out.println("Not a palindrome");
-        }
+        int[] array = {1,2,3,4};
+        int ans = ArrSum(array,0);
+        System.out.println(ans);
     }
 }
-
 
 
 
