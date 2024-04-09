@@ -711,24 +711,38 @@ import java.util.HashSet;
 //}
 
 //Write a recursive function to find the sum of elements in an array.
+//public class recusrsion {
+//    public static int ArrSum(int[] arr,int idx){
+//        if(arr.length == idx){
+//            return 0;
+//        }
+//        int curr = arr[idx];
+//        int sum = ArrSum(arr,idx+1);
+//        return curr+sum;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] array = {1,2,3,4};
+//        int ans = ArrSum(array,0);
+//        System.out.println(ans);
+//    }
+//}
+
+//11. Write a Java program to print the elements of an array using recursion.
 public class recusrsion {
-    public static int ArrSum(int[] arr,int idx){
-        if(arr.length == idx){
-            return 0;
+    public static void eleArr(int array[],int idx){
+        if(array.length == idx){
+            return;
         }
-        int curr = arr[idx];
-        int sum = ArrSum(arr,idx+1);
-        return curr+sum;
+        System.out.println(array[idx]);
+        eleArr(array,idx+1);
     }
 
     public static void main(String[] args) {
-        int[] array = {1,2,3,4};
-        int ans = ArrSum(array,0);
-        System.out.println(ans);
+        int[] arr = {1,2,3,4};
+        eleArr(arr,0);
     }
 }
-
-
 
 
 

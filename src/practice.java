@@ -956,16 +956,28 @@ import java.util.regex.*;
 //    }
 //}
 
+//public class practice {
+//    public static void main(String[] args) {
+//        String wrd = "Reva";
+//        String newstr = "";
+//
+//        for(int i=0;i<wrd.length();i++){
+//            char ch = wrd.charAt(i);
+//            newstr = ch + newstr;
+//        }
+//        System.out.println(newstr);
+//    }
+//}
+
 public class practice {
     public static void main(String[] args) {
-        String wrd = "Reva";
-        String newstr = "";
-
-        for(int i=0;i<wrd.length();i++){
-            char ch = wrd.charAt(i);
-            newstr = ch + newstr;
+        int base = 2;
+        int pow = 4;
+        int result = 1;
+        for(int i=0;i<pow;i++){
+            result *= base;
         }
-        System.out.println(newstr);
+        System.out.println(result);
     }
 }
 
