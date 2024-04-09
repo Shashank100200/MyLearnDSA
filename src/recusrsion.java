@@ -729,20 +729,43 @@ import java.util.HashSet;
 //}
 
 //11. Write a Java program to print the elements of an array using recursion.
-public class recusrsion {
-    public static void eleArr(int array[],int idx){
-        if(array.length == idx){
-            return;
-        }
-        System.out.println(array[idx]);
-        eleArr(array,idx+1);
-    }
+//public class recusrsion {
+//    public static void eleArr(int array[],int idx){
+//        if(array.length == idx){
+//            return;
+//        }
+//        System.out.println(array[idx]);
+//        eleArr(array,idx+1);
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr = {1,2,3,4};
+//        eleArr(arr,0);
+//    }
+//}
 
+//12. Implement a recursive function to find the maximum element in an array.
+public class recusrsion {
+    public static int maxEle(int array[],int idx){
+        if(array.length-1 == idx){
+            return array[idx];
+        }
+        int max = maxEle(array,idx+1);
+        if(array[idx] > max){
+            return array[idx];
+        }else{
+            return max;
+        }
+    }
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4};
-        eleArr(arr,0);
+        int arr[] = {10,2,32,4};
+        int ans = maxEle(arr,0);
+        System.out.println(ans);
     }
 }
+
+
+
 
 
 
