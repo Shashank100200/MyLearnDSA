@@ -745,26 +745,38 @@ import java.util.HashSet;
 //}
 
 //12. Implement a recursive function to find the maximum element in an array.
-public class recusrsion {
-    public static int maxEle(int array[],int idx){
-        if(array.length-1 == idx){
-            return array[idx];
+//public class recusrsion {
+//    public static int maxEle(int array[],int idx){
+//        if(array.length-1 == idx){
+//            return array[idx];
+//        }
+//        int max = maxEle(array,idx+1);
+//        if(array[idx] > max){
+//            return array[idx];
+//        }else{
+//            return max;
+//        }
+//    }
+//    public static void main(String[] args) {
+//        int arr[] = {10,2,32,4};
+//        int ans = maxEle(arr,0);
+//        System.out.println(ans);
+//    }
+//}
+
+//13. Write a program to find the factorial of a number using tail recursion.
+public class recusrsion{
+    static int fact(int n){
+        if(n ==  0){
+            return 1;
         }
-        int max = maxEle(array,idx+1);
-        if(array[idx] > max){
-            return array[idx];
-        }else{
-            return max;
-        }
+        return fact(n-1) * n;
     }
-    public static void main(String[] args) {
-        int arr[] = {10,2,32,4};
-        int ans = maxEle(arr,0);
-        System.out.println(ans);
+    public static void main(String[] args){
+       int ans = fact(5);
+       System.out.println(ans);
     }
 }
-
-
 
 
 
