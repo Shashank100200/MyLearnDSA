@@ -765,18 +765,47 @@ import java.util.HashSet;
 //}
 
 //13. Write a program to find the factorial of a number using tail recursion.
-public class recusrsion{
-    static int fact(int n){
-        if(n ==  0){
-            return 1;
+//public class recusrsion{
+//    static int fact(int n){
+//        if(n ==  0){
+//            return 1;
+//        }
+//        return fact(n-1) * n;
+//    }
+//    public static void main(String[] args){
+//       int ans = fact(5);
+//       System.out.println(ans);
+//    }
+//}
+
+//14. Implement a recursive function to check if a given number is prime
+public class recusrsion {
+    public static boolean isPrime(int n,int i){
+        if(n == 1){
+            return false;
         }
-        return fact(n-1) * n;
+        if(n ==2){
+            return true;
+        }
+        if(n%i == 0){
+            return false;
+        }
+        if(i*i > n){
+            return true;
+        }
+        return isPrime(n,i+1);
     }
-    public static void main(String[] args){
-       int ans = fact(5);
-       System.out.println(ans);
+    public static void main(String[] args) {
+        int num = 12;
+        if (isPrime(num,2)){
+            System.out.println("true");
+        }else{
+            System.out.println("false");
+        }
     }
 }
+
+
 
 
 
