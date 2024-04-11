@@ -779,28 +779,49 @@ import java.util.HashSet;
 //}
 
 //14. Implement a recursive function to check if a given number is prime
+//public class recusrsion {
+//    public static boolean isPrime(int n,int i){
+//        if(n == 1){
+//            return false;
+//        }
+//        if(n ==2){
+//            return true;
+//        }
+//        if(n%i == 0){
+//            return false;
+//        }
+//        if(i*i > n){
+//            return true;
+//        }
+//        return isPrime(n,i+1);
+//    }
+//    public static void main(String[] args) {
+//        int num = 12;
+//        if (isPrime(num,2)){
+//            System.out.println("true");
+//        }else{
+//            System.out.println("false");
+//        }
+//    }
+//}
+
 public class recusrsion {
-    public static boolean isPrime(int n,int i){
-        if(n == 1){
-            return false;
-        }
-        if(n ==2){
+    public static boolean pow(int n){
+        if(n == 1 || n == 3){
             return true;
         }
-        if(n%i == 0){
+        if(n%3 != 0 || n == 0){
             return false;
         }
-        if(i*i > n){
-            return true;
-        }
-        return isPrime(n,i+1);
+        return pow(n/3);
     }
+
     public static void main(String[] args) {
-        int num = 12;
-        if (isPrime(num,2)){
-            System.out.println("true");
+        int num=27;
+        if(pow(num)){
+            System.out.println("True");
         }else{
-            System.out.println("false");
+            System.out.println("False");
         }
     }
 }
