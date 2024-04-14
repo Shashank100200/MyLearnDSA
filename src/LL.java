@@ -2,6 +2,10 @@ import java.util.*;
 public class LL {
     Node head;  // Declairation of head
     private int size;
+
+    LL(){
+        this.size = 0;
+    }
     class Node{  // Creating class
         String data;  //variables of the class
         Node next;
@@ -9,6 +13,7 @@ public class LL {
         Node(String data){            //Constructor
             this.data = data;
             this.next = null;
+            size++;
         }
     }
 
@@ -57,6 +62,7 @@ public class LL {
             System.out.println("List is empty");
             return;
         }
+        size--;
         head = head.next;               //meaking 2nd node as head where 1st node is lost now there fore the node is deleted
     }
 
@@ -66,6 +72,7 @@ public class LL {
             System.out.println("List is empty");
             return;
         }
+        size--;
         if(head.next == null){          //head.next == null -> lastnode = null ,then null.next means lastnode.next will get error
             head = null;                //to avoid this we will satisfy this corner case
             return;
@@ -80,6 +87,10 @@ public class LL {
         }
         seclasnode.next = null;         //linking seclasnode next to null
     }
+
+    public int getSize(){
+        return size;
+    }
     public static void main(String[] args) {
         LL list = new LL();
         list.addFirst("a");
@@ -89,9 +100,11 @@ public class LL {
         list.addLast("Reva");
         list.addLast("University");
         list.printList();
+        System.out.println(list.getSize());
         list.deleteFirst();
         list.printList();
         list.deleteLast();
         list.printList();
+        System.out.println(list.getSize());
     }
 }
