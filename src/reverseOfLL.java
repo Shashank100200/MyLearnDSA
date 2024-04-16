@@ -108,6 +108,16 @@ public class reverseOfLL {
         head = prevNode;
     }
 
+    public static Node reverseRecursive(Node head){
+        if(head == null || head.next == null){
+            return head;
+        }
+        Node newHead = reverseRecursive(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return newHead;
+    }
     public int getSize(){
         return size;
     }
@@ -119,7 +129,9 @@ public class reverseOfLL {
         list.addLast("Reva");
         list.addLast("University");
         list.printList();
-        list.reverseInterate();
+//        list.reverseInterate();
+//        list.printList();
+        list.head = reverseRecursive(list.head);
         list.printList();
     }
 }
