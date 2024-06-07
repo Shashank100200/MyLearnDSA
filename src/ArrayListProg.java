@@ -31,7 +31,7 @@ public class ArrayListProg {
 
         //loop
         for(int i=0;i<list.size();i++){
-            System.out.println(list.get(i));
+            System.out.print(list.get(i));
         }
 
         //sorting --> Collections contains sorting packages in AL

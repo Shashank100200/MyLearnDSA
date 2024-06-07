@@ -108,6 +108,29 @@ public class reverseOfLL {
         head = prevNode;
     }
 
+//    public void swapInterate(){
+//        if(head == null || head.next == null){
+//            return;
+//        }
+//
+//        Node currNode = head.next;
+//        Node prevNode = head;
+//
+//        while(currNode != null){
+//            Node nextNode = currNode.next;
+//            prevNode.next = nextNode;
+//            currNode.next = prevNode;
+//
+//            //update
+//            prevNode = currNode;
+//            currNode = nextNode;
+//        }
+//        head.next = null;
+//        head = prevNode;
+//    }
+
+
+
     public static Node reverseRecursive(Node head){
         if(head == null || head.next == null){
             return head;
@@ -126,12 +149,13 @@ public class reverseOfLL {
         list.addFirst("a");
         list.addFirst("is");
         list.addFirst("It");
-        list.addLast("Reva");
+//        list.addLast("Reva");
         list.addLast("University");
         list.printList();
 //        list.reverseInterate();
 //        list.printList();
-        list.head = reverseRecursive(list.head);
+//        list.head = reverseRecursive(list.head);
+//        list.printList();
         list.printList();
     }
 }

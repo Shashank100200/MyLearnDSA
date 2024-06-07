@@ -805,26 +805,27 @@ import java.util.HashSet;
 //    }
 //}
 
-public class recusrsion {
-    public static boolean pow(int n){
-        if(n == 1 || n == 3){
-            return true;
-        }
-        if(n%3 != 0 || n == 0){
-            return false;
-        }
-        return pow(n/3);
-    }
+//public class recusrsion {
+//    public static boolean pow(int n){
+//        if(n == 1 || n == 3){
+//            return true;
+//        }
+//        if(n%3 != 0 || n == 0){
+//            return false;
+//        }
+//        return pow(n/3);
+//    }
+//
+//    public static void main(String[] args) {
+//        int num=27;
+//        if(pow(num)){
+//            System.out.println("True");
+//        }else{
+//            System.out.println("False");
+//        }
+//    }
+//}
 
-    public static void main(String[] args) {
-        int num=27;
-        if(pow(num)){
-            System.out.println("True");
-        }else{
-            System.out.println("False");
-        }
-    }
-}
 
 
 
