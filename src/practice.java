@@ -58,27 +58,28 @@ import java.util.regex.*;
 //Diagonal Differences
 //import java.util.*;
 
-//public class practice{
-//
-//    public static void main(String[] args) {
-//        Scanner in=new Scanner(System.in);
-//        int t=in.nextInt();
-//
-//        while(t!=0){
-//            int a = in.nextInt();
-//            int b = in.nextInt();
-//            int n = in.nextInt();
-//            int sum=a;
-//            for(int j=0;j<n;j++){
-//                sum+=b*Math.pow(2,j);
-//                System.out.print(sum+" ");
-//            }
-//            System.out.println();
-//            t--;
-//        }
-//        in.close();
-//    }
-//}
+public class practice{
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        int t=in.nextInt();
+
+        while(t!=0){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            int sum=a;
+            for(int j=0;j<n;j++){
+                sum+=b*Math.pow(2,j);
+                System.out.print(sum+" ");
+            }
+            System.out.println();
+            t--;
+        }
+        in.close();
+    }
+}
+
 
 //1. Write a function to check if a number is prime.
 //public class practice {
@@ -1007,37 +1008,39 @@ import java.util.regex.*;
 //    }
 //}
 
-class Solution {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int target = sc.nextInt();
-        ArrayList <Integer> list = new ArrayList<>();
+//class Solution {
+//    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//        int target = sc.nextInt();
+//        ArrayList <Integer> list = new ArrayList<>();
+//
+//        while(sc.hasNextInt()){
+//            list.add(sc.nextInt());
+//        }
+//
+//        int array[] = new int[list.size()];
+//
+//        for(int i=0;i<list.size();i++){
+//            array[i] = list.get(i);
+//        }
+//
+//        boolean found = false;
+//        for(int i=0;i<array.length;i++){
+//            for(int j=i+1;j<array.length;j++){
+//                if(array[i] + array[j] == target){
+//                    System.out.print("["+i+","+j+"]");
+//                    found = true;
+//                }
+//            }
+//        }
+//        if(!found){
+//            System.out.println("Not found pairs");
+//        }
+//        sc.close();
+//    }
+//}
 
-        while(sc.hasNextInt()){
-            list.add(sc.nextInt());
-        }
 
-        int array[] = new int[list.size()];
-
-        for(int i=0;i<list.size();i++){
-            array[i] = list.get(i);
-        }
-
-        boolean found = false;
-        for(int i=0;i<array.length;i++){
-            for(int j=i+1;j<array.length;j++){
-                if(array[i] + array[j] == target){
-                    System.out.print("["+i+","+j+"]");
-                    found = true;
-                }
-            }
-        }
-        if(!found){
-            System.out.println("Not found pairs");
-        }
-        sc.close();
-    }
-}
 
 
 

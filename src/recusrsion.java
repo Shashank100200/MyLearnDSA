@@ -599,7 +599,7 @@ import java.util.HashSet;
 
 //permutation of given string
 //public class recusrsion {
-//    public static void printPermu(String str,String permu,int idx){
+//    public static void printPermu(String str,String permu){
 //        if(str.length() == 0){
 //            System.out.println(permu);
 //            return;
@@ -608,13 +608,12 @@ import java.util.HashSet;
 //        for(int i=0;i<str.length();i++){
 //            char currChar = str.charAt(i);
 //            String newStr = str.substring(0,i) + str.substring(i+1);  //not to repeate current charecter we used this
-//            printPermu(newStr,permu+currChar,idx+1);
+//            printPermu(newStr,permu+currChar);
 //        }
 //    }
-//
 //    public static void main(String[] args) {
 //        String str = "ABC";
-//        printPermu(str,"",0);              //O(n*n!)
+//        printPermu(str,"");              //O(n*n!)
 //    }
 //}
 
@@ -826,7 +825,29 @@ import java.util.HashSet;
 //    }
 //}
 
+//total count of path in given matrix
+public class recusrsion {
+    public static int countPaths(int i,int j,int m,int n){
+        if(i == m-1 || j == n-1){
+            return 1;
+        }
+        if(i == m || j == n){
+            return 0;
+        }
+        //down count
+        int downStep = countPaths(i+1,j,m,n);
 
+        //right count
+        int rightStep = countPaths(i,j+1,m,n);
+
+        return downStep+rightStep;
+    }
+
+    public static void main(String[] args) {
+        int totalPaths = countPaths(0,0,4,4);
+        System.out.println(totalPaths);
+    }
+}
 
 
 
