@@ -826,26 +826,44 @@ import java.util.HashSet;
 //}
 
 //total count of path in given matrix
+//public class recusrsion {
+//    public static int countPaths(int i,int j,int m,int n){
+//        if(i == m-1 || j == n-1){
+//            return 1;
+//        }
+//        if(i == m || j == n){
+//            return 0;
+//        }
+//        //down count
+//        int downStep = countPaths(i+1,j,m,n);
+//
+//        //right count
+//        int rightStep = countPaths(i,j+1,m,n);
+//
+//        return downStep+rightStep;
+//    }
+//
+//    public static void main(String[] args) {
+//        int totalPaths = countPaths(0,0,4,4);
+//        System.out.println(totalPaths);
+//    }
+//}
+
+//Placing tiles of size 1*m in floor of size n*m
 public class recusrsion {
-    public static int countPaths(int i,int j,int m,int n){
-        if(i == m-1 || j == n-1){
+    public static int tilesWays(int n,int m){
+        if(n == m){
+            return 2;
+        }
+        if(n < m){
             return 1;
         }
-        if(i == m || j == n){
-            return 0;
-        }
-        //down count
-        int downStep = countPaths(i+1,j,m,n);
-
-        //right count
-        int rightStep = countPaths(i,j+1,m,n);
-
-        return downStep+rightStep;
+        int vertical = tilesWays(n-m,m);
+        int horrizontel = tilesWays(n-1,m);
+        return vertical + horrizontel;
     }
-
     public static void main(String[] args) {
-        int totalPaths = countPaths(0,0,4,4);
-        System.out.println(totalPaths);
+        System.out.println(tilesWays(4,2));
     }
 }
 
