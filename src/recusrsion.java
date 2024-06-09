@@ -850,23 +850,39 @@ import java.util.HashSet;
 //}
 
 //Placing tiles of size 1*m in floor of size n*m
+//public class recusrsion {
+//    public static int tilesWays(int n,int m){
+//        if(n == m){
+//            return 2;
+//        }
+//        if(n < m){
+//            return 1;
+//        }
+//        int vertical = tilesWays(n-m,m);
+//        int horrizontel = tilesWays(n-1,m);
+//        return vertical + horrizontel;
+//    }
+//    public static void main(String[] args) {
+//        System.out.println(tilesWays(4,2));
+//    }
+//}
+
+//Total number of ways to invite people to party
 public class recusrsion {
-    public static int tilesWays(int n,int m){
-        if(n == m){
-            return 2;
-        }
-        if(n < m){
+    public static int inviteWays(int n){
+        if(n <= 1){
             return 1;
         }
-        int vertical = tilesWays(n-m,m);
-        int horrizontel = tilesWays(n-1,m);
-        return vertical + horrizontel;
+        int way1 = inviteWays(n-1);
+        int way2 = (n-1) * inviteWays(n-2);
+
+        return way1 + way2;
     }
+
     public static void main(String[] args) {
-        System.out.println(tilesWays(4,2));
+        System.out.println(inviteWays(4));
     }
 }
-
 
 
 
