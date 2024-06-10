@@ -42,34 +42,61 @@ import java.util.*;
 //}
 
 //create an ArrayList to store integer
+//public class ArrayListProg {
+//    public static void main(String[] args) {
+//        ArrayList<Integer> list = new ArrayList<>();
+//        list.add(10);
+//        list.add(20);
+//        list.add(30);
+//        list.add(40);
+//        list.add(50);
+//        list.set(4,100);
+//        System.out.println(list.size());
+//        Collections.sort(list);
+//        list.clear();
+//
+//        list.add(2,25);
+//        list.remove(3);
+//
+//        boolean present = true;
+//        for(int i=0;i<list.size();i++){
+//            System.out.println(list.get(i));
+//            if(list.get(i) != 30){
+//                present = false;
+//            }
+////            System.out.print(list.get(i)+" ");
+//        }
+//        if(present){
+//            System.out.println("present");
+//        }else{
+//            System.out.println("NP");
+//        }
+//    }
+//}
+
+//merge three arrays
 public class ArrayListProg {
+     static List<Integer> mergeSortedArray(List<Integer> A,List<Integer> B,List<Integer> C){
+
+     List<Integer> D = new ArrayList<>();
+
+     D.addAll(A);
+     D.addAll(B);
+     D.addAll(C);
+
+     Collections.sort(D);
+     return D;
+    }
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(10);
-        list.add(20);
-        list.add(30);
-        list.add(40);
-        list.add(50);
-        list.set(4,100);
-        System.out.println(list.size());
-        Collections.sort(list);
-        list.clear();
+        List<Integer> A = Arrays.asList(1,2,3,4);
+        List<Integer> B = Arrays.asList(1,2,3,4,5);
+        List<Integer> C = Arrays.asList(1,2,3,4,5,6);
 
-        list.add(2,25);
-        list.remove(3);
+        List<Integer> D = mergeSortedArray(A,B,C);
 
-        boolean present = true;
-        for(int i=0;i<list.size();i++){
-            System.out.println(list.get(i));
-            if(list.get(i) != 30){
-                present = false;
-            }
-//            System.out.print(list.get(i)+" ");
-        }
-        if(present){
-            System.out.println("present");
-        }else{
-            System.out.println("NP");
+        for(int i=0;i<D.size();i++){
+            System.out.print(D.get(i)+" ");
         }
     }
 }
+
