@@ -554,24 +554,24 @@ import java.util.HashSet;
 //}
 
 //to find permutation of a given string
-//public class recusrsion {
-//    public static void permu(String str,String permutation){
-//        if(str.length() == 0){
-//            System.out.println(permutation);
-//            return;
-//        }
-//        for(int i=0;i<str.length();i++){
-//            char currChar = str.charAt(i);
-//            String newStr = str.substring(0,i) + str.substring(i+1);
-//            permu(newStr,permutation+currChar);
-//        }
-//    }
-//
-//    public static void main(String[] args) {
-//        String str = "abc";
-//        permu(str,"");
-//    }
-//}
+public class recusrsion {
+    public static void permu(String str,String permutation){
+        if(str.length() == 0){
+            System.out.println(permutation);
+            return;
+        }
+        for(int i=0;i<str.length();i++){
+            char currChar = str.charAt(i);
+            String newStr = str.substring(0,i) + str.substring(i+1);
+            permu(newStr,permutation+currChar);
+        }
+    }
+
+    public static void main(String[] args) {
+        String str = "abc";
+        permu(str,"");
+    }
+}
 
 //Counting of paths in given matrix
 //public class recusrsion {
@@ -868,21 +868,21 @@ import java.util.HashSet;
 //}
 
 //Total number of ways to invite people to party
-public class recusrsion {
-    public static int inviteWays(int n){
-        if(n <= 1){
-            return 1;
-        }
-        int way1 = inviteWays(n-1);
-        int way2 = (n-1) * inviteWays(n-2);
-
-        return way1 + way2;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(inviteWays(4));
-    }
-}
+//public class recusrsion {
+//    public static int inviteWays(int n){
+//        if(n <= 1){
+//            return 1;
+//        }
+//        int way1 = inviteWays(n-1);
+//        int way2 = (n-1) * inviteWays(n-2);
+//
+//        return way1 + way2;
+//    }
+//
+//    public static void main(String[] args) {
+//        System.out.println(inviteWays(4));
+//    }
+//}
 
 
 
