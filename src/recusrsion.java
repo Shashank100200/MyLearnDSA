@@ -882,21 +882,33 @@ import java.util.HashSet;
 //    }
 //}
 
-public class recusrsion {
-    public static int searchEle(int[] array,int idx,int ele){
-        if(idx >= array.length){
-            return -1;
-        }
-        if(array[idx] == ele){
-            return idx;
-        }
-        return searchEle(array,idx+1,ele);
-    }
+//public class recusrsion {
+//    public static int searchEle(int[] array,int idx,int ele){
+//        if(idx >= array.length){
+//            return -1;
+//        }
+//        if(array[idx] == ele){
+//            return idx;
+//        }
+//        return searchEle(array,idx+1,ele);
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] array = {1,2,3,4,5};
+//        int ans = searchEle(array,0,6);
+//        System.out.println(ans);
+//    }
+//}
 
+public class recusrsion {
+    public static int digiSum(int n,int sum){
+        if(n == 0){
+            return sum;
+        }
+        return digiSum(n/10,sum+(n%10));
+    }
     public static void main(String[] args) {
-        int[] array = {1,2,3,4,5};
-        int ans = searchEle(array,0,6);
-        System.out.println(ans);
+        System.out.println(digiSum(12356,0));
     }
 }
 
