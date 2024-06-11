@@ -884,22 +884,22 @@ import java.util.HashSet;
 
 public class recusrsion {
     public static int searchEle(int[] array,int idx,int ele){
-        if(array.length-1 == idx){
+        if(idx >= array.length){
+            return -1;
+        }
+        if(array[idx] == ele){
             return idx;
         }
-        int ans = searchEle(array,idx+1,ele);
-        if(ans == ele){
-            return idx;
-        }
-        return ans;
+        return searchEle(array,idx+1,ele);
     }
 
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5};
-        int ans = searchEle(array,0,4);
+        int ans = searchEle(array,0,6);
         System.out.println(ans);
     }
 }
+
 
 
 
