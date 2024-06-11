@@ -58,27 +58,27 @@ import java.util.regex.*;
 //Diagonal Differences
 //import java.util.*;
 
-public class practice{
-
-    public static void main(String[] args) {
-        Scanner in=new Scanner(System.in);
-        int t=in.nextInt();
-
-        while(t!=0){
-            int a = in.nextInt();
-            int b = in.nextInt();
-            int n = in.nextInt();
-            int sum=a;
-            for(int j=0;j<n;j++){
-                sum+=b*Math.pow(2,j);
-                System.out.print(sum+" ");
-            }
-            System.out.println();
-            t--;
-        }
-        in.close();
-    }
-}
+//public class practice{
+//
+//    public static void main(String[] args) {
+//        Scanner in=new Scanner(System.in);
+//        int t=in.nextInt();
+//
+//        while(t!=0){
+//            int a = in.nextInt();
+//            int b = in.nextInt();
+//            int n = in.nextInt();
+//            int sum=a;
+//            for(int j=0;j<n;j++){
+//                sum+=b*Math.pow(2,j);
+//                System.out.print(sum+" ");
+//            }
+//            System.out.println();
+//            t--;
+//        }
+//        in.close();
+//    }
+//}
 
 
 //1. Write a function to check if a number is prime.
@@ -1039,6 +1039,8 @@ public class practice{
 //        sc.close();
 //    }
 //}
+
+
 
 
 

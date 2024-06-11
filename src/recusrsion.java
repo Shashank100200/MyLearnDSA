@@ -150,13 +150,12 @@ import java.util.HashSet;
 //        if(n == 2){
 //            return 1;
 //        }
-//        int fibans1 = fib(n-1);
-//        int fibans2 = fib(n-2);
-//        return fibans1 + fibans2;
+//        int fibo = fib(n-1) + fib(n-2);
+//        return fibo;
 //    }
 //
 //    public static void main(String[] args) {
-//        int ans = fib(5);
+//        int ans = fib(6);
 //        System.out.println(ans);
 //    }
 //}
@@ -179,7 +178,6 @@ import java.util.HashSet;
 //        System.out.println(ans);
 //    }
 //}
-
 
 //public class recusrsion {
 //    static int power(int x,int n){
@@ -554,24 +552,24 @@ import java.util.HashSet;
 //}
 
 //to find permutation of a given string
-public class recusrsion {
-    public static void permu(String str,String permutation){
-        if(str.length() == 0){
-            System.out.println(permutation);
-            return;
-        }
-        for(int i=0;i<str.length();i++){
-            char currChar = str.charAt(i);
-            String newStr = str.substring(0,i) + str.substring(i+1);
-            permu(newStr,permutation+currChar);
-        }
-    }
-
-    public static void main(String[] args) {
-        String str = "abc";
-        permu(str,"");
-    }
-}
+//public class recusrsion {
+//    public static void permu(String str,String permutation){
+//        if(str.length() == 0){
+//            System.out.println(permutation);
+//            return;
+//        }
+//        for(int i=0;i<str.length();i++){
+//            char currChar = str.charAt(i);
+//            String newStr = str.substring(0,i) + str.substring(i+1);
+//            permu(newStr,permutation+currChar);
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        String str = "abc";
+//        permu(str,"");
+//    }
+//}
 
 //Counting of paths in given matrix
 //public class recusrsion {
@@ -884,7 +882,24 @@ public class recusrsion {
 //    }
 //}
 
+public class recusrsion {
+    public static int searchEle(int[] array,int idx,int ele){
+        if(array.length-1 == idx){
+            return idx;
+        }
+        int ans = searchEle(array,idx+1,ele);
+        if(ans == ele){
+            return idx;
+        }
+        return ans;
+    }
 
+    public static void main(String[] args) {
+        int[] array = {1,2,3,4,5};
+        int ans = searchEle(array,0,4);
+        System.out.println(ans);
+    }
+}
 
 
 
