@@ -67,7 +67,7 @@ public class LL {
         head = head.next;               //meaking 2nd node as head where 1st node is lost now there fore the node is deleted
     }
 
-//    deleting the ele at the last
+//  deleting the ele at the last
     public void deleteLast(){
         if(head == null){               //Checking weather the LL is empty
             System.out.println("List is empty");
@@ -88,7 +88,6 @@ public class LL {
         }
         seclasnode.next = null;         //linking seclasnode next to null
     }
-
     public int getSize(){
         return size;
     }

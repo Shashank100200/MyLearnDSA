@@ -56,7 +56,7 @@ import java.util.*;
 //    }
 //}
 
-//5.Write a Java program to find the middle element of a linked list.
+//5.To delete ele in LL from last
 
 
 

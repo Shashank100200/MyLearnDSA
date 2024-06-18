@@ -1,3 +1,4 @@
+import java.util.*;
 public class reverseOfLL {
     Node head;  // Declairation of head
     private int size;
@@ -108,28 +109,27 @@ public class reverseOfLL {
         head = prevNode;
     }
 
-//    public void swapInterate(){
-//        if(head == null || head.next == null){
-//            return;
+//    public void swapInterate(String data){
+//
+//        Node dummy = new Node(data);
+//        dummy.next = head;
+//        Node point = dummy;
+//
+//        while(point.next != null && point.next.next != null){
+//            Node swap1 = point.next;
+//            Node swap2 = point.next.next;
+//
+//            swap1.next = swap2.next;
+//            swap2.next = swap1;
+//
+//            point.next = swap2;
+//            point = swap1;
 //        }
-//
-//        Node currNode = head.next;
-//        Node prevNode = head;
-//
-//        while(currNode != null){
-//            Node nextNode = currNode.next;
-//            prevNode.next = nextNode;
-//            currNode.next = prevNode;
-//
-//            //update
-//            prevNode = currNode;
-//            currNode = nextNode;
-//        }
-//        head.next = null;
-//        head = prevNode;
 //    }
 
 
+    
+    //Using Collections frameworks
 
     public static Node reverseRecursive(Node head){
         if(head == null || head.next == null){
@@ -149,13 +149,12 @@ public class reverseOfLL {
         list.addFirst("a");
         list.addFirst("is");
         list.addFirst("It");
-//        list.addLast("Reva");
         list.addLast("University");
         list.printList();
 //        list.reverseInterate();
 //        list.printList();
 //        list.head = reverseRecursive(list.head);
 //        list.printList();
-        list.printList();
+//        list.printList();
     }
 }

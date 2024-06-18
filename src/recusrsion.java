@@ -596,24 +596,24 @@ import java.util.HashSet;
 //}
 
 //permutation of given string
-//public class recusrsion {
-//    public static void printPermu(String str,String permu){
-//        if(str.length() == 0){
-//            System.out.println(permu);
-//            return;
-//        }
-//
-//        for(int i=0;i<str.length();i++){
-//            char currChar = str.charAt(i);
-//            String newStr = str.substring(0,i) + str.substring(i+1);  //not to repeate current charecter we used this
-//            printPermu(newStr,permu+currChar);
-//        }
-//    }
-//    public static void main(String[] args) {
-//        String str = "ABC";
-//        printPermu(str,"");              //O(n*n!)
-//    }
-//}
+public class recusrsion {
+    public static void printPermu(String str,String permu){
+        if(str.length() == 0){
+            System.out.println(permu);
+            return;
+        }
+
+        for(int i=0;i<str.length();i++){
+            char currChar = str.charAt(i);
+            String newStr = str.substring(0,i) + str.substring(i+1);  //not to repeate current charecter we used this
+            printPermu(newStr,permu+currChar);
+        }
+    }
+    public static void main(String[] args) {
+        String str = "ABC";
+        printPermu(str,"");              //O(n*n!)
+    }
+}
 
 //Write a recursive method to calculate the sum of digits of a given number.
 //public class recusrsion {
@@ -900,17 +900,20 @@ import java.util.HashSet;
 //    }
 //}
 
-public class recusrsion {
-    public static int digiSum(int n,int sum){
-        if(n == 0){
-            return sum;
-        }
-        return digiSum(n/10,sum+(n%10));
-    }
-    public static void main(String[] args) {
-        System.out.println(digiSum(12356,0));
-    }
-}
+//public class recusrsion {
+//    public static int digiSum(int n,int sum){
+//        if(n == 0){
+//            return sum;
+//        }
+//        return digiSum(n/10,sum+(n%10));
+//    }
+//    public static void main(String[] args) {
+//        System.out.println(digiSum(12356,0));
+//    }
+//}
+
+
+
 
 
 
