@@ -253,7 +253,7 @@ import java.util.HashSet;
 //    }
 //
 //    public static void main(String[] args){
-//        int num = 1234;
+//        int num = -1234;
 //        int reversed = 0;
 //        System.out.println(revNum(num,reversed));
 //    }
@@ -596,24 +596,24 @@ import java.util.HashSet;
 //}
 
 //permutation of given string
-public class recusrsion {
-    public static void printPermu(String str,String permu){
-        if(str.length() == 0){
-            System.out.println(permu);
-            return;
-        }
-
-        for(int i=0;i<str.length();i++){
-            char currChar = str.charAt(i);
-            String newStr = str.substring(0,i) + str.substring(i+1);  //not to repeate current charecter we used this
-            printPermu(newStr,permu+currChar);
-        }
-    }
-    public static void main(String[] args) {
-        String str = "ABC";
-        printPermu(str,"");              //O(n*n!)
-    }
-}
+//public class recusrsion {
+//    public static void printPermu(String str,String permu){
+//        if(str.length() == 0){
+//            System.out.println(permu);
+//            return;
+//        }
+//
+//        for(int i=0;i<str.length();i++){
+//            char currChar = str.charAt(i);
+//            String newStr = str.substring(0,i) + str.substring(i+1);  //not to repeate current charecter we used this
+//            printPermu(newStr,permu+currChar);
+//        }
+//    }
+//    public static void main(String[] args) {
+//        String str = "ABC";
+//        printPermu(str,"");              //O(n*n!)
+//    }
+//}
 
 //Write a recursive method to calculate the sum of digits of a given number.
 //public class recusrsion {
