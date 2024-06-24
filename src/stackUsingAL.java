@@ -83,6 +83,9 @@ import java.util.*;
 //    }
 //}
 
+
+//to insert the element at the bottom of a stack
+//Reverse an element in an array
 public class stackUsingAL {
     public static void pushAtBottom(int data,Stack<Integer> s){
         if(s.isEmpty()){
