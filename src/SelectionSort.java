@@ -19,3 +19,5 @@ public class SelectionSort {
         }
     }
 }
+
+//O(n*n)
