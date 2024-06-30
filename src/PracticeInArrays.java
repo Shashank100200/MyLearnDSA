@@ -154,29 +154,67 @@ import java.util.*;
 //    }
 //}
 
-//5. Implement an algorithm to rotate the elements of an array to the right.
-
+//5. Implement an algorithm to rotate the elements of an array to the left.
 public class PracticeInArrays {
     public static void main(String[] args) {
-        int arr[] = {12,4,5,23,3,32,31};
+        int arr[] = {1,2,3,4,5};
 
-        int max = arr[0];
-        int secLarge = Integer.MIN_VALUE;
-
-        for(int i=0;i<arr.length;i++){
-            int curr = arr[i];
-            if(curr > max){
-                max = arr[i];
-            }
+        int temp = arr[0];
+        for(int i=0;i< arr.length-1;i++){
+            arr[i] = arr[i+1];
         }
+        arr[arr.length-1] = temp;
+
         for(int i=0;i< arr.length;i++){
-            int curr1 = arr[i];
-            if(curr1 > secLarge && curr1 < max){
-                secLarge = arr[i];
-            }
+            System.out.print(arr[i] + " ");
         }
-        System.out.println(secLarge);
     }
 }
+
+//6. Second Largest Element in an Array without sorting
+//public class PracticeInArrays {
+//    public static void main(String[] args) {
+//        int arr[] = {12,4,5,23,3,32,31};
+//
+//        int max = arr[0];
+//        int secLarge = Integer.MIN_VALUE;
+//
+//        for(int i=0;i<arr.length;i++){
+//            int curr = arr[i];
+//            if(curr > max){
+//                max = arr[i];
+//            }
+//        }
+//        for(int i=0;i< arr.length;i++){
+//            int curr1 = arr[i];
+//            if(curr1 > secLarge && curr1 < max){
+//                secLarge = arr[i];
+//            }
+//        }
+//        System.out.println(secLarge);
+//    }
+//}
+
+
+//public class PracticeInArrays {
+//    public static void main(String[] args) {
+//        int arr[] = {1,2,3,4,5};
+//
+//        int size = 0;
+//        for(int i=0;i< arr.length-1;i++){
+//            int curr = arr[i];
+//            int curr2 = arr[i+1];
+//
+//            if(curr < curr2){
+//                size++;
+//            }
+//        }
+//        if(size == arr.length-1){
+//            System.out.println("Sorted");
+//        }else{
+//            System.out.println("Not Sorted");
+//        }
+//    }
+//}
 
 
