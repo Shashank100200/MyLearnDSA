@@ -53,27 +53,58 @@
 //}
 
 
+// Implementation of Parameterised Constructor
+//class Student{      //class
+//    String name;    //properties
+//    int srn;
 //
+//    public void printInfo(){            //method named printInfo
+//        System.out.println(this.name);
+//        System.out.println(this.srn);
+//    }
+//    Student(String name,int srn){       //Parameterised constructors
+//        this.name = name;
+//        this.srn = srn;
+//    }
+//}
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Student obj = new Student("King Mike",38);      //implementing object for class Student
+//
+//        obj.printInfo();                //Calling printInfo method
+//    }
+//}
 
-class Student{
-    String name;
+
+//Implementation of Copy Constructor
+class Student{      //class
+    String name;    //properties
     int srn;
 
-    public void printInfo(){
+    public void printInfo(){            //method named printInfo
         System.out.println(this.name);
         System.out.println(this.srn);
     }
-    Student(String name,int srn){
-        this.name = name;
-        this.srn = srn;
+    Student(Student s2){                //Parameterised constructors
+        this.name = s2.name;
+        this.srn = s2.srn;
+    }
+
+    Student(){
+
     }
 }
 public class OOPs {
     public static void main(String[] args) {
-        Student obj = new Student("King Mike",38);
+        Student obj1 = new Student();        //implementing object for class Student
+        obj1.name = "King";
+        obj1.srn = 12;
 
-        obj.printInfo();
+        Student obj2 = new Student(obj1);   //here obj2(in which properties are not defined) copies the properties of obj1
+        obj1.printInfo();                   //Calling printInfo method by obj2
     }
 }
+
+//In java there is no distructor as there is garbage collector in java it helps to delete the variables,objects which are not in use automatically
 
 
