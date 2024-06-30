@@ -75,36 +75,68 @@
 //    }
 //}
 
-
+//In java there is no distructor as there is garbage collector in java it helps to delete the variables,objects which are not in use automatically
 //Implementation of Copy Constructor
+//class Student{      //class
+//    String name;    //properties
+//    int srn;
+//
+//    public void printInfo(){            //method named printInfo
+//        System.out.println(this.name);
+//        System.out.println(this.srn);
+//    }
+//    Student(Student s2){                //Parameterised constructors
+//        this.name = s2.name;
+//        this.srn = s2.srn;
+//    }
+//
+//    Student(){
+//
+//    }
+//}
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Student obj1 = new Student();        //implementing object for class Student
+//        obj1.name = "King";
+//        obj1.srn = 12;
+//
+//        Student obj2 = new Student(obj1);   //here obj2(in which properties are not defined) copies the properties of obj1
+//        obj1.printInfo();                   //Calling printInfo method by obj2
+//    }
+//}
+
+
+
+//  Polymorphism -> Poly(many) Morphism(forms)
+//  2 Types in Polymorphism -> 1)Function Overloading (Compile time polymorphism)  2)Function Overriding (Run time polymorphism)
+
+//  Function Overloading -> Calling functions of same name with different parameters in same class
 class Student{      //class
     String name;    //properties
     int srn;
 
-    public void printInfo(){            //method named printInfo
-        System.out.println(this.name);
-        System.out.println(this.srn);
-    }
-    Student(Student s2){                //Parameterised constructors
-        this.name = s2.name;
-        this.srn = s2.srn;
+    public void printInfo(String name){  //Function names printInfo
+        System.out.println(name);
     }
 
-    Student(){
+    public void printInfo(int srn){      //Function names printInfo with different parameters
+        System.out.println(srn);
+    }
 
+    public void printInfo(String name,int srn){
+        System.out.println(name+" "+srn);
     }
 }
 public class OOPs {
     public static void main(String[] args) {
-        Student obj1 = new Student();        //implementing object for class Student
-        obj1.name = "King";
-        obj1.srn = 12;
+        Student s1 = new Student();
+        s1.name = "Lord Krishna";
+        s1.srn = 21;
 
-        Student obj2 = new Student(obj1);   //here obj2(in which properties are not defined) copies the properties of obj1
-        obj1.printInfo();                   //Calling printInfo method by obj2
+        s1.printInfo(s1.name);
+        s1.printInfo(s1.srn);
+        s1.printInfo(s1.name,s1.srn);
     }
 }
-
-//In java there is no distructor as there is garbage collector in java it helps to delete the variables,objects which are not in use automatically
 
 
