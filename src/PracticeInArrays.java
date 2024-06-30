@@ -156,4 +156,27 @@ import java.util.*;
 
 //5. Implement an algorithm to rotate the elements of an array to the right.
 
+public class PracticeInArrays {
+    public static void main(String[] args) {
+        int arr[] = {12,4,5,23,3,32,31};
+
+        int max = arr[0];
+        int secLarge = Integer.MIN_VALUE;
+
+        for(int i=0;i<arr.length;i++){
+            int curr = arr[i];
+            if(curr > max){
+                max = arr[i];
+            }
+        }
+        for(int i=0;i< arr.length;i++){
+            int curr1 = arr[i];
+            if(curr1 > secLarge && curr1 < max){
+                secLarge = arr[i];
+            }
+        }
+        System.out.println(secLarge);
+    }
+}
+
 
