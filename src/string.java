@@ -96,20 +96,50 @@ import java.util.*;
 //        email = “apnaCollegeJava@gmail.com” ; username = “apnaCollegeJava”
 //        email = “helloWorld123@gmail.com”; username = “helloWorld123”
 
+//public class string {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the email :");
+//        String mail = sc.next();
+//        String result = "";
+//
+//        for(int i=0;i<mail.length();i++){
+//            if(mail.charAt(i) == '@'){
+//                break;
+//            }else{
+//                result += mail.charAt(i);
+//            }
+//        }
+//        System.out.println(result);
+//    }
+//}
+
 public class string {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the email :");
-        String mail = sc.next();
-        String result = "";
+        String sentence = "WORLD WIDE WEB";
+        int result = findStringCode(sentence);
+        System.out.println(result);  // Output: 402326
+    }
 
-        for(int i=0;i<mail.length();i++){
-            if(mail.charAt(i) == '@'){
-                break;
-            }else{
-                result += mail.charAt(i);
+    public static int letterPosition(char letter) {
+        return Character.toUpperCase(letter) - 'A' + 1;
+    }
+
+    public static int findStringCode(String sentence) {
+        String[] words = sentence.split(" ");
+        StringBuilder result = new StringBuilder();
+
+        for (String word : words) {
+            int wordSum = 0;
+            int length = word.length();
+            for (int i = 0; i < (length + 1) / 2; i++) {
+                char startLetter = word.charAt(i);
+                char endLetter = word.charAt(length - 1 - i);
+                wordSum += Math.abs(letterPosition(startLetter) - letterPosition(endLetter));
             }
+            result.append(wordSum);
         }
-        System.out.println(result);
+
+        return Integer.parseInt(result.toString());
     }
 }

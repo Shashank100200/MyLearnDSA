@@ -54,6 +54,7 @@
 
 
 // Implementation of Parameterised Constructor
+
 //class Student{      //class
 //    String name;    //properties
 //    int srn;
@@ -77,6 +78,7 @@
 
 //In java there is no distructor as there is garbage collector in java it helps to delete the variables,objects which are not in use automatically
 //Implementation of Copy Constructor
+
 //class Student{      //class
 //    String name;    //properties
 //    int srn;
@@ -111,32 +113,64 @@
 //  2 Types in Polymorphism -> 1)Function Overloading (Compile time polymorphism)  2)Function Overriding (Run time polymorphism)
 
 //  Function Overloading -> Calling functions of same name with different parameters in same class
-class Student{      //class
-    String name;    //properties
-    int srn;
+//class Student{      //class
+//    String name;    //properties
+//    int srn;
+//
+//    public void printInfo(String name){  //Function names printInfo
+//        System.out.println(name);
+//    }
+//
+//    public void printInfo(int srn){      //Function names printInfo with different parameters
+//        System.out.println(srn);
+//    }
+//
+//    public void printInfo(String name,int srn){
+//        System.out.println(name+" "+srn);
+//    }
+//}
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Student s1 = new Student();
+//        s1.name = "Lord Krishna";
+//        s1.srn = 21;
+//
+//        s1.printInfo(s1.name);
+//        s1.printInfo(s1.srn);
+//        s1.printInfo(s1.name,s1.srn);
+//    }
+//}
 
-    public void printInfo(String name){  //Function names printInfo
-        System.out.println(name);
-    }
+//  Inheritance -> In which all the properties of one class can be copied to another class
+//  4 types in it they are
+//  Single Level Inheritance
+//  Multi Level Inheritance
+//  Hirarcle Inheritance
 
-    public void printInfo(int srn){      //Function names printInfo with different parameters
-        System.out.println(srn);
-    }
 
-    public void printInfo(String name,int srn){
-        System.out.println(name+" "+srn);
+//This is Single Level Inheritance
+class Shape{
+    String color;
+
+    public void area(){
+        System.out.println("Displays Area");
     }
 }
+class Triangle extends Shape{
+    public void area(int l,int h){
+        System.out.println(0.5*l*h);
+    }
+}
+
 public class OOPs {
     public static void main(String[] args) {
-        Student s1 = new Student();
-        s1.name = "Lord Krishna";
-        s1.srn = 21;
+       Triangle t1 = new Triangle();
+       t1.color = "Blue";
 
-        s1.printInfo(s1.name);
-        s1.printInfo(s1.srn);
-        s1.printInfo(s1.name,s1.srn);
+       t1.area(12,4);
     }
 }
+
+
 
 
