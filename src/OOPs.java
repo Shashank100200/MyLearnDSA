@@ -1,13 +1,13 @@
 //In this block we will see initiating class , objects , methods and constructors till line 53
 
 //class Pen{         //creating class
-//    String color;  //properties of class
+//    String color;  //properties of class or called as objects
 //    String type;   //properties of class
 //
 //    public void write(){       //Method named write
 //        System.out.println("Writing something");
 //    }
-//    public void printColor(){;
+//    public void printColor(){
 //        System.out.println(this.color);    //this -> it is the keyword where it prints according which object is called
 //    }
 //}
@@ -92,7 +92,7 @@
 //        this.srn = s2.srn;
 //    }
 //
-//    Student(){
+//    Student(){                          //Default constructor
 //
 //    }
 //}
@@ -141,35 +141,96 @@
 //    }
 //}
 
+
 //  Inheritance -> In which all the properties of one class can be copied to another class
 //  4 types in it they are
 //  Single Level Inheritance
 //  Multi Level Inheritance
 //  Hirarcle Inheritance
+//  Hybrid Inheritance
 
 
-//This is Single Level Inheritance
+//          This is Single Level Inheritance
+
+//class Shape{
+//    String color;
+//
+//    public void area(){
+//        System.out.println("Displays Area");
+//    }
+//}
+//class Triangle extends Shape{
+//    public void area(int l,int h){
+//        System.out.println(0.5*l*h);
+//    }
+//}
+//
+//public class OOPs {
+//    public static void main(String[] args) {
+//       Triangle t1 = new Triangle();
+//       t1.color = "Blue";
+//
+//       t1.area(12,4);
+//    }
+//}
+
+
+//          This is Multi Level Inheritance
+
+//class Shape{
+//    String color;
+//
+//    public void area(){
+//        System.out.println("Displays Area");
+//    }
+//}
+//class Triangle extends Shape{
+//    public void area(int l,int h){
+//        System.out.println(0.5*l*h);
+//    }
+//}
+//class EqiTriangle extends Triangle{
+//    public void area(int l,int h){
+//        System.out.println(0.5*l*h);
+//    }
+//}
+//
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Triangle t1 = new Triangle();
+//        t1.color = "Blue";
+//
+//        t1.area(12,4);
+//    }
+//}
+
+
 class Shape{
-    String color;
+    String Color;
 
     public void area(){
         System.out.println("Displays Area");
     }
 }
 class Triangle extends Shape{
-    public void area(int l,int h){
+    public void area(int l,int h) {
         System.out.println(0.5*l*h);
+    }
+}
+class Rectangle extends Shape{
+    public void area(int l,int b){
+        System.out.println(l*b);
     }
 }
 
 public class OOPs {
     public static void main(String[] args) {
-       Triangle t1 = new Triangle();
-       t1.color = "Blue";
+        Rectangle obj1 = new Rectangle();
 
-       t1.area(12,4);
+        obj1.area(2,4);
     }
 }
+
 
 
 
