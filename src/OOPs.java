@@ -205,31 +205,31 @@
 //}
 
 
-class Shape{
-    String Color;
-
-    public void area(){
-        System.out.println("Displays Area");
-    }
-}
-class Triangle extends Shape{
-    public void area(int l,int h) {
-        System.out.println(0.5*l*h);
-    }
-}
-class Rectangle extends Shape{
-    public void area(int l,int b){
-        System.out.println(l*b);
-    }
-}
-
-public class OOPs {
-    public static void main(String[] args) {
-        Rectangle obj1 = new Rectangle();
-
-        obj1.area(2,4);
-    }
-}
+//class Shape{
+//    String Color;
+//
+//    public void area(){
+//        System.out.println("Displays Area");
+//    }
+//}
+//class Triangle extends Shape{
+//    public void area(int l,int h) {
+//        System.out.println(0.5*l*h);
+//    }
+//}
+//class Rectangle extends Shape{
+//    public void area(int l,int b){
+//        System.out.println(l*b);
+//    }
+//}
+//
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Rectangle obj1 = new Rectangle();
+//
+//        obj1.area(2,4);
+//    }
+//}
 
 
 
