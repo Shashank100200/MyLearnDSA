@@ -253,10 +253,48 @@ import java.util.*;
 
 
 //          Abstraction -> where it used to hide unwanted data from users
-abstract class Animal{          //In this animal class where walk function is not relavent as animals are only considered such as horse or duck etc so we need this animal class to hide from user where we use abstract for it
+//abstract class Animal{          //In this animal class where walk function is not relavent as animals are only considered such as horse or duck etc so we need this animal class to hide from user where we use abstract for it
+//    abstract void walk();
+//    public void eats(){
+//        System.out.println("Animal eats");
+//    }
+//}
+//class horse extends Animal{
+//    public void walk(){
+//        System.out.println("Walks on 4 Legs");
+//    }
+//}
+//
+//class duck extends Animal{
+//    public void walk(){
+//        System.out.println("Walks on 2 Legs");
+//    }
+//}
+//
+//public class OOPs {
+//    public static void main(String[] args) {
+//        horse h1 = new horse();
+//        h1.walk();
+//
+//        // As animal class is abstract class its cannot be instansiated
+//
+//        h1.eats();
+//    }
+//}
+
+
+//          Constructer Chaining
+abstract class Animal{
     abstract void walk();
+    Animal(){                       //Constructor of base class will be called first
+        System.out.println("Animal Created");
+    }
 }
 class horse extends Animal{
+
+    horse(){                        //Constructor of derived class will be called later
+        System.out.println("Animal is horse");
+    }
     public void walk(){
         System.out.println("Walks on 4 Legs");
     }
@@ -271,11 +309,8 @@ class duck extends Animal{
 public class OOPs {
     public static void main(String[] args) {
         horse h1 = new horse();
-        h1.walk();
     }
 }
-
-
 
 
 
