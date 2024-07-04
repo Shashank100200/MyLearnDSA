@@ -237,15 +237,45 @@ import java.util.*;
 
 //          Packages in java -> How to import packages of different file to current class
 
-import bank.Bank;       //importing packages from pakage bank
-public class OOPs {
-    public static void main(String[] args) {
-        Bank acc1 = new Bank();
-        acc1.name="SBI";                    // Use 'name' from pakage bank
+//import bank.Bank;       //importing packages from pakage bank
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Bank acc1 = new Bank();
+//        acc1.name="SBI";                    // Use 'name' from pakage bank
+//
+//        System.out.println("Bank name: " + acc1.name);  // Use getter method to get 'name'
+//    }
+//}
 
-        System.out.println("Bank name: " + acc1.name);  // Use getter method to get 'name'
+
+//      Encapsulation -> Combining data and its functions to one unit() for example combining class and its properties to another class
+//      And also used to hide the sensitive datas from the users
+
+
+//          Abstraction -> where it used to hide unwanted data from users
+abstract class Animal{          //In this animal class where walk function is not relavent as animals are only considered such as horse or duck etc so we need this animal class to hide from user where we use abstract for it
+    abstract void walk();
+}
+class horse extends Animal{
+    public void walk(){
+        System.out.println("Walks on 4 Legs");
     }
 }
+
+class duck extends Animal{
+    public void walk(){
+        System.out.println("Walks on 2 Legs");
+    }
+}
+
+public class OOPs {
+    public static void main(String[] args) {
+        horse h1 = new horse();
+        h1.walk();
+    }
+}
+
+
 
 
 
