@@ -149,6 +149,7 @@ import java.util.*;
 //  Multi Level Inheritance
 //  Hirarcle Inheritance
 //  Hybrid Inheritance
+//  Muliple Inheritance -> can only achived by interface in java
 
 
 //          This is Single Level Inheritance
@@ -284,31 +285,54 @@ import java.util.*;
 
 
 //          Constructer Chaining
-abstract class Animal{
-    abstract void walk();
-    Animal(){                       //Constructor of base class will be called first
-        System.out.println("Animal Created");
-    }
-}
-class horse extends Animal{
+//abstract class Animal{
+//    abstract void walk();
+//    Animal(){                       //Constructor of base class will be called first
+//        System.out.println("Animal Created");
+//    }
+//}
+//class horse extends Animal{
+//
+//    horse(){                        //Constructor of derived class will be called later
+//        System.out.println("Animal is horse");
+//    }
+//    public void walk(){
+//        System.out.println("Walks on 4 Legs");
+//    }
+//}
+//
+//class duck extends Animal{
+//    public void walk(){
+//        System.out.println("Walks on 2 Legs");
+//    }
+//}
+//
+//public class OOPs {
+//    public static void main(String[] args) {
+//        horse h1 = new horse();
+//    }
+//}
 
-    horse(){                        //Constructor of derived class will be called later
-        System.out.println("Animal is horse");
-    }
-    public void walk(){
-        System.out.println("Walks on 4 Legs");
-    }
+
+//              Interface -> It is an abstract type and also achived Multiple inheritance in java
+interface Animal{               //interface is an abstract type
+    public void walk();
 }
 
-class duck extends Animal{
+interface Herbivor{
+
+}
+
+class Horse implements Animal,Herbivor{         //Multiple inheritance
     public void walk(){
-        System.out.println("Walks on 2 Legs");
+        System.out.println("Walks on 4 legs");
     }
 }
 
 public class OOPs {
     public static void main(String[] args) {
-        horse h1 = new horse();
+        Horse h1 = new Horse();
+        h1.walk();
     }
 }
 
