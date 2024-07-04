@@ -206,6 +206,8 @@ import java.util.*;
 //}
 
 
+//          This is Multi Level Inheritance
+
 //class Shape{
 //    String Color;
 //
@@ -231,6 +233,23 @@ import java.util.*;
 //        obj1.area(2,4);
 //    }
 //}
+
+
+//          Packages in java -> How to import packages of different file to current class
+
+import bank.Bank;       //importing packages from pakage bank
+public class OOPs {
+    public static void main(String[] args) {
+        Bank acc1 = new Bank();
+        acc1.name="SBI";                    // Use 'name' from pakage bank
+
+        System.out.println("Bank name: " + acc1.name);  // Use getter method to get 'name'
+    }
+}
+
+
+
+
 
 
 
