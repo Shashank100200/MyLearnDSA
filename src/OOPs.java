@@ -1,4 +1,3 @@
-import java.util.*;
 //In this block we will see initiating class , objects , methods and constructors till line 53
 
 //class Pen{         //creating class
@@ -315,24 +314,44 @@ import java.util.*;
 
 
 //              Interface -> It is an abstract type and also achived Multiple inheritance in java
-interface Animal{               //interface is an abstract type
-    public void walk();
+//interface Animal{               //interface is an abstract type
+//    public void walk();
+//}
+//
+//interface Herbivor{
+//
+//}
+//
+//class Horse implements Animal,Herbivor{         //Multiple inheritance
+//    public void walk(){
+//        System.out.println("Walks on 4 legs");
+//    }
+//}
+//
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Horse h1 = new Horse();
+//        h1.walk();
+//    }
+//}
+
+
+//              Static keyword
+class Student{
+    String name;
+    static String school;           //static is the keyword because where school is common for all students
+
 }
-
-interface Herbivor{
-
-}
-
-class Horse implements Animal,Herbivor{         //Multiple inheritance
-    public void walk(){
-        System.out.println("Walks on 4 legs");
-    }
-}
-
 public class OOPs {
     public static void main(String[] args) {
-        Horse h1 = new Horse();
-        h1.walk();
+        Student s1 = new Student();
+        Student.school = "PPEC";
+        s1.school = "MCE";
+        s1.name = "Ram";
+
+        System.out.println(s1.school);
+        System.out.println(s1.name);
+
     }
 }
 
