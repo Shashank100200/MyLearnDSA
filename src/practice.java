@@ -174,25 +174,25 @@ import java.util.regex.*;
 //    }
 
 //5. Implement code to find the greatest common divisor (GCD) of two numbers.
-//public class practice{
-//    public static void main(String[] args){
-//        Scanner sc=new Scanner(System.in);
-//        System.out.println("Enter a :");
-//        int a=sc.nextInt();
-//        System.out.println("Enter b :");
-//        int b=sc.nextInt();
-//        int i,j;
-//        int result = Math.min(a,b);
-//        if(result>0){
-//            for(i=result;i>=1;i--){
-//                if(a%i==0 && b%i==0){
-//                    System.out.println("HCF is :"+i);
-//                    break;
-//                }
-//            }
-//        }
-//    }
-//}
+public class practice{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a :");
+        int a=sc.nextInt();
+        System.out.println("Enter b :");
+        int b=sc.nextInt();
+        int i,j;
+        int result = Math.min(a,b);
+        if(result>0){
+            for(i=result;i>=1;i--){
+                if(a%i==0 && b%i==0){
+                    System.out.println("HCF is :"+i);
+                    break;
+                }
+            }
+        }
+    }
+}
 
 //import java.math.*;
 //7. Create a program to check if a number is a perfect square.
