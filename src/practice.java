@@ -174,25 +174,28 @@ import java.util.regex.*;
 //    }
 
 //5. Implement code to find the greatest common divisor (GCD) of two numbers.
-public class practice{
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter a :");
-        int a=sc.nextInt();
-        System.out.println("Enter b :");
-        int b=sc.nextInt();
-        int i,j;
-        int result = Math.min(a,b);
-        if(result>0){
-            for(i=result;i>=1;i--){
-                if(a%i==0 && b%i==0){
-                    System.out.println("HCF is :"+i);
-                    break;
-                }
-            }
-        }
-    }
-}
+
+//      GCD -> It is the number which divides both given numbers evenly
+//          -> Where GCD of number will not be more than the minimum of given two numbers
+//public class practice{
+//    public static void main(String[] args){
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("Enter a :");
+//        int a=sc.nextInt();
+//        System.out.println("Enter b :");
+//        int b=sc.nextInt();
+//        int i,j;
+//        int result = Math.min(a,b);
+//        if(result>0){
+//            for(i=result;i>=1;i--){
+//                if(a%i==0 && b%i==0){
+//                    System.out.println("HCF is :"+i);
+//                    break;
+//                }
+//            }
+//        }
+//    }
+//}
 
 //import java.math.*;
 //7. Create a program to check if a number is a perfect square.
@@ -1008,37 +1011,64 @@ public class practice{
 //    }
 //}
 
+
 //class Solution {
-//    public static void main(String[] args){
+//    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
-//        int target = sc.nextInt();
-//        ArrayList <Integer> list = new ArrayList<>();
 //
-//        while(sc.hasNextInt()){
-//            list.add(sc.nextInt());
-//        }
+//        System.out.println("Enter two numbers:");
+//        int num1 = sc.nextInt();
+//        int num2 = sc.nextInt();
 //
-//        int array[] = new int[list.size()];
+//        int gcd = findGCD(num1, num2);
+//        int lcm = (num1 * num2) / gcd;
 //
-//        for(int i=0;i<list.size();i++){
-//            array[i] = list.get(i);
-//        }
+//        System.out.println("GCD of " + num1 + " and " + num2 + " = " + gcd);
+//        System.out.println("LCM of " + num1 + " and " + num2 + " = " + lcm);
 //
-//        boolean found = false;
-//        for(int i=0;i<array.length;i++){
-//            for(int j=i+1;j<array.length;j++){
-//                if(array[i] + array[j] == target){
-//                    System.out.print("["+i+","+j+"]");
-//                    found = true;
-//                }
-//            }
-//        }
-//        if(!found){
-//            System.out.println("Not found pairs");
-//        }
 //        sc.close();
 //    }
+//
+//    public static int findGCD(int num1, int num2) {
+//        int numerator = (num1 > num2) ? num1 : num2;
+//        int denominator = (num1 < num2) ? num1 : num2;
+//        int remainder = numerator % denominator;
+//
+//        while (remainder != 0) {
+//            numerator = denominator;
+//            denominator = remainder;
+//            remainder = numerator % denominator;
+//        }
+//
+//        return denominator;
+//    }
 //}
+
+
+// Check Amstrong number
+public class practice {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int origNum = num;
+
+        int sum = 0;
+        while(num>0){
+            int digi = num%10;
+            sum += Math.pow(digi,3);
+            num = num/10;
+        }
+        if(sum == origNum){
+            System.out.println("It is Armstrong");
+        }else{
+            System.out.println("Not Armstrong");
+        }
+    }
+}
+
+
+
+
 
 
 

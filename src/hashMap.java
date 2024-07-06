@@ -23,5 +23,16 @@ public class hashMap {
             System.out.println("Not contains");
         }
 
+        //Iteration in HashMap
+        //for(int val : arr)  -> Same as this where Map.Entry<String,Integer> is data type and e is variable
+        for(Map.Entry<String,Integer> e : map.entrySet()){
+            System.out.println(e.getKey());
+            System.out.println(e.getValue());
+        }
+
+        Set<String> keys = map.keySet();
+        for(String key : keys){
+            System.out.println(key +" "+map.get(key));
+        }
     }
 }
