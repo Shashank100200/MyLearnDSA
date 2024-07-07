@@ -1045,24 +1045,47 @@ import java.util.regex.*;
 //}
 
 
-// Check Amstrong number
-public class practice {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        int origNum = num;
+//              Check Amstrong number
+//public class practice {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int num = sc.nextInt();
+//        int origNum = num;
+//
+//        int sum = 0;
+//        while(num>0){
+//            int digi = num%10;
+//            sum += Math.pow(digi,3);
+//            num = num/10;
+//        }
+//        if(sum == origNum){
+//            System.out.println("It is Armstrong");
+//        }else{
+//            System.out.println("Not Armstrong");
+//        }
+//    }
+//}
 
-        int sum = 0;
-        while(num>0){
-            int digi = num%10;
-            sum += Math.pow(digi,3);
-            num = num/10;
+
+//              Print all Divisors of a given Number
+public class practice {
+    public static ArrayList<Integer> getDivisors(int n){
+        ArrayList<Integer> list = new ArrayList<>();
+
+        int sqrt = (int) Math.sqrt(n);
+        for(int i=1;i<=sqrt;i++){
+            if(n%i == 0){
+                list.add(i);
+            }
+            if(i != n/i){
+                list.add(n/i);
+            }
         }
-        if(sum == origNum){
-            System.out.println("It is Armstrong");
-        }else{
-            System.out.println("Not Armstrong");
-        }
+        return list;
+    }
+    public static void main(String[] args) {
+        int n = 36;
+        System.out.println(getDivisors(n));
     }
 }
 
