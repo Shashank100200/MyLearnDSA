@@ -300,24 +300,24 @@ import java.util.*;
 //}
 
 
-public class PracticeInArrays {
-    public static void rotateByOne(int arr[]){
-        int n = arr.length;
-        int temp = arr[n-1];
-        for(int i=n-2;i >= 0;i--){
-            arr[i+1] = arr[i];
-        }
-        arr[0] = temp;
-        for(int i=0;i< arr.length;i++){
-            System.out.print(arr[i]+" ");
-        }
-    }
-
-    public static void main(String[] args) {
-        int[] array = {1,2,3,4,5};
-        rotateByOne(array);
-    }
-}
+//public class PracticeInArrays {
+//    public static void rotateByOne(int arr[]){
+//        int n = arr.length;
+//        int temp = arr[n-1];
+//        for(int i=n-2;i >= 0;i--){
+//            arr[i+1] = arr[i];
+//        }
+//        arr[0] = temp;
+//        for(int i=0;i< arr.length;i++){
+//            System.out.print(arr[i]+" ");
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] array = {1,2,3,4,5};
+//        rotateByOne(array);
+//    }
+//}
 
 //public class PracticeInArrays {
 //    public static void rotateByN(int arr[],int k){
@@ -351,6 +351,32 @@ public class PracticeInArrays {
 //    }
 //}
 
+
+//          Code to Move all the zeros to end
+public class PracticeInArrays {
+    public static void moveZeroToEnd(int arr[]){
+        int n = arr.length;
+        int pos = 0;
+
+        for(int j=0;j<n;j++){
+            if(arr[j] != 0){
+                arr[pos] = arr[j];
+                pos++;
+            }
+        }
+        for(int i = pos;i<n;i++){
+            arr[i] = 0;
+        }
+        for(int val:arr){
+            System.out.print(val+" ");
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] array = {1,0,2,0,6,4,6,0,3};
+        moveZeroToEnd(array);
+    }
+}
 
 
 
