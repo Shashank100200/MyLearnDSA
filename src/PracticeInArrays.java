@@ -218,6 +218,66 @@ import java.util.*;
 //    }
 //}
 
+//public class PracticeInArrays {
+//    public static void main(String[] args) {
+//        int[] arr = {1, 4, 3, 2, 6, 7};
+//        System.out.println(minJumps(arr));
+//    }
+//
+//    public static int minJumps(int[] arr) {
+//        if (arr.length == 0 || arr[0] == 0) {
+//            return -1;
+//        }
+//
+//        int n = arr.length;
+//        int jumps = 0; // Number of jumps made
+//        int currentEnd = 0; // End of the range that we can reach with the current number of jumps
+//        int farthest = 0; // Farthest point that can be reached
+//
+//        for (int i = 0; i < n - 1; i++) {
+//            // Update the farthest point that can be reached
+//            farthest = Math.max(farthest, i + arr[i]);
+//
+//            // If we have reached the end of the current range,
+//            // we need to make another jump
+//            if (i == currentEnd) {
+//                jumps++;
+//                currentEnd = farthest;
+//
+//                // If the current end is beyond or at the last element, we are done
+//                if (currentEnd >= n - 1) {
+//                    return jumps;
+//                }
+//            }
+//        }
+//
+//        // If we exit the loop without having reached the end, return -1
+//        return currentEnd >= n - 1 ? jumps : -1;
+//    }
+//}
+
+
+//      Program to Check Array is Sorted
+class Solution {
+    public static boolean check(int[] nums) {
+        int count = 0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i] > nums[(i+1)%nums.length]){
+                count++;
+            }
+            if(count > 1){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {3,4,5,1,2};
+        System.out.println(check(arr));
+    }
+}
+
 
 
 

@@ -1068,26 +1068,33 @@ import java.util.regex.*;
 
 
 //              Print all Divisors of a given Number
-public class practice {
-    public static ArrayList<Integer> getDivisors(int n){
-        ArrayList<Integer> list = new ArrayList<>();
+//public class practice {
+//    public static ArrayList<Integer> getDivisors(int n){
+//        ArrayList<Integer> list = new ArrayList<>();
+//
+//        int sqrt = (int) Math.sqrt(n);
+//        for(int i=1;i<=sqrt;i++){
+//            if(n%i == 0){
+//                list.add(i);
+//            }
+//            if(i != n/i){
+//                list.add(n/i);
+//            }
+//        }
+//        return list;
+//    }
+//    public static void main(String[] args) {
+//        int n = 36;
+//        System.out.println(getDivisors(n));
+//    }
+//}
 
-        int sqrt = (int) Math.sqrt(n);
-        for(int i=1;i<=sqrt;i++){
-            if(n%i == 0){
-                list.add(i);
-            }
-            if(i != n/i){
-                list.add(n/i);
-            }
-        }
-        return list;
-    }
-    public static void main(String[] args) {
-        int n = 36;
-        System.out.println(getDivisors(n));
-    }
-}
+
+
+
+
+
+
 
 
 
