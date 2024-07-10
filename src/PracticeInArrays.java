@@ -258,23 +258,44 @@ import java.util.*;
 
 
 //      Program to Check Array is Sorted
-class Solution {
-    public static boolean check(int[] nums) {
-        int count = 0;
-        for(int i=0;i<nums.length;i++){
-            if(nums[i] > nums[(i+1)%nums.length]){
-                count++;
-            }
-            if(count > 1){
-                return false;
-            }
+//class Solution {
+//    public static boolean check(int[] nums) {
+//        int count = 0;
+//        for(int i=0;i<nums.length;i++){
+//            if(nums[i] > nums[(i+1)%nums.length]){
+//                count++;
+//            }
+//            if(count > 1){
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr = {3,4,5,1,2};
+//        System.out.println(check(arr));
+//    }
+//}
+
+
+//                  Left Rotate of an Array By One
+public class PracticeInArrays {
+    public static void rotateByOne(int arr[]){
+
+        int temp = arr[0];
+        for(int i=0;i< arr.length-1;i++){
+            arr[i] = arr[i+1];
         }
-        return true;
+        arr[arr.length-1] = temp;
+        for(int i=0;i < arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
     }
 
     public static void main(String[] args) {
-        int[] arr = {3,4,5,1,2};
-        System.out.println(check(arr));
+        int[] array = {1,2,3,4,5};
+        rotateByOne(array);
     }
 }
 
