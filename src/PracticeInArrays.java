@@ -300,56 +300,56 @@ import java.util.*;
 //}
 
 
-//public class PracticeInArrays {
-//    public static void rotateByOne(int arr[]){
-//
-//        int temp = arr[arr.length-1];
-//        for(int i= arr.length-1;i > 1;i--){
-//            arr[(i+1)% arr.length] = arr[i];
-//        }
-//        arr[arr.length-1] = temp;
-//        for(int i=0;i< arr.length;i++){
-//            System.out.print(arr[i]+" ");
-//        }
-//    }
-//
-//    public static void main(String[] args) {
-//        int[] array = {1,2,3,4,5};
-//        rotateByOne(array);
-//    }
-//}
-
 public class PracticeInArrays {
-    public static void rotateByN(int arr[],int k){
+    public static void rotateByOne(int arr[]){
         int n = arr.length;
-        if(n == 0){
-            return;
+        int temp = arr[n-1];
+        for(int i=n-2;i >= 0;i--){
+            arr[i+1] = arr[i];
         }
-        k=k%n;
-        if(k > n){
-            return;
-        }
-        int temp[] = new int[k];
-
-        for(int i=n-k;i<n;i++){
-            temp[i-n+k] = arr[i];
-        }
-        for(int i=n-k-1;i>=0;i--){
-            arr[i+k] = arr[i];
-        }
-        for(int i=0;i< temp.length;i++){
-            arr[i] = temp[i];
-        }
-        for(int i=0;i<n;i++){
+        arr[0] = temp;
+        for(int i=0;i< arr.length;i++){
             System.out.print(arr[i]+" ");
         }
     }
 
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5};
-        rotateByN(array,2);
+        rotateByOne(array);
     }
 }
+
+//public class PracticeInArrays {
+//    public static void rotateByN(int arr[],int k){
+//        int n = arr.length;
+//        if(n == 0){
+//            return;
+//        }
+//        k=k%n;
+//        if(k > n){
+//            return;
+//        }
+//        int temp[] = new int[k];
+//
+//        for(int i=n-k;i<n;i++){
+//            temp[i-n+k] = arr[i];
+//        }
+//        for(int i=n-k-1;i>=0;i--){
+//            arr[i+k] = arr[i];
+//        }
+//        for(int i=0;i< temp.length;i++){
+//            arr[i] = temp[i];
+//        }
+//        for(int i=0;i<n;i++){
+//            System.out.print(arr[i]+" ");
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] array = {1,2,3,4,5};
+//        rotateByN(array,2);
+//    }
+//}
 
 
 
