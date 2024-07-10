@@ -280,24 +280,78 @@ import java.util.*;
 
 
 //                  Left Rotate of an Array By One
-public class PracticeInArrays {
-    public static void rotateByOne(int arr[]){
+//public class PracticeInArrays {
+//    public static void rotateByOne(int arr[]){
+//
+//        int temp = arr[0];
+//        for(int i=0;i< arr.length-1;i++){
+//            arr[i] = arr[i+1];
+//        }
+//        arr[arr.length-1] = temp;
+//        for(int i=0;i < arr.length;i++){
+//            System.out.print(arr[i]+" ");
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] array = {1,2,3,4,5};
+//        rotateByOne(array);
+//    }
+//}
 
-        int temp = arr[0];
-        for(int i=0;i< arr.length-1;i++){
-            arr[i] = arr[i+1];
+
+//public class PracticeInArrays {
+//    public static void rotateByOne(int arr[]){
+//
+//        int temp = arr[arr.length-1];
+//        for(int i= arr.length-1;i > 1;i--){
+//            arr[(i+1)% arr.length] = arr[i];
+//        }
+//        arr[arr.length-1] = temp;
+//        for(int i=0;i< arr.length;i++){
+//            System.out.print(arr[i]+" ");
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] array = {1,2,3,4,5};
+//        rotateByOne(array);
+//    }
+//}
+
+public class PracticeInArrays {
+    public static void rotateByN(int arr[],int k){
+        int n = arr.length;
+        if(n == 0){
+            return;
         }
-        arr[arr.length-1] = temp;
-        for(int i=0;i < arr.length;i++){
+        k=k%n;
+        if(k > n){
+            return;
+        }
+        int temp[] = new int[k];
+
+        for(int i=n-k;i<n;i++){
+            temp[i-n+k] = arr[i];
+        }
+        for(int i=n-k-1;i>=0;i--){
+            arr[i+k] = arr[i];
+        }
+        for(int i=0;i< temp.length;i++){
+            arr[i] = temp[i];
+        }
+        for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
         }
     }
 
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5};
-        rotateByOne(array);
+        rotateByN(array,2);
     }
 }
+
+
 
 
 
