@@ -1,4 +1,4 @@
-import java.util.*;
+//import java.util.*;
 
 //Make a Linked List & add the following elements to it : (1, 5, 7, 3 , 8, 2, 3). Search for the number 7 & display its index.
 
@@ -58,60 +58,68 @@ import java.util.*;
 
 //5.To delete ele in LL from last
 
-public class PracticeInLL {
+//public class PracticeInLL {
+//
+//    public ListNode detectCycle(ListNode head) {
+//        if (head == null) {
+//            return null;
+//        }
+//
+//        ListNode fast = head;
+//        ListNode slow = head;
+//
+//        // First step: Determine if there is a cycle
+//        while (fast != null && fast.next != null) {
+//            fast = fast.next.next;
+//            slow = slow.next;
+//
+//            if (slow == fast) {
+//                // Cycle detected
+//                ListNode check = head;
+//                while (check != slow) {
+//                    check = check.next;
+//                    slow = slow.next;
+//                }
+//                return check; // The start of the cycle
+//            }
+//        }
+//        return null; // No cycle
+//    }
+//
+//    public static void main(String[] args) {
+//        // Example usage
+//        ListNode head = new ListNode(3);
+//        head.next = new ListNode(2);
+//        head.next.next = new ListNode(0);
+//        head.next.next.next = new ListNode(-4);
+//        head.next.next.next.next = head.next; // Create a cycle for testing
+//
+//        PracticeInLL solution = new PracticeInLL();
+//        ListNode cycleStart = solution.detectCycle(head);
+//
+//        if (cycleStart != null) {
+//            System.out.println("Cycle starts at node with value: " + cycleStart.val);
+//        } else {
+//            System.out.println("No cycle detected.");
+//        }
+//    }
+//}
 
-    public ListNode detectCycle(ListNode head) {
-        if (head == null) {
-            return null;
-        }
+// Definition for singly-linked list.
+class Node{
+    public Node head;
+    int data;
+    Node next;
 
-        ListNode fast = head;
-        ListNode slow = head;
-
-        // First step: Determine if there is a cycle
-        while (fast != null && fast.next != null) {
-            fast = fast.next.next;
-            slow = slow.next;
-
-            if (slow == fast) {
-                // Cycle detected
-                ListNode check = head;
-                while (check != slow) {
-                    check = check.next;
-                    slow = slow.next;
-                }
-                return check; // The start of the cycle
-            }
-        }
-        return null; // No cycle
-    }
-
-    public static void main(String[] args) {
-        // Example usage
-        ListNode head = new ListNode(3);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(0);
-        head.next.next.next = new ListNode(-4);
-        head.next.next.next.next = head.next; // Create a cycle for testing
-
-        PracticeInLL solution = new PracticeInLL();
-        ListNode cycleStart = solution.detectCycle(head);
-
-        if (cycleStart != null) {
-            System.out.println("Cycle starts at node with value: " + cycleStart.val);
-        } else {
-            System.out.println("No cycle detected.");
-        }
+    Node(int data){
+        this.data = data;
+        this.next = null;
     }
 }
 
-// Definition for singly-linked list.
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
+public class PracticeInLL {
+    public static void main(String[] args) {
+
     }
 }
 

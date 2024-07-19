@@ -353,32 +353,61 @@ import java.util.*;
 
 
 //          Code to Move all the zeros to end
-public class PracticeInArrays {
-    public static void moveZeroToEnd(int arr[]){
-        int n = arr.length;
-        int pos = 0;
+//public class PracticeInArrays {
+//    public static void moveZeroToEnd(int arr[]){
+//        int n = arr.length;
+//        int pos = 0;
+//
+//        for(int j=0;j<n;j++){
+//            if(arr[j] != 0){
+//                arr[pos] = arr[j];
+//                pos++;
+//            }
+//        }
+//        for(int i = pos;i<n;i++){
+//            arr[i] = 0;
+//        }
+//        for(int val:arr){
+//            System.out.print(val+" ");
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] array = {1,0,2,0,6,4,6,0,3};
+//        moveZeroToEnd(array);
+//    }
+//}
 
-        for(int j=0;j<n;j++){
-            if(arr[j] != 0){
-                arr[pos] = arr[j];
-                pos++;
-            }
+
+//              Union Of An Array
+public class PracticeInArrays {
+    public static ArrayList<Integer> findUnion(int arr1[],int arr2[],int n,int m){
+        HashSet<Integer> set = new HashSet<>();
+        ArrayList<Integer> list = new ArrayList<>();
+
+        for(int i=0;i<n;i++){
+            set.add(arr1[i]);
         }
-        for(int i = pos;i<n;i++){
-            arr[i] = 0;
+        for(int i=0;i<m;i++){
+            set.add(arr2[i]);
         }
-        for(int val:arr){
-            System.out.print(val+" ");
+
+        for(int val : set){
+            list.add(val);
         }
+        Collections.sort(list);
+        return list;
     }
 
     public static void main(String[] args) {
-        int[] array = {1,0,2,0,6,4,6,0,3};
-        moveZeroToEnd(array);
+        int[] arr1 = {2,1,3,23,3,21,4,5,6,3};
+        int[] arr2 = {12,3,2,12,3,12,2,12,4};
+
+        int n = arr1.length;
+        int m = arr2.length;
+
+        System.out.println(findUnion(arr1,arr2,n,m));
     }
 }
-
-
-
 
 
