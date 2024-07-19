@@ -299,7 +299,7 @@ import java.util.*;
 //    }
 //}
 
-
+//          Rotate an array by one
 //public class PracticeInArrays {
 //    public static void rotateByOne(int arr[]){
 //        int n = arr.length;
@@ -319,6 +319,7 @@ import java.util.*;
 //    }
 //}
 
+//          Rotate an Array by n
 //public class PracticeInArrays {
 //    public static void rotateByN(int arr[],int k){
 //        int n = arr.length;
@@ -380,33 +381,55 @@ import java.util.*;
 
 
 //              Union Of An Array
+//public class PracticeInArrays {
+//    public static ArrayList<Integer> findUnion(int arr1[],int arr2[],int n,int m){
+//        HashSet<Integer> set = new HashSet<>();
+//        ArrayList<Integer> list = new ArrayList<>();
+//
+//        for(int i=0;i<n;i++){
+//            set.add(arr1[i]);
+//        }
+//        for(int i=0;i<m;i++){
+//            set.add(arr2[i]);
+//        }
+//
+//        for(int val : set){
+//            list.add(val);
+//        }
+//        Collections.sort(list);
+//        return list;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr1 = {2,1,3,23,3,21,4,5,6,3};
+//        int[] arr2 = {12,3,2,12,3,12,2,12,4};
+//
+//        int n = arr1.length;
+//        int m = arr2.length;
+//
+//        System.out.println(findUnion(arr1,arr2,n,m));
+//    }
+//}
+
+
+//              Program to remove duplicates in array
 public class PracticeInArrays {
-    public static ArrayList<Integer> findUnion(int arr1[],int arr2[],int n,int m){
-        HashSet<Integer> set = new HashSet<>();
-        ArrayList<Integer> list = new ArrayList<>();
-
-        for(int i=0;i<n;i++){
-            set.add(arr1[i]);
+    public static int removeDuplicates(int arr[]){
+        int i=0;
+        for(int j=1;j< arr.length;j++){
+            if(arr[i] != arr[j]){
+                i++;
+                arr[i] = arr[j];
+            }
         }
-        for(int i=0;i<m;i++){
-            set.add(arr2[i]);
-        }
-
-        for(int val : set){
-            list.add(val);
-        }
-        Collections.sort(list);
-        return list;
+        return i+1;
     }
-
     public static void main(String[] args) {
-        int[] arr1 = {2,1,3,23,3,21,4,5,6,3};
-        int[] arr2 = {12,3,2,12,3,12,2,12,4};
-
-        int n = arr1.length;
-        int m = arr2.length;
-
-        System.out.println(findUnion(arr1,arr2,n,m));
+        int[] arr = {1,2,2,3,3,4};
+        int k = removeDuplicates(arr);
+        for(int i=0;i<k;i++){
+            System.out.println(arr[i] + " ");
+        }
     }
 }
 
