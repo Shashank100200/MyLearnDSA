@@ -413,24 +413,54 @@ import java.util.*;
 
 
 //              Program to remove duplicates in array
+//public class PracticeInArrays {
+//    public static int removeDuplicates(int arr[]){
+//        int i=0;
+//        for(int j=1;j< arr.length;j++){
+//            if(arr[i] != arr[j]){
+//                i++;
+//                arr[i] = arr[j];
+//            }
+//        }
+//        return i+1;
+//    }
+//    public static void main(String[] args) {
+//        int[] arr = {1,2,2,3,3,4};
+//        int k = removeDuplicates(arr);
+//        for(int i=0;i<k;i++){
+//            System.out.println(arr[i] + " ");
+//        }
+//    }
+//}
+
+//              Program to move zeros to end of array
 public class PracticeInArrays {
-    public static int removeDuplicates(int arr[]){
+    public static int moveZeros(int[] arr){
         int i=0;
-        for(int j=1;j< arr.length;j++){
-            if(arr[i] != arr[j]){
-                i++;
+        for(int j=0;j<arr.length;j++){
+            if(arr[j] != 0){
                 arr[i] = arr[j];
+                i++;
             }
+        }
+        for(int k=i;k< arr.length;k++){
+            arr[k] = 0;
         }
         return i+1;
     }
+
     public static void main(String[] args) {
-        int[] arr = {1,2,2,3,3,4};
-        int k = removeDuplicates(arr);
-        for(int i=0;i<k;i++){
-            System.out.println(arr[i] + " ");
+        int arr[] = {1,2,0,0,3,0,4,5};
+        int k = moveZeros(arr);
+
+        for(int i=0;i< arr.length;i++){
+            System.out.println(arr[i]+" ");
         }
     }
 }
+
+
+
+
 
 
