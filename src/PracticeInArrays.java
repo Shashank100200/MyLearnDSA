@@ -434,31 +434,50 @@ import java.util.*;
 //}
 
 //              Program to move zeros to end of array
+//public class PracticeInArrays {
+//    public static int moveZeros(int[] arr){
+//        int i=0;
+//        for(int j=0;j<arr.length;j++){
+//            if(arr[j] != 0){
+//                arr[i] = arr[j];
+//                i++;
+//            }
+//        }
+//        for(int k=i;k< arr.length;k++){
+//            arr[k] = 0;
+//        }
+//        return i+1;
+//    }
+//
+//    public static void main(String[] args) {
+//        int arr[] = {1,2,0,0,3,0,4,5};
+//        int k = moveZeros(arr);
+//
+//        for(int i=0;i< arr.length;i++){
+//            System.out.println(arr[i]+" ");
+//        }
+//    }
+//}
+
+
+//          To check if array is sorted or Not even if array is rotated
 public class PracticeInArrays {
-    public static int moveZeros(int[] arr){
-        int i=0;
-        for(int j=0;j<arr.length;j++){
-            if(arr[j] != 0){
-                arr[i] = arr[j];
-                i++;
+    public static void main(String[] args) {
+        int[] arr = {5,4,1,2,3};
+
+        int count = 0;
+        for(int i=0;i< arr.length;i++){
+            if(arr[i] > arr[(i+1) % arr.length]){
+                count++;
             }
         }
-        for(int k=i;k< arr.length;k++){
-            arr[k] = 0;
-        }
-        return i+1;
-    }
-
-    public static void main(String[] args) {
-        int arr[] = {1,2,0,0,3,0,4,5};
-        int k = moveZeros(arr);
-
-        for(int i=0;i< arr.length;i++){
-            System.out.println(arr[i]+" ");
+        if(count > 1){
+            System.out.println("False");
+        }else{
+            System.out.println("True");
         }
     }
 }
-
 
 
 
