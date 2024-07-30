@@ -461,21 +461,38 @@ import java.util.*;
 
 
 //          To check if array is sorted or Not even if array is rotated
+//public class PracticeInArrays {
+//    public static void main(String[] args) {
+//        int[] arr = {5,4,1,2,3};
+//
+//        int count = 0;
+//        for(int i=0;i< arr.length;i++){
+//            if(arr[i] > arr[(i+1) % arr.length]){
+//                count++;
+//            }
+//        }
+//        if(count > 1){
+//            System.out.println("False");
+//        }else{
+//            System.out.println("True");
+//        }
+//    }
+//}
+
+
 public class PracticeInArrays {
     public static void main(String[] args) {
-        int[] arr = {5,4,1,2,3};
+        int[] arr = {1,2,1,2,5};
 
-        int count = 0;
+        int num = -1;
         for(int i=0;i< arr.length;i++){
-            if(arr[i] > arr[(i+1) % arr.length]){
-                count++;
+            for(int j=0;j<i;j++){
+                if(arr[i] != arr[j]){
+                    num = arr[j];
+                }
             }
         }
-        if(count > 1){
-            System.out.println("False");
-        }else{
-            System.out.println("True");
-        }
+        System.out.println(num);
     }
 }
 

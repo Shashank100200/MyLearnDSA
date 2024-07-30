@@ -77,8 +77,8 @@
 //}
 
 //In java there is no distructor as there is garbage collector in java it helps to delete the variables,objects which are not in use automatically
-//Implementation of Copy Constructor
 
+//Implementation of Copy Constructor
 //class Student{      //class
 //    String name;    //properties
 //    int srn;
@@ -103,7 +103,7 @@
 //        obj1.srn = 12;
 //
 //        Student obj2 = new Student(obj1);   //here obj2(in which properties are not defined) copies the properties of obj1
-//        obj1.printInfo();                   //Calling printInfo method by obj2
+//        obj2.printInfo();                   //Calling printInfo method by obj2
 //    }
 //}
 
@@ -138,12 +138,15 @@
 //        s1.printInfo(s1.name);
 //        s1.printInfo(s1.srn);
 //        s1.printInfo(s1.name,s1.srn);
+//
+//        s1.printInfo(28);
+//        s1.printInfo("Lord Rama");
 //    }
 //}
 
 
 //  Inheritance -> In which all the properties of one class can be copied to another class
-//  4 types in it they are
+//  5 types in it they are
 //  Single Level Inheritance
 //  Multi Level Inheritance
 //  Hirarcle Inheritance
@@ -152,9 +155,8 @@
 
 
 //          This is Single Level Inheritance
-
 //class Shape{
-//    String color;
+//    String color;                   //color is the properties of class Shape
 //
 //    public void area(){
 //        System.out.println("Displays Area");
@@ -165,12 +167,13 @@
 //        System.out.println(0.5*l*h);
 //    }
 //}
-//
 //public class OOPs {
 //    public static void main(String[] args) {
 //       Triangle t1 = new Triangle();
-//       t1.color = "Blue";
+//       t1.color = "Blue";           //Color property is extended to class Triangle
 //
+//       System.out.println(t1.color);
+//       t1.area();
 //       t1.area(12,4);
 //    }
 //}
@@ -179,7 +182,7 @@
 //          This is Multi Level Inheritance
 
 //class Shape{
-//    String color;
+//    String color = "Black";
 //
 //    public void area(){
 //        System.out.println("Displays Area");
@@ -191,6 +194,7 @@
 //    }
 //}
 //class EqiTriangle extends Triangle{
+//    String color = "Green";
 //    public void area(int l,int h){
 //        System.out.println(0.5*l*h);
 //    }
@@ -198,9 +202,9 @@
 //
 //public class OOPs {
 //    public static void main(String[] args) {
-//        Triangle t1 = new Triangle();
-//        t1.color = "Blue";
-//
+//        Triangle t1 = new EqiTriangle();
+////        t1.color = "Blue";
+//        System.out.println(t1.color);
 //        t1.area(12,4);
 //    }
 //}
@@ -229,11 +233,40 @@
 //public class OOPs {
 //    public static void main(String[] args) {
 //        Rectangle obj1 = new Rectangle();
-//
+//        obj1.Color = "Black";
 //        obj1.area(2,4);
+//        System.out.println(obj1.Color);
 //    }
 //}
 
+
+
+//              Hierarcle Inheritance
+
+class Shape{
+    String color;                   //color is the properties of class Shape
+
+    public void area(){
+        System.out.println("Displays Area");
+    }
+}
+class Triangle extends Shape{
+    public void area(int l,int h){
+        System.out.println(0.5*l*h);
+    }
+}
+
+class Circle extends Shape{
+    Circle(){
+        System.out.println("2*pai*r");
+    }
+}
+public class OOPs {
+    public static void main(String[] args) {
+        Circle c1 = new Circle();
+        c1.area();
+    }
+}
 
 //          Packages in java -> How to import packages of different file to current class
 
@@ -254,6 +287,7 @@
 
 //          Abstraction -> where it used to hide unwanted data from users
 //abstract class Animal{          //In this animal class where walk function is not relavent as animals are only considered such as horse or duck etc so we need this animal class to hide from user where we use abstract for it
+//    String color;
 //    abstract void walk();
 //    public void eats(){
 //        System.out.println("Animal eats");
@@ -265,7 +299,7 @@
 //    }
 //}
 //
-//class duck extends Animal{
+//class Duck extends Animal{
 //    public void walk(){
 //        System.out.println("Walks on 2 Legs");
 //    }
@@ -275,9 +309,9 @@
 //    public static void main(String[] args) {
 //        horse h1 = new horse();
 //        h1.walk();
-//
+//        h1.color = "Brown";
+//        System.out.println(h1.color);
 //        // As animal class is abstract class its cannot be instansiated
-//
 //        h1.eats();
 //    }
 //}
@@ -337,23 +371,23 @@
 
 
 //              Static keyword
-class Student{
-    String name;
-    static String school;           //static is the keyword because where school is common for all students
-
-}
-public class OOPs {
-    public static void main(String[] args) {
-        Student s1 = new Student();
-        Student.school = "PPEC";
-        s1.school = "MCE";
-        s1.name = "Ram";
-
-        System.out.println(s1.school);
-        System.out.println(s1.name);
-
-    }
-}
+//class Student{
+//    String name;
+//    static String school;           //static is the keyword because where school is common for all students
+//
+//}
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Student s1 = new Student();
+//        Student.school = "PPEC";
+//        s1.school = "MCE";
+//        s1.name = "Ram";
+//
+//        System.out.println(s1.school);
+//        System.out.println(s1.name);
+//
+//    }
+//}
 
 
 
