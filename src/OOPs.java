@@ -243,30 +243,30 @@
 
 //              Hierarcle Inheritance
 
-class Shape{
-    String color;                   //color is the properties of class Shape
-
-    public void area(){
-        System.out.println("Displays Area");
-    }
-}
-class Triangle extends Shape{
-    public void area(int l,int h){
-        System.out.println(0.5*l*h);
-    }
-}
-
-class Circle extends Shape{
-    Circle(){
-        System.out.println("2*pai*r");
-    }
-}
-public class OOPs {
-    public static void main(String[] args) {
-        Circle c1 = new Circle();
-        c1.area();
-    }
-}
+//class Shape{
+//    String color;                   //color is the properties of class Shape
+//
+//    public void area(){
+//        System.out.println("Displays Area");
+//    }
+//}
+//class Triangle extends Shape{
+//    public void area(int l,int h){
+//        System.out.println(0.5*l*h);
+//    }
+//}
+//
+//class Circle extends Shape{
+//    Circle(){
+//        System.out.println("2*pai*r");
+//    }
+//}
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Circle c1 = new Circle();
+//        c1.area();
+//    }
+//}
 
 //          Packages in java -> How to import packages of different file to current class
 
@@ -385,9 +385,35 @@ public class OOPs {
 //
 //        System.out.println(s1.school);
 //        System.out.println(s1.name);
-//
 //    }
 //}
+
+
+class Shape{
+    String Color;
+
+    private void area(){
+        System.out.println("Displays Area");
+    }
+}
+class Triangle extends Shape{
+    protected void area() {
+        System.out.println("Triangle Shape");
+    }
+}
+class Rectangle extends Triangle{
+    public void area(){
+        System.out.println("Rectangle Shape");
+    }
+}
+
+public class OOPs {
+    public static void main(String[] args) {
+        Triangle obj = new Rectangle();
+        obj.area();
+    }
+}
+
 
 
 
