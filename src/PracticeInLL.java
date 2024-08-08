@@ -106,20 +106,31 @@
 //}
 
 // Definition for singly-linked list.
+//public class PracticeInLL {
+//    public static void main(String[] args) {
+//        LinkedList<Integer> list = new LinkedList<>();
+//
+//        list.add(1);
+//        list.add(2);
+//        list.add(3);
+//        list.add(4);
+//        list.remove(2);
+//
+//        for(int i=0;i<list.size();i++){
+//            System.out.print(list.get(i)+"->");
+//        }
+//        System.out.print("null");
+//    }
+//}
+
 class Node{
-    public Node head;
+    Node head;
+
     int data;
     Node next;
-
     Node(int data){
         this.data = data;
         this.next = null;
-    }
-}
-
-public class PracticeInLL {
-    public static void main(String[] args) {
-
     }
 }
 

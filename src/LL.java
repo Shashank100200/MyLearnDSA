@@ -7,7 +7,7 @@ public class LL {
         this.size = 0;
     }
     class Node{  // Creating class
-        String data;  //variables of the class
+        String data;  //properties of the class
         Node next;
 
         Node(String data){            //Constructor

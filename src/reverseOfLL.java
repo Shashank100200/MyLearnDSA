@@ -149,7 +149,11 @@ public class reverseOfLL {
         list.addFirst("a");
         list.addFirst("is");
         list.addFirst("It");
+        list.addLast("Reva");
         list.addLast("University");
+        list.printList();
+
+        list.reverseInterate();
         list.printList();
 //        list.reverseInterate();
 //        list.printList();

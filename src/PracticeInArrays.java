@@ -434,30 +434,30 @@ import java.util.*;
 //}
 
 //              Program to move zeros to end of array
-//public class PracticeInArrays {
-//    public static int moveZeros(int[] arr){
-//        int i=0;
-//        for(int j=0;j<arr.length;j++){
-//            if(arr[j] != 0){
-//                arr[i] = arr[j];
-//                i++;
-//            }
-//        }
-//        for(int k=i;k< arr.length;k++){
-//            arr[k] = 0;
-//        }
-//        return i+1;
-//    }
-//
-//    public static void main(String[] args) {
-//        int arr[] = {1,2,0,0,3,0,4,5};
-//        int k = moveZeros(arr);
-//
-//        for(int i=0;i< arr.length;i++){
-//            System.out.println(arr[i]+" ");
-//        }
-//    }
-//}
+public class PracticeInArrays {
+    public static int moveZeros(int[] arr){
+        int i=0;
+        for(int j=0;j<arr.length;j++){
+            if(arr[j] != 2){
+                arr[i] = arr[j];
+                i++;
+            }
+        }
+        for(int k=i;k< arr.length;k++){
+            arr[k] = 0;
+        }
+        return i+1;
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {0,1,2,2,3,0,4,2};
+        int k = moveZeros(arr);
+
+        for(int i=0;i< arr.length;i++){
+            System.out.println(arr[i]+" ");
+        }
+    }
+}
 
 
 //          To check if array is sorted or Not even if array is rotated
@@ -479,22 +479,27 @@ import java.util.*;
 //    }
 //}
 
-
-public class PracticeInArrays {
-    public static void main(String[] args) {
-        int[] arr = {1,2,1,2,5};
-
-        int num = -1;
-        for(int i=0;i< arr.length;i++){
-            for(int j=0;j<i;j++){
-                if(arr[i] != arr[j]){
-                    num = arr[j];
-                }
-            }
-        }
-        System.out.println(num);
-    }
-}
+//public class PracticeInArrays {
+//    public static void main(String[] args) {
+//        int[] S = {1,1,1,1,1,0};
+//        boolean cond = false;
+//
+//        for(int i=0;i<S.length-1;i++){
+//            if(S[i] == 1 && S[i+1] == 0){
+//                cond = true;
+//            }
+//        }
+//        if(true){
+//            for(int i=0;i<S.length-1;i++){
+//                S[i] = S[i+1];
+//            }
+//
+//            for(int i=0;i<S.length;i++){
+//                System.out.println(S[i]);
+//            }
+//        }
+//    }
+//}
 
 
 
