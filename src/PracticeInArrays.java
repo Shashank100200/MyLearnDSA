@@ -434,30 +434,30 @@ import java.util.*;
 //}
 
 //              Program to move zeros to end of array
-public class PracticeInArrays {
-    public static int moveZeros(int[] arr){
-        int i=0;
-        for(int j=0;j<arr.length;j++){
-            if(arr[j] != 2){
-                arr[i] = arr[j];
-                i++;
-            }
-        }
-        for(int k=i;k< arr.length;k++){
-            arr[k] = 0;
-        }
-        return i+1;
-    }
-
-    public static void main(String[] args) {
-        int arr[] = {0,1,2,2,3,0,4,2};
-        int k = moveZeros(arr);
-
-        for(int i=0;i< arr.length;i++){
-            System.out.println(arr[i]+" ");
-        }
-    }
-}
+//public class PracticeInArrays {
+//    public static int moveZeros(int[] arr){
+//        int i=0;
+//        for(int j=0;j<arr.length;j++){
+//            if(arr[j] != 2){
+//                arr[i] = arr[j];
+//                i++;
+//            }
+//        }
+//        for(int k=i;k< arr.length;k++){
+//            arr[k] = 0;
+//        }
+//        return i+1;
+//    }
+//
+//    public static void main(String[] args) {
+//        int arr[] = {0,1,2,2,3,0,4,2};
+//        int k = moveZeros(arr);
+//
+//        for(int i=0;i< arr.length;i++){
+//            System.out.println(arr[i]+" ");
+//        }
+//    }
+//}
 
 
 //          To check if array is sorted or Not even if array is rotated
@@ -500,6 +500,67 @@ public class PracticeInArrays {
 //        }
 //    }
 //}
+
+
+//public class PracticeInArrays {
+//    public static void main(String[] args) {
+//        int[] arr = {1,2,4};
+//        int k = 5;
+//        System.out.println(work(arr, k));
+//    }
+//
+//    public static int work(int[] arr, int k) {
+//        Arrays.sort(arr);
+//        int left = 0;
+//        int right = 0;
+//        int freq = 1;
+//        int sub = 0;
+//
+//        while (right < arr.length) {
+//            if (right > 0) {
+//                sub += (arr[right] - arr[right - 1]) * (right - left);
+//            }
+//            while (sub > k) {
+//                sub -= arr[right] - arr[left];
+//                left++;
+//            }
+//
+//            freq = Math.max(freq,right - left+1);
+//            right++;
+//        }
+//        return freq;
+//    }
+//}
+
+public class PracticeInArrays {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        int[] arr1 = {3,4,9};
+        int[] arr2 = {4,6,5};
+        int curr1 = 0,curr2 = 0;
+        int carry = 0;
+        int size = Math.min(arr1.length,arr2.length);
+        for(int i=size-1;i>=0;i--){
+            curr1 = arr1[i];
+            curr2 = arr2[i];
+            int data = curr1+curr2;
+            if(carry == 1){
+                data = data+1;
+            }
+            if(data >= 10){
+                int num = data%10;
+                list.add(num);
+                carry = 1;
+            }else{
+                list.add(data);
+            }
+        }
+        for(int i=list.size()-1;i>=0;i--){
+            System.out.print(list.get(i));
+        }
+    }
+}
+
 
 
 
