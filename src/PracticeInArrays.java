@@ -532,31 +532,59 @@ import java.util.*;
 //    }
 //}
 
+
+//Inserted program to find addition of numbers in two different array of same size
+//public class PracticeInArrays {
+//    public static void main(String[] args) {
+//        ArrayList<Integer> list = new ArrayList<>();
+//        int[] arr1 = {3,4,9};
+//        int[] arr2 = {4,6,5};
+//        int curr1 = 0,curr2 = 0;
+//        int carry = 0;
+//        int size = Math.min(arr1.length,arr2.length);
+//        for(int i=size-1;i>=0;i--){
+//            curr1 = arr1[i];
+//            curr2 = arr2[i];
+//            int data = curr1+curr2;
+//            if(carry == 1){
+//                data = data+1;
+//            }
+//            if(data >= 10){
+//                int num = data%10;
+//                list.add(num);
+//                carry = 1;
+//            }else{
+//                list.add(data);
+//            }
+//        }
+//        for(int i=list.size()-1;i>=0;i--){
+//            System.out.print(list.get(i));
+//        }
+//    }
+//}
+
 public class PracticeInArrays {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
         int[] arr1 = {3,4,9};
-        int[] arr2 = {4,6,5};
-        int curr1 = 0,curr2 = 0;
+        int[] arr2 = {6,5};
+
+        int i = arr1.length-1;
+        int j = arr2.length-1;
         int carry = 0;
-        int size = Math.min(arr1.length,arr2.length);
-        for(int i=size-1;i>=0;i--){
-            curr1 = arr1[i];
-            curr2 = arr2[i];
-            int data = curr1+curr2;
-            if(carry == 1){
-                data = data+1;
-            }
-            if(data >= 10){
-                int num = data%10;
-                list.add(num);
-                carry = 1;
-            }else{
-                list.add(data);
-            }
+        while(i>=0 || j>=0 || carry > 0){
+            int curr1 = (i >= 0) ? arr1[i] : 0;
+            int curr2 = (j >= 0) ? arr2[j] : 0;
+            int sum = curr1+curr2+carry;
+
+            list.add(sum%10);
+            carry = sum/10;
+
+            i--;
+            j--;
         }
-        for(int i=list.size()-1;i>=0;i--){
-            System.out.print(list.get(i));
+        for(int k = list.size()-1;k>=0;k--){
+            System.out.print(list.get(k));
         }
     }
 }
