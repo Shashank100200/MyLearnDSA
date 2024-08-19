@@ -1,5 +1,5 @@
 import java.util.*;
-//                                                        Strings are immutable --> they cannot modify once they are into memory
+//                                   Strings are immutable --> they cannot modify once they are into memory
 //public class string {
 //    public static void main(String[] args){
 //        Scanner sc = new Scanner(System.in);
@@ -12,6 +12,7 @@ import java.util.*;
 //}
 
 //using compare to function
+
 //public class string{
 //    public static void main(String[] args){
 //        Scanner sc = new Scanner(System.in);
@@ -21,6 +22,7 @@ import java.util.*;
 //        //s1 > s2 --> +ve
 //        //s1 == s2 --> 0
 //        //s1 < s2 --> -ve
+//
 //        if(name1.compareTo(name2) == 0){
 //            System.out.println("Strings are equal");
 //        }else{
@@ -28,14 +30,20 @@ import java.util.*;
 //        }
 //
 //        if(new String("Tomy") == new String("Tomy")){
-//            System.out.println("Strings are equal");                // here it shows not equal in java strings are objects many conditions = condition fails
+//            System.out.println("Strings are equal");                // here it shows not equal because-> In java even though the content are same but the objects store in two different memory they will be having different memory address therefore they state different
+//        }else{
+//            System.out.println("Strings are not equal");
+//        }
+//
+//        if(new String("Tomy").equals(new String("Tomy"))){
+//            System.out.println("Strings are equal");
 //        }else{
 //            System.out.println("Strings are not equal");
 //        }
 //    }
 //}
 
-//String indexing
+//          String indexing
 //public class string {
 //    public static void main(String[] args){
 //        String name = "Pavitra Prabakar";
@@ -71,6 +79,24 @@ import java.util.*;
 //        Example :
 //        original = “eabcdef’ ; result = “iabcdif”
 //        Original = “xyz” ; result = “xyz”
+
+public class string {
+    public static void main(String[] args) {
+        String s = "abcedefghi";
+        StringBuilder sb = new StringBuilder(s);
+        String result = "";
+        for(int i=0;i<sb.length();i++){
+            if(sb.charAt(i) != 'e'){
+                result = result + sb.charAt(i);
+            }
+            if(sb.charAt(i) == 'e'){
+                sb.setCharAt(i,'i');
+                result = result+'i';
+            }
+        }
+        System.out.println(result);
+    }
+}
 
 //public class string {
 //    public static void main(String[] args){
@@ -114,32 +140,32 @@ import java.util.*;
 //    }
 //}
 
-public class string {
-    public static void main(String[] args) {
-        String sentence = "WORLD WIDE WEB";
-        int result = findStringCode(sentence);
-        System.out.println(result);  // Output: 402326
-    }
-
-    public static int letterPosition(char letter) {
-        return Character.toUpperCase(letter) - 'A' + 1;
-    }
-
-    public static int findStringCode(String sentence) {
-        String[] words = sentence.split(" ");
-        StringBuilder result = new StringBuilder();
-
-        for (String word : words) {
-            int wordSum = 0;
-            int length = word.length();
-            for (int i = 0; i < (length + 1) / 2; i++) {
-                char startLetter = word.charAt(i);
-                char endLetter = word.charAt(length - 1 - i);
-                wordSum += Math.abs(letterPosition(startLetter) - letterPosition(endLetter));
-            }
-            result.append(wordSum);
-        }
-
-        return Integer.parseInt(result.toString());
-    }
-}
+//public class string {
+//    public static void main(String[] args) {
+//        String sentence = "WORLD WIDE WEB";
+//        int result = findStringCode(sentence);
+//        System.out.println(result);  // Output: 402326
+//    }
+//
+//    public static int letterPosition(char letter) {
+//        return Character.toUpperCase(letter) - 'A' + 1;
+//    }
+//
+//    public static int findStringCode(String sentence) {
+//        String[] words = sentence.split(" ");
+//        StringBuilder result = new StringBuilder();
+//
+//        for (String word : words) {
+//            int wordSum = 0;
+//            int length = word.length();
+//            for (int i = 0; i < (length + 1) / 2; i++) {
+//                char startLetter = word.charAt(i);
+//                char endLetter = word.charAt(length - 1 - i);
+//                wordSum += Math.abs(letterPosition(startLetter) - letterPosition(endLetter));
+//            }
+//            result.append(wordSum);
+//        }
+//
+//        return Integer.parseInt(result.toString());
+//    }
+//}

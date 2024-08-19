@@ -103,5 +103,12 @@ import java.util.*;
 //Given an unsorted array of A of size N that contains only non negative integer find a continuous sub array that adds to
 //given number S and return the left right index[1-based indexing] of that sub-array in case of multiple subarray return the subarray indexes which come first on moving from left to right
 
+public class ArrayListProg {
+    public static void main(String[] args) {
+        String s = "The sky is blue";
+
+
+    }
+}
 
 

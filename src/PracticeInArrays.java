@@ -563,32 +563,80 @@ import java.util.*;
 //    }
 //}
 
+//public class PracticeInArrays {
+//    public static void main(String[] args) {
+//        ArrayList<Integer> list = new ArrayList<>();
+//        int[] arr1 = {3,4,9};
+//        int[] arr2 = {6,5};
+//
+//        int i = arr1.length-1;
+//        int j = arr2.length-1;
+//        int carry = 0;
+//        while(i>=0 || j>=0 || carry > 0){
+//            int curr1 = (i >= 0) ? arr1[i] : 0;
+//            int curr2 = (j >= 0) ? arr2[j] : 0;
+//            int sum = curr1+curr2+carry;
+//
+//            list.add(sum%10);
+//            carry = sum/10;
+//
+//            i--;
+//            j--;
+//        }
+//        for(int k = list.size()-1;k>=0;k--){
+//            System.out.print(list.get(k));
+//        }
+//    }
+//}
+
+//public class PracticeInArrays {
+//    public static boolean isHappy(int n){
+//
+//        if(n == 1){
+//            return true;
+//        }
+//        int sum=0;
+//        while(n>0){
+//            int digi = n%10;
+//            int digiSq = digi*digi;
+//            sum = sum + digiSq;
+//            n /= 10;
+//        }
+//        if(sum > 0){
+//            isHappy(sum);
+//        }
+//        return true;
+//    }
+//    public static void main(String[] args) {
+//        int n = 2;
+//        System.out.println(isHappy(n));
+//    }
+//}
+
 public class PracticeInArrays {
+    public static boolean isHappy(int n){
+        HashSet<Integer> set = new HashSet<>();
+        while(n !=1 && !set.contains(n)){
+            set.add(n);
+            n = sumOfSq(n);
+        }
+        return n == 1;
+    }
+    private static int sumOfSq(int n){
+        int sum = 0;
+        while(n > 0){
+            int digi = n % 10;
+            int digiSq = digi * digi;
+            sum = sum + digiSq;
+            n = n/10;
+        }
+        return sum;
+    }
+
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        int[] arr1 = {3,4,9};
-        int[] arr2 = {6,5};
-
-        int i = arr1.length-1;
-        int j = arr2.length-1;
-        int carry = 0;
-        while(i>=0 || j>=0 || carry > 0){
-            int curr1 = (i >= 0) ? arr1[i] : 0;
-            int curr2 = (j >= 0) ? arr2[j] : 0;
-            int sum = curr1+curr2+carry;
-
-            list.add(sum%10);
-            carry = sum/10;
-
-            i--;
-            j--;
-        }
-        for(int k = list.size()-1;k>=0;k--){
-            System.out.print(list.get(k));
-        }
+        System.out.println(isHappy(19));
     }
 }
-
 
 
 
