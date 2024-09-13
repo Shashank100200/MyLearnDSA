@@ -37,29 +37,60 @@ import java.util.*;
 //    }
 //}
 
+//public class hashMap {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int[] arr = {1,2,3,1,4,3,2};
+//        int max = 0;
+//        for(int i=0;i< arr.length;i++){
+//            if(arr[i] > max){
+//                max = arr[i];
+//            }
+//        }
+//        int[] hash = new int[max+1];
+//
+//        for(int i=0;i<arr.length;i++){
+//            hash[arr[i]] += 1;
+//        }
+//
+//        int q = 3;
+//        while(q-- != 0){
+//            int num = sc.nextInt();
+//
+//            if(num <= max){
+//                System.out.println(hash[num]);
+//            }
+//        }
+//    }
+//}
+
 public class hashMap {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = {1,2,3,1,4,3,2};
-        int max = 0;
-        for(int i=0;i< arr.length;i++){
-            if(arr[i] > max){
-                max = arr[i];
-            }
-        }
-        int[] hash = new int[max+1];
+        String s = "abcdabehf";
 
-        for(int i=0;i<arr.length;i++){
-            hash[arr[i]] += 1;
+        int[] hash = new int[26];
+        for(int i=0;i<s.length();i++){
+            hash[s.charAt(i) - 'a'] += 1;
         }
 
         int q = 3;
-        while(q-- != 0){
-            int num = sc.nextInt();
+        while(q-- > 0){
+            char let;
+            let = sc.next().charAt(0);
 
-            if(num <= max){
-                System.out.println(hash[num]);
-            }
+            System.out.println(hash[let - 'a']);
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
