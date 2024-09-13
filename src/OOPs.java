@@ -47,8 +47,6 @@
 //        obj.srn = 38;
 //
 //        obj.printInfo();                //calling printInfo method
-//
-//
 //    }
 //}
 
@@ -210,7 +208,7 @@
 //}
 
 
-//          This is Multi Level Inheritance
+//          This is Hirerarcle Inheritance
 
 //class Shape{
 //    String Color;
@@ -232,7 +230,7 @@
 //
 //public class OOPs {
 //    public static void main(String[] args) {
-//        Rectangle obj1 = new Rectangle();
+//        Triangle obj1 = new Triangle();
 //        obj1.Color = "Black";
 //        obj1.area(2,4);
 //        System.out.println(obj1.Color);
@@ -269,7 +267,7 @@
 //}
 
 //          Packages in java -> How to import packages of different file to current class
-
+//
 //import bank.Bank;       //importing packages from pakage bank
 //public class OOPs {
 //    public static void main(String[] args) {

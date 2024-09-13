@@ -80,23 +80,25 @@ import java.util.*;
 //        original = “eabcdef’ ; result = “iabcdif”
 //        Original = “xyz” ; result = “xyz”
 
-public class string {
-    public static void main(String[] args) {
-        String s = "abcedefghi";
-        StringBuilder sb = new StringBuilder(s);
-        String result = "";
-        for(int i=0;i<sb.length();i++){
-            if(sb.charAt(i) != 'e'){
-                result = result + sb.charAt(i);
-            }
-            if(sb.charAt(i) == 'e'){
-                sb.setCharAt(i,'i');
-                result = result+'i';
-            }
-        }
-        System.out.println(result);
-    }
-}
+//public class string {
+//    public static void main(String[] args) {
+//        String s = "abcedefghi";
+//        StringBuilder sb = new StringBuilder(s);
+//        String result = "";
+//        for(int i=0;i<sb.length();i++){
+//            if(sb.charAt(i) != 'e'){
+//                result = result + sb.charAt(i);
+//            }
+//            if(sb.charAt(i) == 'e'){
+//                sb.setCharAt(i,'i');
+//                result = result+'i';
+//            }
+//        }
+//        System.out.println(result);
+//    }
+//}
+
+//          Same Same But Diffelent
 
 //public class string {
 //    public static void main(String[] args){
@@ -117,7 +119,7 @@ public class string {
 //}
 
 
-//nput an email from the user. You have to create a username from the email by deleting the part that comes after ‘@’. Display that username to the user.
+//input an email from the user. You have to create a username from the email by deleting the part that comes after ‘@’. Display that username to the user.
 //        Example :
 //        email = “apnaCollegeJava@gmail.com” ; username = “apnaCollegeJava”
 //        email = “helloWorld123@gmail.com”; username = “helloWorld123”
@@ -169,3 +171,16 @@ public class string {
 //        return Integer.parseInt(result.toString());
 //    }
 //}
+
+public class string {
+    public static void main(String[] args) {
+        String s = "A man, a plan, a canal: Panama";
+
+        s = s.replaceAll("[^a-zA-Z0-9]", " ");
+        s = s.replaceAll("\\s","");
+        s = s.toLowerCase();
+
+        System.out.println(s);
+    }
+}
+
