@@ -432,23 +432,49 @@
 //    }
 //}
 
-class Shape{
-    String Color;
 
-    private void area(){
-        System.out.println("Displays Area");
+//                                              Use of Final Key word
+//class Shape{
+//    String Color;
+//
+//    private void area(){
+//        System.out.println("Displays Area");
+//    }
+//}
+//final class Triangle extends Shape{                      // Here the final key word let not any other class to inherit
+//    protected void area() {
+//        System.out.println("Triangle Shape");
+//    }
+//}
+//
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Triangle obj = new Triangle();
+//        obj.area();
+//    }
+//}
+
+
+
+//                                     super key word in java
+class Animal{
+    public void eats(){
+        System.out.println("Veg and Non-Veg");
     }
 }
-final class Triangle extends Shape{                      // Here the final key word let not any other class to inherit
-    protected void area() {
-        System.out.println("Triangle Shape");
+class Dog extends Animal{
+    public void sound(){
+        System.out.println("Bow Bow");
+    }
+    public void work(){
+        super.eats();                           //It helps to access the data member or field of a parent class
+        sound();
     }
 }
-
 public class OOPs {
     public static void main(String[] args) {
-        Triangle obj = new Triangle();
-        obj.area();
+        Dog d = new Dog();
+        d.work();
     }
 }
 
