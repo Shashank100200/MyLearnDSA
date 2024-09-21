@@ -1102,6 +1102,64 @@ import java.util.regex.*;
 //    }
 //}
 
+class Person {
+    // Private fields (data)
+    private String name;
+    private int age;
+
+    // Constructor to initialize data
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Public getter for the name field
+    public String getName() {
+        return name;
+    }
+
+    // Public setter for the name field
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Public getter for the age field
+    public int getAge() {
+        return age;
+    }
+
+    // Public setter for the age field
+    public void setAge(int age) {
+        if (age > 0) {  // Basic validation to restrict invalid age
+            this.age = age;
+        }
+    }
+
+    // Method to display the person's details
+    public void displayInfo() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class practice{
+    public static void main(String[] args) {
+        // Creating an instance of Person
+        Person person = new Person("John", 25);
+
+        // Accessing private data via public methods
+        System.out.println("Person's name: " + person.getName());  // Output: John
+        System.out.println("Person's age: " + person.getAge());    // Output: 25
+
+        // Modifying private data via public methods
+        person.setName("Alice");
+        person.setAge(30);
+
+        // Displaying updated information
+        person.displayInfo();  // Output: Name: Alice, Age: 30
+    }
+}
+
+
 
 
 

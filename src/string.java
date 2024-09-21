@@ -184,3 +184,17 @@ import java.util.*;
 //    }
 //}
 
+public class string {
+    public static void main(String[] args) {
+        int num = 36;
+        double sqrt = Math.sqrt(num);
+        double prd = sqrt*sqrt;
+
+        if(prd == num){
+            System.out.println("T");
+        }else{
+            System.out.println("F");
+        }
+    }
+}
+
