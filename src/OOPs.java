@@ -457,26 +457,26 @@
 
 
 //                                     super key word in java
-class Animal{
-    public void eats(){
-        System.out.println("Veg and Non-Veg");
-    }
-}
-class Dog extends Animal{
-    public void sound(){
-        System.out.println("Bow Bow");
-    }
-    public void work(){
-        super.eats();                           //It helps to access the data member or field of a parent class
-        sound();
-    }
-}
-public class OOPs {
-    public static void main(String[] args) {
-        Dog d = new Dog();
-        d.work();
-    }
-}
+//class Animal{
+//    public void eats(){
+//        System.out.println("Veg and Non-Veg");
+//    }
+//}
+//class Dog extends Animal{
+//    public void sound(){
+//        System.out.println("Bow Bow");
+//    }
+//    public void work(){
+//        super.eats();                           //It helps to access the data member or field of a parent class
+//        sound();
+//    }
+//}
+//public class OOPs {
+//    public static void main(String[] args) {
+//        Dog d = new Dog();
+//        d.work();
+//    }
+//}
 
 
 
