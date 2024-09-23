@@ -1121,21 +1121,37 @@ import java.util.regex.*;
 //    }
 //}
 
+//public class practice {
+//    public static void main(String[] args) {
+//        int[] arr= {13,46,24,52,20,9};
+//
+//        for(int i=0;i< arr.length;i++){
+//            int j=i;
+//            while(j > 0 && arr[j-1] > arr[j]){
+//                arr[j - 1] = arr[j-1] + arr[j];
+//                arr[j] = arr[j-1] - arr[j];
+//                arr[j-1] = arr[j-1] - arr[j];
+//                j--;
+//            }
+//        }
+//        for(int i=0;i< arr.length;i++){
+//            System.out.print(arr[i]+" ");
+//        }
+//    }
+//}
+
 public class practice {
     public static void main(String[] args) {
-        int[] arr= {13,46,24,52,20,9};
-
-        for(int i=0;i< arr.length;i++){
-            int j=i;
-            while(j > 0 && arr[j-1] > arr[j]){
-                arr[j - 1] = arr[j-1] + arr[j];
-                arr[j] = arr[j-1] - arr[j];
-                arr[j-1] = arr[j-1] - arr[j];
-                j--;
-            }
+        int[] arr = new int[100];
+        int deci = 12;
+        int i = 0;
+        while(deci>0){
+            arr[i] = deci%2;
+            deci = deci/2;
+            i++;
         }
-        for(int i=0;i< arr.length;i++){
-            System.out.print(arr[i]+" ");
+        for(int j=i-1;j>=0;j--){
+            System.out.print(arr[j]+" ");
         }
     }
 }
