@@ -1140,19 +1140,35 @@ import java.util.regex.*;
 //    }
 //}
 
+//public class practice {
+//    public static void main(String[] args) {
+//        int[] arr = new int[100];
+//        int deci = 12;
+//        int i = 0;
+//        while(deci>0){
+//            arr[i] = deci%2;
+//            deci = deci/2;
+//            i++;
+//        }
+//        for(int j=i-1;j>=0;j--){
+//            System.out.print(arr[j]+" ");
+//        }
+//    }
+//}
+
 public class practice {
     public static void main(String[] args) {
-        int[] arr = new int[100];
-        int deci = 12;
-        int i = 0;
-        while(deci>0){
-            arr[i] = deci%2;
-            deci = deci/2;
-            i++;
+        String num = "1101";
+
+        int pow = 0;
+        int deci = 0;
+        for(int i=num.length()-1;i>=0;i--){
+            if(num.charAt(i) == '1'){
+                deci = deci + (int)Math.pow(2,pow);
+            }
+            pow++;
         }
-        for(int j=i-1;j>=0;j--){
-            System.out.print(arr[j]+" ");
-        }
+        System.out.println(deci);
     }
 }
 
