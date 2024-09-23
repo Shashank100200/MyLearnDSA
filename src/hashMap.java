@@ -64,52 +64,52 @@ import java.util.*;
 //    }
 //}
 
-//public class hashMap {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        String s = "abcdabehf";
-//
-//        int[] hash = new int[26];
-//        for(int i=0;i<s.length();i++){
-//            hash[s.charAt(i) - 'a'] += 1;
-//        }
-//
-//        int q = 3;
-//        while(q-- > 0){
-//            char let;
-//            let = sc.next().charAt(0);
-//
-//            System.out.println(hash[let - 'a']);
-//        }
-//    }
-//}
-
-
 public class hashMap {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = {1, 2, 3, 1, 2, 3, 4};
+        String s = "abcdabehf";
 
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < arr.length; i++) {
-            int key = arr[i];
-            // Fetch the current frequency, if the key exists, or default to 0
-            int freq = map.getOrDefault(key, 0);
-            // Increment frequency and update the map
-            map.put(key, freq + 1);
+        int[] hash = new int[26];
+        for(int i=0;i<s.length();i++){
+            hash[s.charAt(i) - 'a'] += 1;
         }
 
-        int q = sc.nextInt(); // Number of queries
+        int q = 3;
+        while(q-- > 0){
+            char let;
+            let = sc.next().charAt(0);
 
-        while (q-- > 0) {
-            int num = sc.nextInt(); // Query number
-            // Fetch and print the frequency from the map, or 0 if not found
-            System.out.println(map.getOrDefault(num, 0));
+            System.out.println(hash[let - 'a']);
         }
-
-        sc.close(); // Close the scanner to avoid resource leaks
     }
 }
+
+
+//public class hashMap {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int[] arr = {1, 2, 3, 1, 2, 3, 4};
+//
+//        HashMap<Integer, Integer> map = new HashMap<>();
+//        for (int i = 0; i < arr.length; i++) {
+//            int key = arr[i];
+//            // Fetch the current frequency, if the key exists, or default to 0
+//            int freq = map.getOrDefault(key, 0);
+//            // Increment frequency and update the map
+//            map.put(key, freq + 1);
+//        }
+//
+//        int q = sc.nextInt(); // Number of queries
+//
+//        while (q-- > 0) {
+//            int num = sc.nextInt(); // Query number
+//            // Fetch and print the frequency from the map, or 0 if not found
+//            System.out.println(map.getOrDefault(num, 0));
+//        }
+//
+//        sc.close(); // Close the scanner to avoid resource leaks
+//    }
+//}
 
 
 

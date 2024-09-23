@@ -1156,19 +1156,48 @@ import java.util.regex.*;
 //    }
 //}
 
+//public class practice {
+//    public static void main(String[] args) {
+//        String num = "1101";
+//
+//        int pow = 0;
+//        int deci = 0;
+//        for(int i=num.length()-1;i>=0;i--){
+//            if(num.charAt(i) == '1'){
+//                deci = deci + (int)Math.pow(2,pow);
+//            }
+//            pow++;
+//        }
+//        System.out.println(deci);
+//    }
+//}
+
 public class practice {
     public static void main(String[] args) {
-        String num = "1101";
-
-        int pow = 0;
-        int deci = 0;
-        for(int i=num.length()-1;i>=0;i--){
-            if(num.charAt(i) == '1'){
-                deci = deci + (int)Math.pow(2,pow);
+        String str = " the sky is     blue ";
+        String res = "";
+        int n = str.length();
+        int i=0;
+        while(i<n){
+            while(i < n && str.charAt(i) == ' '){
+                i++;
             }
-            pow++;
+            if(i >= n){
+                break;
+            }
+            int j=i+1;
+            while(j < n && str.charAt(j) != ' '){
+                j++;
+            }
+            String sub = str.substring(i,j);
+            if(res.length() == 0){
+                res = sub;
+            }else{
+                res = sub+" "+res;
+            }
+            i=j;
         }
-        System.out.println(deci);
+        System.out.println(res);
     }
 }
 
